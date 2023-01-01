@@ -312,38 +312,16 @@ body {
     }
 }
 
-.custom-shape-divider-bottom-1672039699 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-  
-.custom-shape-divider-bottom-1672039699 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 78px;
-}
-  
-.custom-shape-divider-bottom-1672039699 .shape-fill {
-    fill: #252422;
-    filter: brightness(100%) invert(0);
-}
-
 /* Featured page */
 #featured {
     font-family: 'Sora', sans-serif;
-    background: #252422;
     color: rgb(255, 255, 255, 0.9);
     height: auto;
     width: 100%;
 }
 
 .featured-title h2 {
+    color: #252422;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -385,14 +363,19 @@ body {
   
 .featured-item {
     display: flex;
+    background: #252422;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px 0px;
 }
   
 .featured-item:nth-child(1) {
     flex-direction: row-reverse;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
   
 .featured-content {
+    margin: 0px 20px;
     min-width: 50%;
 }
   
@@ -410,10 +393,10 @@ body {
 }
   
 .featured-content p {
-    color: rgba(255, 255, 255, 0.534);
+    color: rgb(255, 255, 255, 0.7);
     margin-top: 20px;
     padding: 0px 20px;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: -.3px;
     text-align: justify;
 }
@@ -449,7 +432,7 @@ body {
     height: auto;
     text-decoration: none;
     color: #fff;
-    background: #252422;
+    background: #000000;
     border: 1px solid #ffffff;
     margin: 10px 10px 0px 0px;
     padding: 5px 15px;
@@ -554,9 +537,16 @@ body {
 @media screen and (max-width: 480px) {
     .featured .featured-title h2 {
         font-size: 30px;
+        padding: 0;
     }
     .featured .featured-container {
         margin: 0;
+    }
+    .featured-item .featured-content {
+        margin: 0px;
+    }
+    .featured-item .featured-image {
+        margin-bottom: 10px;
     }
 }
 
@@ -583,6 +573,9 @@ body {
     .featured-item {
         flex-direction: column;
         font-size: 1rem;
+    }
+    .featured .featured-container {
+        margin: 0;
     }
     .featured-image img {
         display: block;
@@ -765,6 +758,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+    .project .project-title {
+        margin: 0px;
+    }
     .project .project-title h2 {
         font-size: 30px;
     }
@@ -816,8 +812,7 @@ body {
     transform: translateY(20px);
 }
 
-#svg1,
-#svg2 {
+#svg1 {
     filter: brightness(100%) invert(0);
     transform: translateY(-10px);
 }
