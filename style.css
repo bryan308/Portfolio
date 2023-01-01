@@ -551,9 +551,15 @@ body {
             transition-duration: 0.5s;
 }
 
+@media screen and (max-width: 480px) {
+    .featured .featured-title h2 {
+        font-size: 30px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .featured-item .featured-content h1 {
-        font-size: 45px;
+        font-size: 30px;
     }
     .featured-item .featured-content h5 {
         font-size: 15px;
@@ -592,10 +598,6 @@ body {
     .tag {
         justify-content: center;
     }
-}
-
-@media screen and (min-width: 993px) {
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -757,6 +759,15 @@ body {
 .card:hover {
     background-image: linear-gradient(-60deg, rgba(235, 40, 40, 0.9) 0%, rgba(240, 201, 25, 0.9) 100%);
     transform: scale(1.02);
+}
+
+@media screen and (max-width: 480px) {
+    .project .project-title h2 {
+        font-size: 30px;
+    }
+    .project .project-title h4 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1122,6 +1133,15 @@ body {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .about-item .about-content h1 {
+        font-size: 1.5rem;
+    }
+    .about .about-title h2 {
+        font-size: 30px;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .about-container {
         flex-direction: column;
@@ -1280,12 +1300,15 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .contact-title h2 {
-        font-size: 35px;
+    .contact .contact-title h2 {
+        font-size: 30px;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .contact {
+        margin: 0px 40px;
+    }
     .contact .contact-item p {
         font-size: .8rem;
         margin: 20px 0px;
