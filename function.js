@@ -1,21 +1,32 @@
-// Get a reference to the navbar element
-const navbar = document.querySelector('.navbar');
+let prevScrollpos = window.pageYOffset;
 
-// Get a reference to the navbar links
+// Add event listener for window scroll to show/hide navbar
+window.addEventListener('scroll', function() {
+  // Get current scroll position
+  let currentScrollPos = window.pageYOffset;
+  // If scrolling up, show navbar
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.transform = 'translateY(0)';
+    navbar.style.transition = 'transform 0.3s ease-in';
+  // If scrolling down, hide navbar
+  } else {
+    navbar.style.transform = 'translateY(-100%)';
+    navbar.style.transition = 'transform 0.3s ease-out';
+  }
+  // Update previous scroll position
+  prevScrollpos = currentScrollPos;
+});
+
+const navbar = document.querySelector('.navbar');
 const navbarLinks = document.querySelectorAll('.navbar-item a');
 
-// Add event listener for navbar links to smooth scroll to anchor targets
 navbarLinks.forEach(link => {
   link.addEventListener('click', e => {
-    // Prevent default link behavior
     e.preventDefault();
-    // Get target element and navbar height
     const targetId = e.target.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     const navbarHeight = navbar.offsetHeight;
-    // Calculate target position
     const targetPosition = targetElement.offsetTop - navbarHeight;
-    // Smooth scroll to target position
     window.scrollTo({
       top: targetPosition,
       behavior: 'smooth'
@@ -23,28 +34,22 @@ navbarLinks.forEach(link => {
   });
 });
 
-// Get a reference to the cursor element
 const cursor = document.querySelector('.cursor');
 
-// Add event listener for mouse movement to update cursor position
 document.addEventListener('mousemove', e => {
   cursor.style.top = e.pageY - 10 + "px";
   cursor.style.left = e.pageX - 10 + "px";
 });
 
-// Add event listener for mouse click to expand cursor
 document.addEventListener('click', () => {
   cursor.classList.add("expand");
-  // Remove expand class after 1s
+
   setTimeout(() => {
     cursor.classList.remove("expand");
-  }, 1000);
+  }, 500);
 });
 
-// Get a reference to the menu icon element
 const menuIcon = document.getElementById("menu-icon");
-
-// Get a reference to the navbar nav element
 const navbarNav = document.querySelector(".navbar-nav");
 
 // Add event listener for menu icon click to toggle navbar
@@ -90,43 +95,17 @@ function sendMessage() {
   // Add a close button
   var closeButton = document.createElement("span");
   closeButton.className = "closebtn";
-  var closeText = document.createTextNode("×");
-  closeButton.appendChild(closeText);
+  closeButton.innerHTML = "&times;";
   alertBox.appendChild(closeButton);
 
   // Add the alert box to the page
   document.body.appendChild(alertBox);
 
-  // Add event listener for close button click to remove alert box
-  closeButton.addEventListener("click", () => {
-    document.body.removeChild(alertBox);
-  });
+  // Set the opacity of the alert box to 1 to trigger the fade-in animation
+  alertBox.style.opacity = "1";
+
+  // Close the alert box when the close button is clicked
+  closeButton.onclick = function() {
+    alertBox.style.display = "none";
+  }
 }
-
-// Get a reference to the send message button
-const sendMessageButton = document.querySelector('.send-message');
-
-// Add event listener for send message button click to show alert
-sendMessageButton.addEventListener("click", () => {
-    sendMessage();
-  });
-  
-  // Get the current scroll position
-  let prevScrollpos = window.pageYOffset;
-  
-  // Add event listener for window scroll to show/hide navbar
-  window.addEventListener('scroll', function() {
-    // Get current scroll position
-    let currentScrollPos = window.pageYOffset;
-    // If scrolling up, show navbar
-    if (prevScrollpos > currentScrollPos) {
-      navbar.style.transform = 'translateY(0)';
-      navbar.style.transition = 'transform 0.3s ease-in';
-    // If scrolling down, hide navbar
-    } else {
-      navbar.style.transform = 'translateY(-100%)';
-      navbar.style.transition = 'transform 0.3s ease-out';
-    }
-    // Update previous scroll position
-    prevScrollpos = currentScrollPos;
-  });
