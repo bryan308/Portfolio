@@ -555,6 +555,9 @@ body {
     .featured .featured-title h2 {
         font-size: 30px;
     }
+    .featured .featured-container {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
