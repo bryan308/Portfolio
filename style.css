@@ -311,6 +311,15 @@ body {
     -webkit-transform: rotate(14deg);
 }
 
+@media screen and (max-height:400px) {
+    .intro-text .intro-title h1 {
+        font-size: 40px;
+    }
+    .intro-content .intro-image img {
+        height: 50vh;
+    }
+}
+
 @media screen and (max-width:320px) {
     .intro-content .intro-text {
         margin: 0;
