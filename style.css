@@ -181,6 +181,12 @@ body {
     color: rgb(255, 255, 255);
 }
 
+@media screen and (max-height:400px) {
+    .navbar {
+        height: 3.5rem;
+    }
+}
+
 @media screen and (max-width:320px) {
     .navbar-container .nav-name a {
         font-size: .8rem;
