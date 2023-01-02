@@ -11,9 +11,9 @@ Quiz.prototype.getQuestionIndex = function() {
 Quiz.prototype.guess = function(answer) {
     if (this.getQuestionIndex().isCorrectAnswer(answer)) {
       this.score++;
-      alert("<div class='alert correct-alert'>CORRECT!</div>"); // ALERT
+      alert(CORRECT!); // ALERT
     } else {
-      alert("<div class='alert incorrect-alert'>INCORRECT</div>"); //ALERT
+      alert(INCORRECT); //ALERT
     }
     this.questionIndex++;
 };
