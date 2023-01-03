@@ -546,7 +546,6 @@ body {
     transform: scale(1.1);
 }
 
-
 .tag {
     display: flex;
     margin-top: 20px;
@@ -554,32 +553,44 @@ body {
 }
 
 .tag1 {
+    display: flex;
+    align-items: center;
     color: #ff4800;
     background: #ff48002d;
-    padding: 5px 10px;
+    padding-right: 10px;
     border: 1px solid #ff4800;
     border-radius: 20px;
     margin-right: 1rem;
 }
-  
+
 .tag2 {
+    display: flex;
+    align-items: center;
     color: #0088ff;
     background: #0088ff2b;
-    padding: 5px 10px;
+    padding-right: 10px;
     border: 1px solid #0088ff;
     border-radius: 20px;
     margin-right: 1rem;
 }
 
 .tag3 {
+    display: flex;
+    align-items: center;
     color: #ffff00;
     background: #ffff0019;
-    padding: 5px 10px;
-    border: 1px solid #ffff00;
+    padding-right: 10px;
+    border: 1px solid #e7a42b;
     border-radius: 20px;
     margin-right: 1rem;
 }
-  
+
+.tag1 img,
+.tag2 img,
+.tag3 img {
+    height: 25px;
+}
+
 .tag1,
 .tag2,
 .tag3 {
@@ -800,7 +811,7 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     font-size: 20px;
-    color: #ffffff;
+    color: #ff4800;
     margin-bottom: 20px;
 }
   
