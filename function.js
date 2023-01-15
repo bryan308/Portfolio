@@ -89,7 +89,7 @@ function sendMessage() {
 
     var alertBox = document.createElement("div");
     alertBox.className = "alert";
-    var message = document.createTextNode("This button is not yet functional, sorry for inconvenience.");
+    var message = document.createTextNode("This button is not yet functional, sorry for the inconvenience.");
     alertBox.appendChild(message);
     var closeButton = document.createElement("span");
     closeButton.className = "closebtn";
