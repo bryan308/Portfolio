@@ -83,29 +83,24 @@ logos.forEach((logo) => {
   logo.style.left = `${Math.random() * 100}%`;
 });
 
+var alertBoxVisible = false;
 function sendMessage() {
-  // Create the alert box
-  var alertBox = document.createElement("div");
-  alertBox.className = "alert";
+    if(alertBoxVisible) return;
 
-  // Add a message
-  var message = document.createTextNode("This button is not yet functional. Sorry for the inconvenience.");
-  alertBox.appendChild(message);
+    var alertBox = document.createElement("div");
+    alertBox.className = "alert";
+    var message = document.createTextNode("There's no Acronym appeared.");
+    alertBox.appendChild(message);
+    var closeButton = document.createElement("span");
+    closeButton.className = "closebtn";
+    closeButton.innerHTML = "&times;";
+    alertBox.appendChild(closeButton);
+    document.body.appendChild(alertBox);
+    alertBox.style.opacity = "1";
+    alertBoxVisible = true;
 
-  // Add a close button
-  var closeButton = document.createElement("span");
-  closeButton.className = "closebtn";
-  closeButton.innerHTML = "&times;";
-  alertBox.appendChild(closeButton);
-
-  // Add the alert box to the page
-  document.body.appendChild(alertBox);
-
-  // Set the opacity of the alert box to 1 to trigger the fade-in animation
-  alertBox.style.opacity = "1";
-
-  // Close the alert box when the close button is clicked
-  closeButton.onclick = function() {
-    alertBox.style.display = "none";
-  }
+    closeButton.onclick = function() {
+        alertBox.parentNode.removeChild(alertBox);
+        alertBoxVisible = false;
+    }
 }
