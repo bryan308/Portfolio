@@ -439,6 +439,12 @@ body {
     }
 }
 
+@media screen and (max-width: 390px) {
+    .featured-title h2 {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 425px ) {
     .featured .featured-container .featured-card {
         width: 380px;
@@ -1177,6 +1183,11 @@ body {
 
 .about-list h4 {
     font-weight: 300;
+}
+
+.about-list h4 a {
+    color: rgb(255, 255, 255, 0.8);
+    text-decoration: none;
 }
 
 .about-list h4 span {
