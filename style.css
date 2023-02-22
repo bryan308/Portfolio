@@ -44,7 +44,7 @@ body {
     transition-timing-function: ease-out;
     animation: cursorAnim 0.5s infinite alternate;
     pointer-events: none;
-    z-index: 99999;
+    z-index: 999999999999999999999999999999;
 }
   
 .cursor::after {
@@ -303,7 +303,7 @@ body {
     z-index: 1;
     pointer-events: none;
 }
-  
+
 .social-links a:hover {
     color: #fff;
     background-color: #252422;
@@ -312,6 +312,62 @@ body {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -ms-transition: -ms-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -o-transition: -o-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume_dl {
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    position: relative;
+    color: rgba(255, 255, 255, 0.907);
+    background: #ff6224;
+    padding: 15px;
+    margin: 0 10px;
+    border-radius: 15px;
+    border: none;
+    -webkit-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
+    -moz-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
+    -ms-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
+    -o-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
+    transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.resume_dl::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #ff672b;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    border-radius: 1rem;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.resume_dl:hover {
+    color: #fff;
+    background-color: #ff682d;
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+    transform: scale(1.06);
     -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
     -moz-transition: -moz-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
     -ms-transition: -ms-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
@@ -1188,6 +1244,10 @@ body {
 .about-list h4 a {
     color: rgb(255, 255, 255, 0.8);
     text-decoration: none;
+}
+
+.about-list h4 a:hover {
+    text-decoration: underline;
 }
 
 .about-list h4 span {
