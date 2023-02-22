@@ -432,10 +432,6 @@ body {
     .intro-content .intro-text {
         width: auto;
     }
-    .intro-subtitle,
-    .intro-title {
-        text-align: center;
-    }
     .intro-content .intro-actions {
         justify-content: center;
         margin-top: 0px;
@@ -443,8 +439,20 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .social-links {
+        display: block;
+        margin: auto;
+    }
+    .intro-subtitle,
+    .intro-title {
+        text-align: center;
+    }
     .intro-text .intro-actions {
+        justify-content: flex-end;
         flex-direction: column;
+    }
+    .resume {
+        margin: 15px 0;
     }
 }
 
