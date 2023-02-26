@@ -1,4 +1,4 @@
-*{
+* {
 	border: 0;
 	box-sizing: border-box;
 	margin: 0;
@@ -14,7 +14,9 @@
 
 body, button {
 	color: var(--fg);
-	font: 1em/1.5  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-family:"Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	line-height: 1.5;
 }
 
 body {
