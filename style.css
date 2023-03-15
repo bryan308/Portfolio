@@ -9,10 +9,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
 
 body {
+    overflow-x: hidden;
+    font-size: 1.2rem;
     font-family: 'Sora', sans-serif;
     background: rgb(37, 36, 34, 0.1);
-    font-size: 1.2rem;
-    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -29,34 +29,34 @@ body {
     background-color: #ff4800;
     border-radius: 10px;
 }
-  
+        
 ::-webkit-scrollbar-track {
     background-color: #fffcf200;
 }
 /* Style for cursor */
 .cursor {
+    position: absolute;
     width: 20px;
     height: 20px;
     border: 1px solid #ff4800;
     border-radius: 50%;
-    position: absolute;
+    pointer-events: none;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
     animation: cursorAnim 0.5s infinite alternate;
-    pointer-events: none;
-    z-index: 999999999999999999999999999999;
+    z-index: 999;
 }
-  
+
 .cursor::after {
     content: "";
-    width: 20px;
-    height: 20px;
     position: absolute;
-    border: 8px solid #ffa988;
-    border-radius: 50%;
-    opacity: 0.5;
     top: -8px;
     left: -8px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    border: 8px solid #ffa988;
+    border-radius: 50%;
     animation: cursorAnim2 0.5s infinite alternate;
 }
   
@@ -92,8 +92,8 @@ body {
 }
 
 .cursor.expand {
-    animation: cursorAnim3 0.5s forwards;
     border: 1px solid red;
+    animation: cursorAnim3 0.5s forwards;
 }
 
 @media screen and (max-width: 600px) {
@@ -109,7 +109,7 @@ body {
     left: 0;
     width: 100%;
     height: 7rem;
-    z-index: 999999;
+    z-index: 99;
     background-color: rgba(var(--navbar-bg),.7);
     -webkit-backdrop-filter: blur(8px);
     -moz-backdrop-filter: blur(8px);
@@ -128,18 +128,18 @@ body {
 }
 
 .navbar-container {
-    position: relative;
-    width: 100%;
-    display: -moz-box;
     display: flex;
-    margin: 0 auto;
-    -moz-box-align: center;
+    display: -moz-box;
+    position: relative;
     align-items: center;
-    height: 100%;
-    padding: 0px 100px;
-    font-size: 1.2rem;
-    font-weight: 300;
     letter-spacing: .6px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px 100px;
+    -moz-box-align: center;
     -webkit-backdrop-filter: blur(100px);
     -moz-backdrop-filter: blur(100px);
     -ms-backdrop-filter: blur(100px);
@@ -220,9 +220,9 @@ body {
   
 .intro-content {
     display: flex;
+    height: 100%;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
   
 .intro-text {
@@ -231,8 +231,8 @@ body {
 }
   
 .intro-subtitle h4 {
-    color: #252422;
     font-weight: 300;
+    color: #252422;
     letter-spacing: 2px;
 }
   
@@ -241,9 +241,9 @@ body {
 }
 
 .intro-title h1 {
-    color: #252422;
     font-size: 50px;
     font-weight: 700;
+    color: #252422;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.433);
 }
   
@@ -263,8 +263,8 @@ body {
   
 .intro-actions {
     display: flex;
-    justify-content: flex-end;
     margin-top: 10px;
+    justify-content: flex-end;
 }
 
 .social-links a {
@@ -292,8 +292,9 @@ body {
     top: 0;
     left: 0;
     border: 2px solid #252422;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
     -webkit-transform: rotate(-1.5deg);
     -moz-transform: rotate(-1.5deg);
     -ms-transform: rotate(-1.5deg);
@@ -301,7 +302,6 @@ body {
     transform: rotate(-1.5deg);
     border-radius: 2rem;
     z-index: 1;
-    pointer-events: none;
 }
 
 .social-links a:hover {
@@ -321,20 +321,20 @@ body {
 
 .resume {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .resume_dl {
+    position: relative;
     font-family: 'Sora', sans-serif;
     font-weight: 500;
-    position: relative;
     color: rgba(255, 255, 255, 0.907);
     background: #ff6224;
+    border: none;
+    border-radius: 15px;
     padding: 15px;
     margin: 0 10px;
-    border-radius: 15px;
-    border: none;
     -webkit-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
     -moz-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
     -ms-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
@@ -347,17 +347,17 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 1rem;
     border: 2px solid #ff672b;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
     -webkit-transform: rotate(-1.5deg);
     -moz-transform: rotate(-1.5deg);
     -ms-transform: rotate(-1.5deg);
     -o-transform: rotate(-1.5deg);
     transform: rotate(-1.5deg);
-    border-radius: 1rem;
     z-index: 1;
-    pointer-events: none;
 }
 
 .resume_dl:hover {
@@ -419,9 +419,9 @@ body {
         font-size: 30px;
     }
     .intro-actions .social-links a {
-        font-size: 20px;
-        height: 40px;
         width: 40px;
+        height: 40px;
+        font-size: 20px;
     }
 }
 
@@ -433,23 +433,23 @@ body {
         width: auto;
     }
     .intro-content .intro-actions {
-        justify-content: center;
         margin-top: 0px;
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 768px) {
     .social-links {
-        display: block;
         margin: auto;
+        display: block;
     }
     .intro-subtitle,
     .intro-title {
         text-align: center;
     }
     .intro-text .intro-actions {
-        justify-content: flex-end;
         flex-direction: column;
+        justify-content: flex-end;
     }
     .resume {
         margin: 15px 0;
@@ -459,13 +459,13 @@ body {
 /* Featured page */
 #featured {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1083%26quot%3b)' fill='none'%3e%3cpath d='M -693.203250332909%2c190 C -621.2%2c226.6 -477.2%2c382 -333.203250332909%2c373 C -189.2%2c364 -117.2%2c133.4 26.796749667090978%2c145 C 170.8%2c156.6 242.8%2c408.6 386.796749667091%2c431 C 530.8%2c453.4 602.8%2c275.2 746.796749667091%2c257 C 890.8%2c238.8 968.16%2c336.8 1106.796749667091%2c340 C 1245.44%2c343.2 1373.36%2c286.4 1440%2c273' stroke='rgba(255%2c 154%2c 113%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -279.7802552960063%2c304 C -207.78%2c278.4 -63.78%2c178.6 80.2197447039937%2c176 C 224.22%2c173.4 296.22%2c305.8 440.2197447039937%2c291 C 584.22%2c276.2 656.22%2c78.6 800.2197447039937%2c102 C 944.22%2c125.4 1016.22%2c385.2 1160.2197447039937%2c408 C 1304.22%2c430.8 1464.26%2c207 1520.2197447039937%2c216 C 1576.18%2c225 1456.04%2c405.6 1440%2c453' stroke='rgba(255%2c 154%2c 113%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -0.40760318220173986%2c351 C 71.59%2c320.2 215.59%2c196.2 359.59239681779826%2c197 C 503.59%2c197.8 575.59%2c376.6 719.5923968177983%2c355 C 863.59%2c333.4 935.59%2c80.6 1079.5923968177983%2c89 C 1223.59%2c97.4 1295.59%2c383.6 1439.5923968177983%2c397 C 1583.59%2c410.4 1799.51%2c152.2 1799.5923968177983%2c156 C 1799.67%2c159.8 1511.92%2c364 1440%2c416' stroke='rgba(255%2c 154%2c 113%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -189.09209167984804%2c444 C -117.09%2c380 26.91%2c150.4 170.90790832015196%2c124 C 314.91%2c97.6 386.91%2c295.8 530.9079083201519%2c312 C 674.91%2c328.2 746.91%2c203.2 890.9079083201519%2c205 C 1034.91%2c206.8 1106.91%2c314.4 1250.907908320152%2c321 C 1394.91%2c327.6 1573.09%2c208.6 1610.907908320152%2c238 C 1648.73%2c267.4 1474.18%2c422 1440%2c468' stroke='rgba(255%2c 154%2c 113%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1083'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    margin: auto;
+    height: auto;
+    display: block;
     background-size: cover;
     background-position: center;
     font-family: 'Sora', sans-serif;
     color: rgb(255, 255, 255, 0.9);
-    height: auto;
-    display: block;
-    margin: auto;
 }
 
 .featured-title h2 {
@@ -550,11 +550,11 @@ body {
 .featured-container {
     font-family: 'Sora', sans-serif;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    place-items: center;
     grid-gap: 100px;
+    place-items: center;
     padding-bottom: 150px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .featured-card {
@@ -593,10 +593,10 @@ body {
     right: 0;
     width: 88%;
     height: 88%;
-    background: #252422;
     border-radius: 15px;
-    z-index: -1;
+    background: #252422;
     transition: all 150ms ease;
+    z-index: -1;
 }
   
 .featured-card:hover > .card-metrics {
@@ -607,8 +607,8 @@ body {
 .featured-card:hover:before {
     width: 100%;
     height: 100%;
-    transition: all 300ms ease;
     transition-delay: 50ms;
+    transition: all 300ms ease;
     background-image: linear-gradient(-90deg, #2f2e2b 10%, #872600 100%);
 }
   
@@ -616,9 +616,9 @@ body {
     height: 80%;
     width: 100%;
     object-fit: cover;
-    object-position: top;
     border-radius: 10px;
     margin-bottom: .5rem;
+    object-position: top;
 }
 
 .featured-content {
@@ -1077,9 +1077,6 @@ body {
 @media screen and (max-width: 480px) {
     .project .project-title {
         margin: 0px;
-    }
-    .project .project-title h2 {
-        font-size: 30px;
     }
     .project .project-title h4 {
         font-size: 15px;
@@ -1546,9 +1543,6 @@ body {
 @media screen and (max-width: 480px) {
     .about-item .about-content h1 {
         font-size: 1.5rem;
-    }
-    .about .about-title h2 {
-        font-size: 30px;
     }
     .web-langs {
         -webkit-gap: 50px;
