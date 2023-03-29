@@ -1761,12 +1761,6 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .contact .contact-title h2 {
-        font-size: 30px;
-    }
-}
-
 @media screen and (max-width: 600px) {
     .contact {
         margin: 0px 20px;
