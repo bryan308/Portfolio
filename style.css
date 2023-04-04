@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-1: #ff4800;
+    --color-2: #ff48002d;
+    --color-3: #252422;
+    --background-color-: #cacaca1a;
+    --tag-1: #ff4800;
+    --tag-2: #0088ff;
+    --tag-3: #ffff00;
+    --tag3-border: #e7a42b;
+    --tag1bg-color: #ff48002d;
+    --tag2bg-color: #0088ff2b;
+    --tag3bg-color: #ffff0019;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
@@ -12,7 +26,7 @@ body {
     overflow-x: hidden;
     font-size: 1.2rem;
     font-family: 'Sora', sans-serif;
-    background: rgb(37, 36, 34, 0.1);
+    background: var(--background-color-);
 }
 
 ::-webkit-scrollbar {
@@ -21,12 +35,12 @@ body {
 }
   
 ::-webkit-scrollbar-thumb {
-    background: #252422;
+    background: var(--color-2);
     border-radius: 10px;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #ff4800;
+    background-color: var(--color-1);
     border-radius: 10px;
 }
         
@@ -38,7 +52,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 1px solid #ff4800;
+    border: 1px solid var(--color-1);
     border-radius: 50%;
     pointer-events: none;
     transition-duration: 200ms;
@@ -179,7 +193,7 @@ body {
 }
 
 .navbar-item a:hover {
-    color: rgb(37, 36, 34);
+    color: rgb(255, 120, 67);
 }
 
 @media screen and (max-height:400px) {
@@ -232,23 +246,23 @@ body {
   
 .intro-subtitle h4 {
     font-weight: 300;
-    color: #252422;
+    color: var(--color-3);
     letter-spacing: 2px;
 }
   
 .intro-subtitle h4 span {
-    color: #ff4800;
+    color: var(--color-1);
 }
 
 .intro-title h1 {
     font-size: 50px;
     font-weight: 700;
-    color: #252422;
+    color: var(--color-3);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.433);
 }
   
 .intro-title h1 span {
-    color: #ff4800;
+    color: var(--color-1);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.0);
 }
 
@@ -273,7 +287,7 @@ body {
     width: 50px;
     height: 50px;
     text-decoration: none;
-    background: #252422;
+    background: var(--color-3);
     border-radius: 50%;
     color: #fff;
     text-align: center;
@@ -291,7 +305,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid #252422;
+    border: 2px solid var(--color-3);
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -306,7 +320,7 @@ body {
 
 .social-links a:hover {
     color: #fff;
-    background-color: #252422;
+    background-color: var(--color-3);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -469,7 +483,7 @@ body {
 }
 
 .featured-title h2 {
-    color: #252422;
+    color: var(--color-3);
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -488,7 +502,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    border-top: 2px solid #ff4800;
+    border-top: 2px solid var(--color-1);
 }
   
 .featured-title h2 span::after {
@@ -497,7 +511,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #ff4800;
+    border-bottom: 2px solid var(--color-1);
 }
 
 @media screen and (max-width: 320px) {
@@ -594,7 +608,7 @@ body {
     width: 88%;
     height: 88%;
     border-radius: 15px;
-    background: #252422;
+    background: var(--color-3);
     transition: all 150ms ease;
     z-index: -1;
 }
@@ -634,7 +648,7 @@ body {
 }
 
 .featured-text p {
-    color: #ff4800;
+    color: var(--color-1);
 }
 
 .featured-text > .title {
@@ -665,10 +679,10 @@ body {
 .featured-tag1 {
     display: flex;
     align-items: center;
-    color: #ff4800;
-    background: #ff48002d;
+    color: var(--tag-1);
+    background: var(--tag1bg-color);
     padding-right: 10px;
-    border: 1px solid #ff4800;
+    border: 1px solid var(--tag-1);
     border-radius: 5px;
     margin-bottom: 5px;
     max-height: 20px;
@@ -677,10 +691,10 @@ body {
 .featured-tag2 {
     display: flex;
     align-items: center;
-    color: #0088ff;
-    background: #0088ff2b;
+    color: var(--tag-2);
+    background: var(--tag2bg-color);
     padding-right: 10px;
-    border: 1px solid #0088ff;
+    border: 1px solid var(--tag-2);
     border-radius: 5px;
     margin-bottom: 5px;
     max-height: 20px;
@@ -689,10 +703,10 @@ body {
 .featured-tag3 {
     display: flex;
     align-items: center;
-    color: #ffff00;
-    background: #ffff0019;
+    color: var(--tag-3);
+    background: var(--tag3bg-color);
     padding-right: 10px;
-    border: 1px solid #e7a42b;
+    border: 1px solid var(--tag3-border);
     border-radius: 5px;
     margin-bottom: 5px;
     max-height: 20px;
@@ -747,7 +761,7 @@ body {
          -o-transition: background-position 0s ease;
             transition: background-position 0s ease;
 }
-  
+
 .featured-tag1:hover,
 .featured-tag2:hover,
 .featured-tag3:hover {
@@ -766,7 +780,7 @@ body {
     height: auto;
     text-decoration: none;
     color: #fff;
-    background: #252422;
+    background: var(--color-3);
     border: 1px solid #464544;
     padding: 5px 10px;
     border-radius: 5px;
@@ -779,9 +793,9 @@ body {
 }
 
 .featured-content a:hover {
-    color: #252422;
-    background: linear-gradient(-60deg, #ff4800 0%, #f09819 100%);
-    border: 1px solid #ff4800;
+    color: var(--color-3);
+    background: linear-gradient(-60deg, var(--color-1) 0%, #f09819 100%);
+    border: 1px solid var(--color-1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -820,7 +834,7 @@ body {
 
 .shape-divide1 .shape-fill {
     filter: brightness(100%) invert(0);
-    fill: #252422;
+    fill: var(--color-3);
 }
 /* Project Page */
 .project {
@@ -848,7 +862,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    border-top: 2px solid #ff4800;
+    border-top: 2px solid var(--color-1);
 }
   
 .project-title h2 span::after {
@@ -857,12 +871,12 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #ff4800;
+    border-bottom: 2px solid var(--color-1);
 }
   
 .project-title h4 {
     text-align: center;
-    color: #ff4800;
+    color: var(--color-1);
     font-size: 2rem;
     font-weight: 400;
 }
@@ -890,7 +904,7 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     font-size: 20px;
-    color: #ff4800;
+    color: var(--color-1);
     margin-bottom: 20px;
 }
   
@@ -913,7 +927,7 @@ body {
     width: 40px;
     height: 40px;
     text-decoration: none;
-    background: #ff4800;
+    background: var(--color-1);
     padding: 0px 15px;
     border-radius: 20px;
     float: right;
@@ -946,7 +960,7 @@ body {
     justify-content: center;
     min-height: auto;
     min-width: auto;
-    background-color: #252422;
+    background-color: var(--color-3);
     padding: 16px 24px 16px 24px;
     border-radius: 22px;
     z-index: 2;
@@ -965,33 +979,33 @@ body {
 .tag1 {
     display: flex;
     align-items: center;
-    color: #ff4800;
-    background: #ff48002d;
+    color: var(--color-1);
+    background: var(--color-2);
     padding-right: 10px;
-    border: 1px solid #ff4800;
-    border-radius: 20px;
+    border: 1px solid var(--color-1);
+    border-radius: 5px;
     margin-right: 10px;
 }
 
 .tag2 {
     display: flex;
     align-items: center;
-    color: #0088ff;
-    background: #0088ff2b;
+    color: var(--tag-2);
+    background: var(--tag2bg-color);
     padding-right: 10px;
-    border: 1px solid #0088ff;
-    border-radius: 20px;
+    border: 1px solid var(--tag-2);
+    border-radius: 5px;
     margin-right: 10px;
 }
 
 .tag3 {
     display: flex;
     align-items: center;
-    color: #ffff00;
-    background: #ffff0019;
+    color: var(--tag-3);
+    background: var(--tag3bg-color);
     padding-right: 10px;
-    border: 1px solid #e7a42b;
-    border-radius: 20px;
+    border: 1px solid var(--tag3-border);
+    border-radius: 5px;
     margin-right: 10px;
 }
 
@@ -1122,7 +1136,7 @@ body {
 /* About Page */
 .about {
     font-family: 'Sora', sans-serif;
-    background: #252422;
+    background: var(--color-3);
     color: rgb(255, 255, 255, 0.9);
     height: auto;
     padding: 100px 0px;
@@ -1165,7 +1179,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    border-top: 2px solid #ff4800;
+    border-top: 2px solid var(--color-1);
 }
   
 .about-title h2 span::after {
@@ -1174,7 +1188,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #ff4800;
+    border-bottom: 2px solid var(--color-1);
 }
   
 .about-container {
@@ -1206,7 +1220,7 @@ body {
 }
   
 .about-content h1 span {
-    color: #ff4800;
+    color: var(--color-1);
 }
   
 .about-content p {
@@ -1291,7 +1305,7 @@ body {
   
 .timeline-content ul li:before {
     content: '';
-    background-color: #ff4800;
+    background-color: var(--color-1);
     position: absolute;
     bottom: 0;
     top: 0px;
@@ -1308,7 +1322,7 @@ body {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #ff4800;
+    background-color: var(--color-1);
 }
   
 .about-actions {
@@ -1335,7 +1349,7 @@ body {
     width: 50px;
     height: 50px;
     text-decoration: none;
-    background: #ff4800;
+    background: var(--color-1);
     border-radius: 50%;
     color: #fff;
     text-align: center;
@@ -1353,7 +1367,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid #ff4800;
+    border: 2px solid var(--color-1);
     height: 100%;
     width: 100%;
     -webkit-transform: rotate(-1.5deg);
@@ -1368,7 +1382,7 @@ body {
   
 .social-link a:hover {
     color: #fff;
-    background-color: #ff4800;
+    background-color: var(--color-1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -1531,7 +1545,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    border-top: 2px solid #ff4800;
+    border-top: 2px solid var(--color-1);
 }
   
 .contact-title h2 span::after {
@@ -1540,7 +1554,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #ff4800;
+    border-bottom: 2px solid var(--color-1);
 }
   
 .contact-item p {
@@ -1553,7 +1567,7 @@ body {
     text-align: center;
     font-family: 'Source Code Pro', monospace;
     text-decoration: none;
-    color: #ff4800;
+    color: var(--color-1);
     font-weight: 500;
     padding: 30px;
     margin: 0;
@@ -1576,7 +1590,7 @@ body {
     height: auto;
     text-decoration: none;
     color: #fff;
-    background: #252422;
+    background: var(--color-3);
     border: 1px solid #ffffff;
     margin: 10px 10px 0px 0px;
     padding: 5px 15px;
@@ -1589,9 +1603,9 @@ body {
 }
   
 .contact-button a:hover {
-    color: #252422;
-    background: linear-gradient(-60deg, #ff4800 0%, #f09819 100%);
-    border: 1px solid #ff4800;
+    color: var(--color-3);
+    background: linear-gradient(-60deg, var(--color-1) 0%, #f09819 100%);
+    border: 1px solid var(--color-1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -1601,7 +1615,7 @@ body {
   
 .alert {
     padding: 20px;
-    border: 2px solid #ff4800;
+    border: 2px solid var(--color-1);
     color: #000000;
     backdrop-filter: blur(8px);
     margin-bottom: 15px;
