@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-tl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -223,44 +223,21 @@
   </svg>
   <!--***********************************ABOUT PAGE***********************************-->
   <section class="about" id="about">
-    <div class="web-langs">
-      <div class="logo logo1">
-        <img src="images/techlogo/HTML5.png">
+    <div class="logos">
+      <div class="logos-slide">
+          <img src="images/techlogo/HTML5.png" alt="HTML5">
+          <img src="images/techlogo/CSS3.png" alt="CSS3">
+          <img src="images/techlogo/JS.png" alt="JavaScript">
+          <img src="images/techlogo/sass.png" alt="sass">
+          <img src="images/techlogo/react.png" alt="ReactJS">
+          <img src="images/techlogo/php.png" alt="PHP">
+          <img src="images/techlogo/python.png" alt="Python">
+          <img src="images/techlogo/Tailwind.png" alt="Tailwind">
+          <img src="images/techlogo/C.png" alt="C">
+          <img src="images/techlogo/Csharp.png" alt="C#">
+          <img src="images/techlogo/C++.png" alt="C++">
       </div>
-      <div class="logo logo2">
-        <img src="images/techlogo/CSS3.png">
-      </div>
-      <div class="logo logo3">
-        <img src="images/techlogo/JS.png">
-      </div>
-      <div class="logo logo4">
-        <img src="images/techlogo/sass.png">
-      </div>
-      <div class="logo logo5">
-        <img src="images/techlogo/react.png">
-      </div>
-      <div class="logo logo6">
-        <img src="images/techlogo/python.png">
-      </div>
-      <div class="logo logo7">
-        <img src="images/techlogo/php.png">
-      </div>
-      <div class="logo logo8">
-        <img src="images/techlogo/Tailwind.png">
-      </div>
-      <div class="logo logo9">
-        <img src="images/techlogo/Typescript.png">
-      </div>
-      <div class="logo logo10">
-        <img src="images/techlogo/VueJs.png">
-      </div>
-      <div class="logo logo11">
-        <img src="images/techlogo/NuxtJs.png">
-      </div>
-      <div class="logo logo12">
-        <img src="images/techlogo/logo.png">
-      </div>
-    </div>
+  </div>
     <div class="about-title" data-aos="fade-up" data-aos-duration="1000">
       <h2>A<span>bou</span>t</h2>
     </div>
@@ -337,5 +314,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
     </script>    
 </html>
