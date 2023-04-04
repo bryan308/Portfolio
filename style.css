@@ -1418,10 +1418,6 @@ body {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(37, 36, 34));
 }
   
-.logos:hover .logos-slide {
-    animation-play-state: paused;
-}
-  
 .logos-slide {
     display: inline-block;
     animation: 35s slide infinite linear;
