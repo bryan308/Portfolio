@@ -57,32 +57,6 @@ menuIcon.addEventListener("click", () => {
   navbarNav.classList.toggle("show");
 });
 
-// Get a reference to the web-langs element
-const webLangs = document.querySelector(".web-langs");
-
-// Set the animation play state to paused when the page loads
-webLangs.style.animationPlayState = "paused";
-
-// Add a hover event listener to the web-langs element
-webLangs.addEventListener("mouseover", () => {
-  // Set the animation play state to running when the user hovers over the element
-  webLangs.style.animationPlayState = "running";
-});
-
-webLangs.addEventListener("mouseout", () => {
-  // Set the animation play state to paused when the user moves the cursor away from the element
-  webLangs.style.animationPlayState = "paused";
-});
-
-// Get a reference to the logo elements
-const logos = document.querySelectorAll(".logo1, .logo2, .logo3, .logo4, .logo5, .logo6, .logo7, .logo8, .logo9, .logo10, .logo11, .logo12");
-
-// Set the top and left properties of each logo element to a random value
-logos.forEach((logo) => {
-  logo.style.top = `${Math.random() * 100}%`;
-  logo.style.left = `${Math.random() * 100}%`;
-});
-
 var alertBoxVisible = false;
 function sendMessage() {
     if(alertBoxVisible) return;
