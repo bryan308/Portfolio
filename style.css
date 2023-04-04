@@ -1459,6 +1459,10 @@ body {
     .about-item .about-content h1 {
         font-size: 1.5rem;
     }
+    .logos:before,
+    .logos:after {
+    width: 100px;
+    }
 }
 
 @media screen and (max-width: 600px) {
