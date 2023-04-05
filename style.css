@@ -21,7 +21,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
     overflow-x: hidden;
@@ -143,7 +142,7 @@ body {
 }
 
 .navbar-container {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora', sans-serif;
     display: flex;
     position: relative;
     align-items: center;
@@ -162,10 +161,9 @@ body {
     backdrop-filter: blur(50px);
 }
 
-.nav-name a {
-    color: rgb(255, 72, 0);
-    text-decoration: none;
-    font-weight: 500;
+.nav-logo img {
+    height: 50px;
+    width: 50px;
 }
 
 .navbar-nav {
@@ -203,11 +201,7 @@ body {
     }
 }
 
-@media screen and (max-width:320px) {
-    .navbar-container .nav-name a {
-        font-size: .8rem;
-    }
-}
+@media screen and (max-width:320px) {}
 
 @media screen and (max-width: 600px) {
     .navbar-nav {
@@ -342,7 +336,7 @@ body {
 
 .resume_dl {
     position: relative;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.97);
     background: #ff6224;
