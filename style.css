@@ -344,7 +344,7 @@ body {
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.907);
+    color: rgba(255, 255, 255, 0.97);
     background: #ff6224;
     border: none;
     border-radius: 15px;
@@ -365,14 +365,9 @@ body {
     left: 0;
     border-radius: 1rem;
     border: 2px solid #ff672b;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 102%;
     pointer-events: none;
-    -webkit-transform: rotate(-1.5deg);
-    -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-    -o-transform: rotate(-1.5deg);
-    transform: rotate(-1.5deg);
     z-index: 1;
 }
 
@@ -1169,6 +1164,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
+    padding: 0 0 50px 0;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.433);
 }
   
@@ -1334,45 +1330,85 @@ body {
     margin-top: 30px;
 }
   
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+  
+.social-content {
+    font-size: 3rem;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+  
+.social-content:hover {
+    color: #fff;
+}
+  
+.social-content .awkward {
+    color: #ff480098;
+    position: absolute;
+    top: 0%;
+    right: -250%;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all .3s ease-in-out;
+}
+  
+.social-content:hover .awkward {
+    opacity: 1;
+    right: -200%;
+    transition: all .3s ease-in-out 0.3s;
+}
+  
+.social-content:hover .not-awkward {
+    transform: translateX(130px);
+    transition: all .3s ease-in-out;
+}
+
 .fa {
     color: #fff;
     font-size: 24px;
 }
-  
-.social-link {
+
+.social-icons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
+    position: relative;
 }
   
-.social-link a {
-    display: inline-block;
+.social-icons a {
+    display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 50px;
     height: 50px;
-    text-decoration: none;
-    background: var(--color-1);
+    background: #ff4800;
     border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
     margin: 0 10px;
-    -webkit-transition: color 0.2s, background-color 0.2s, -webkit-transform 0.2s, filter 0.2s;
-    -moz-transition: color 0.2s, background-color 0.2s, -moz-transform 0.2s, filter 0.2s;
-    -ms-transition: color 0.2s, background-color 0.2s, -ms-transform 0.2s, filter 0.2s;
-    -o-transition: color 0.2s, background-color 0.2s, -o-transform 0.2s, filter 0.2s;
-    transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
+    transition: all 0.3s ease-in-out;
 }
   
-.social-link a::after {
+.social-icons a::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid var(--color-1);
-    height: 100%;
+    border: 2px solid #ff4800;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
     -webkit-transform: rotate(-1.5deg);
     -moz-transform: rotate(-1.5deg);
     -ms-transform: rotate(-1.5deg);
@@ -1380,12 +1416,11 @@ body {
     transform: rotate(-1.5deg);
     border-radius: 2rem;
     z-index: 1;
-    pointer-events: none;
 }
-  
-.social-link a:hover {
+
+.social-icons a:hover {
     color: #fff;
-    background-color: var(--color-1);
+    background-color: #ff4800;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -1397,6 +1432,29 @@ body {
     -o-transition: -o-transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
     transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
 }
+  
+.social-icons i {
+    font-size: 24px;
+    color: #333;
+}
+  
+.social-icons:hover ~ .social-content .awkward {
+    opacity: 1;
+    right: -200%;
+    transition: all .3s ease-in-out;
+}
+  
+.social:hover .social-content .awkward {
+    opacity: 1;
+    right: -200%;
+    transition: all .3s ease-in-out;
+}
+  
+.social:hover .not-awkward {
+    transform: translateX(130px);
+    transition: all .3s ease-in-out;
+}
+
 /* Style for moving icons */
 @keyframes slide {
     from {
@@ -1464,21 +1522,20 @@ body {
     }
 }
 
-@media screen and (max-width:320px) {
-    .about-actions .social-link a {
-        font-size: 20px;
-        height: 40px;
-        width: 40px;
-    }
-}
-
 @media screen and (max-width: 480px) {
     .about-item .about-content h1 {
         font-size: 1.5rem;
     }
+
     .logos:before,
     .logos:after {
-    width: 100px;
+        width: 100px;
+    }
+
+    .logos-slide img {
+        height: 70px;
+        width: 70px;
+        padding: 10px;
     }
 }
 
@@ -1488,6 +1545,13 @@ body {
     }
     .timeline-content .about-list h4 {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-actions .social .social-content {
+        opacity: 0;
+        height: 0;
     }
 }
 
