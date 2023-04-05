@@ -21,11 +21,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
     overflow-x: hidden;
     font-size: 1.2rem;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: var(--background-color-);
 }
 
@@ -122,7 +123,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 7rem;
+    height: 5rem;
     z-index: 99;
     background-color: rgba(var(--navbar-bg),.7);
     -webkit-backdrop-filter: blur(8px);
@@ -142,8 +143,8 @@ body {
 }
 
 .navbar-container {
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    display: -moz-box;
     position: relative;
     align-items: center;
     letter-spacing: .6px;
@@ -154,11 +155,11 @@ body {
     margin: 0 auto;
     padding: 0px 100px;
     -moz-box-align: center;
-    -webkit-backdrop-filter: blur(100px);
-    -moz-backdrop-filter: blur(100px);
-    -ms-backdrop-filter: blur(100px);
-    -o-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(50px);
+    -moz-backdrop-filter: blur(50px);
+    -ms-backdrop-filter: blur(50px);
+    -o-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
 }
 
 .nav-name a {
@@ -341,7 +342,7 @@ body {
 
 .resume_dl {
     position: relative;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.907);
     background: #ff6224;
@@ -349,6 +350,7 @@ body {
     border-radius: 15px;
     padding: 15px;
     margin: 0 10px;
+    letter-spacing: 1px;
     -webkit-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
     -moz-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
     -ms-transition: color 0.2s, background-color 0.2s, transform 0.2s, filter 0.2s;
@@ -649,6 +651,7 @@ body {
 
 .featured-text p {
     color: var(--color-1);
+    font-weight: 400;
 }
 
 .featured-text > .title {
@@ -896,13 +899,13 @@ body {
 }
   
 .card-content h1 {
-    color: rgb(255, 255, 255, 0.9);
-    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 }
   
 .card-content h5 {
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     color: var(--color-1);
     margin-bottom: 20px;
@@ -1216,7 +1219,7 @@ body {
  
 .about-content h1 {
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 2rem;
 }
   
 .about-content h1 span {
@@ -1287,11 +1290,11 @@ body {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-    -webkit-transition: -webkit-transform 1s cubic-bezier(0.18, 0.89, 0.53, 1.52);
-    -moz-transition: -moz-transform 1s cubic-bezier(0.18, 0.89, 0.53, 1.52);
-    -ms-transition: -ms-transform 1s cubic-bezier(0.18, 0.89, 0.53, 1.52);
-    -o-transition: -o-transform 1s cubic-bezier(0.18, 0.89, 0.53, 1.52);
-    transition: transform 1s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -webkit-transition: -webkit-transform .5s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -moz-transition: -moz-transform .5s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -ms-transition: -ms-transform .5s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    -o-transition: -o-transform .5s cubic-bezier(0.18, 0.89, 0.53, 1.52);
+    transition: transform .5s cubic-bezier(0.18, 0.89, 0.53, 1.52);
 }
   
 .about-list h4:hover,
