@@ -90,4 +90,6 @@ body::before {
 
 .not_found a:hover {
     color: #dcdcdc;
+    transform: scale(1.06);
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.53, 1.52);
 }
