@@ -1,19 +1,14 @@
 let prevScrollpos = window.pageYOffset;
 
-// Add event listener for window scroll to show/hide navbar
 window.addEventListener('scroll', function() {
-  // Get current scroll position
   let currentScrollPos = window.pageYOffset;
-  // If scrolling up, show navbar
   if (prevScrollpos > currentScrollPos) {
     navbar.style.transform = 'translateY(0)';
     navbar.style.transition = 'transform 0.3s ease-in';
-  // If scrolling down, hide navbar
   } else {
     navbar.style.transform = 'translateY(-100%)';
     navbar.style.transition = 'transform 0.3s ease-out';
   }
-  // Update previous scroll position
   prevScrollpos = currentScrollPos;
 });
 
@@ -27,10 +22,16 @@ navbarLinks.forEach(link => {
     const targetElement = document.querySelector(targetId);
     const navbarHeight = navbar.offsetHeight;
     const targetPosition = targetElement.offsetTop - navbarHeight;
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
+    const duration = 1000;
+    const delay = 100;
+    setTimeout(() => {
+      window.scroll({
+        top: targetPosition,
+        left: 0,
+        behavior: 'smooth',
+        duration: duration
+      });
+    }, delay);
   });
 });
 
@@ -48,33 +49,3 @@ document.addEventListener('click', () => {
     cursor.classList.remove("expand");
   }, 500);
 });
-
-const menuIcon = document.getElementById("menu-icon");
-const navbarNav = document.querySelector(".navbar-nav");
-
-// Add event listener for menu icon click to toggle navbar
-menuIcon.addEventListener("click", () => {
-  navbarNav.classList.toggle("show");
-});
-
-var alertBoxVisible = false;
-function sendMessage() {
-    if(alertBoxVisible) return;
-
-    var alertBox = document.createElement("div");
-    alertBox.className = "alert";
-    var message = document.createTextNode("This button is not yet functional, sorry for inconvenience.");
-    alertBox.appendChild(message);
-    var closeButton = document.createElement("span");
-    closeButton.className = "closebtn";
-    closeButton.innerHTML = "&times;";
-    alertBox.appendChild(closeButton);
-    document.body.appendChild(alertBox);
-    alertBox.style.opacity = "1";
-    alertBoxVisible = true;
-
-    closeButton.onclick = function() {
-        alertBox.parentNode.removeChild(alertBox);
-        alertBoxVisible = false;
-    }
-}
