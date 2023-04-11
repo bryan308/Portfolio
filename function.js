@@ -1,19 +1,21 @@
-let prevScrollpos = window.pageYOffset;
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+hamburger.addEventListener("click", mobileMenu);
 
-window.addEventListener('scroll', function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.transform = 'translateY(0)';
-    navbar.style.transition = 'transform 0.3s ease-in';
-  } else {
-    navbar.style.transform = 'translateY(-100%)';
-    navbar.style.transition = 'transform 0.3s ease-out';
-  }
-  prevScrollpos = currentScrollPos;
-});
+function mobileMenu() {
+hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
 
 const navbar = document.querySelector('.navbar');
-const navbarLinks = document.querySelectorAll('.navbar-item a');
+const navbarLinks = document.querySelectorAll('.nav-item .nav-link');
 
 navbarLinks.forEach(link => {
   link.addEventListener('click', e => {
@@ -22,11 +24,11 @@ navbarLinks.forEach(link => {
     const targetElement = document.querySelector(targetId);
     const navbarHeight = navbar.offsetHeight;
     const targetPosition = targetElement.offsetTop - navbarHeight;
-    const duration = 1000;
+    const duration = 20000;
     const delay = 100;
     setTimeout(() => {
       window.scroll({
-        top: targetPosition,
+        top: targetPosition + 150,
         left: 0,
         behavior: 'smooth',
         duration: duration
@@ -35,17 +37,35 @@ navbarLinks.forEach(link => {
   });
 });
 
-const cursor = document.querySelector('.cursor');
+document.addEventListener('DOMContentLoaded', function () {
+  var accordionHeaders = document.querySelectorAll('.accordion-header');
 
-document.addEventListener('mousemove', e => {
-  cursor.style.top = e.pageY - 10 + "px";
-  cursor.style.left = e.pageX - 10 + "px";
-});
+  accordionHeaders.forEach(function (header) {
+    header.addEventListener('click', function () {
+      // Close other active accordions
+      var activeAccordion = document.querySelector('.accordion-header.active');
+      if (activeAccordion && activeAccordion !== this) {
+        activeAccordion.classList.remove('active');
+        activeAccordion.querySelector('.accordion-icon').style.transform = '';
+        activeAccordion.nextElementSibling.style.maxHeight = null;
+      }
 
-document.addEventListener('click', () => {
-  cursor.classList.add("expand");
+      this.classList.toggle('active');
+      var accordionContent = this.nextElementSibling;
+      var accordionIcon = this.querySelector('.accordion-icon');
+      if (this.classList.contains('active')) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        accordionIcon.style.transform = 'rotate(180deg)';
+      } else {
+        accordionContent.style.maxHeight = null;
+        accordionIcon.style.transform = '';
+      }
+    });
+  });
+});  
 
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500);
-});
+const checkbox = document.querySelector("input[type='checkbox']");
+  
+  checkbox.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+})
