@@ -38,6 +38,7 @@
     --logo-image: url(images/weblogoL.png);
     --logo-bg: #e3e3e3d5;
     --dropdown-color: linear-gradient(270deg, rgba(255,167,99,1) 0%, rgba(126,190,222,1) 26%);
+    --bg-hamburger: #b8caccf9;
 }
 
 .dark {
@@ -50,6 +51,7 @@
     --logo-image: url(images/weblogoD.png);
     --logo-bg: #33333b;
     --dropdown-color: linear-gradient(270deg, rgba(52,111,177,1) 0%, rgba(46,49,105,1) 27%);
+    --bg-hamburger: #27272ff9;
 }
 
 body {
@@ -138,7 +140,7 @@ a {
         left: -100%;
         top: 80px;
         flex-direction: column;
-        background: var(--bg-color);
+        background: var(--bg-hamburger);
         width: 100%;
         border-radius: 10px;
         text-align: center;
@@ -149,11 +151,11 @@ a {
 
     .nav-menu.active {
         left: 0;
-        padding: 0;
+        padding: 100px 0 100px 0;
     }
 
     .nav-item {
-        margin: 40px 0;
+        margin: 20px 0;
     }
 
     .hamburger {
@@ -346,6 +348,77 @@ input:checked+.slider:before {
     }
 }
 
+/* Style for moving icons */
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+}
+  
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+  
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-color));
+    transition: .8s ease;
+}
+  
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-color));
+    transition: .8s ease;
+}
+  
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+  
+.logos-slide img {
+    height: 90px;
+    width: 90px;
+    margin: 0 40px;
+    padding: 20px;
+    overflow: hidden;
+    object-fit: contain;
+    background: var(--logo-bg);
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.5));
+    transition: .8s ease;
+}
+
+@media screen and (max-width: 480px) {
+    .logos:before,
+    .logos:after {
+        width: 100px;
+    }
+
+    .logos-slide img {
+        height: 70px;
+        width: 70px;
+        padding: 10px;
+    }
+}
+
+
 /* WHO page styles */
 .who {
     height: auto;
@@ -507,6 +580,8 @@ input:checked+.slider:before {
 }
 
 .accordion-content {
+    display: flex;
+    justify-content: space-evenly;
     max-height: 0;
     overflow: hidden;
     padding: 0 10px;
@@ -516,72 +591,41 @@ input:checked+.slider:before {
     transition: max-height 0.3s ease;
 }
 
-/* Style for moving icons */
-@keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+.accordion-content-text {
+    padding: 10px 0;
+    width: 70%;
 }
 
-.logos {
-    overflow: hidden;
-    padding: 60px 0;
-    white-space: nowrap;
-    position: relative;
-}
-  
-.logos:before,
-.logos:after {
-    position: absolute;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
-  
-.logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-color));
-    transition: .8s ease;
-}
-  
-.logos:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-color));
-    transition: .8s ease;
-}
-  
-.logos-slide {
-    display: inline-block;
-    animation: 35s slide infinite linear;
-}
-  
-.logos-slide img {
-    height: 90px;
-    width: 90px;
-    margin: 0 40px;
-    padding: 20px;
-    overflow: hidden;
-    object-fit: contain;
-    background: var(--logo-bg);
-    border-radius: 50%;
-    filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.5));
-    transition: .8s ease;
+.content-header {
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-    .logos:before,
-    .logos:after {
-        width: 100px;
-    }
+.content-header h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-right: 40px;
+}
 
-    .logos-slide img {
-        height: 70px;
-        width: 70px;
-        padding: 10px;
-    }
+.content-header a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.content-body {
+    text-align: justify;
+    padding: 10px;
+    width: 100%;
+}
+
+.school-logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.school-logo img {
+    height: 100px;
 }
