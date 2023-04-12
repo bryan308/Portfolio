@@ -459,6 +459,18 @@ input:checked+.slider:before {
     font-weight: 300;
 }
 
+.who-content-body p::before {
+    content: '<p>';
+    font-weight: 600;
+    color: var(--nav-text-color);
+}
+
+.who-content-body p::after {
+    content: '<p>';
+    font-weight: 600;
+    color: var(--nav-text-color);
+}
+
 .about-image {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -512,13 +524,13 @@ input:checked+.slider:before {
         max-height: 180px;
         max-width: 180px;
     }
-
-    .who-container-2 .accordion {
-        width: 70%;
-    }
 }
 
 @media screen and (max-width: 425px) {
+    .who-title h2 {
+        text-align: center;
+    }
+
     .about-image img {
         max-height: 150px;
         max-width: 150px;
@@ -568,10 +580,14 @@ input:checked+.slider:before {
     transition: 0.3s ease;
 }
 
-.accordion-title h4 {
+.accordion-title {
     font-family: var(--default-font-family);
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
+}
+
+.accordion-title span {
+    font-weight: 600;
 }
 
 .accordion-icon {
@@ -607,6 +623,10 @@ input:checked+.slider:before {
     margin-right: 40px;
 }
 
+.content-header i {
+    color: var(--nav-text-color);
+}
+
 .content-header a {
     font-size: 1.3rem;
     font-weight: 500;
@@ -620,12 +640,74 @@ input:checked+.slider:before {
     width: 100%;
 }
 
+.content-body::before {
+    content: '<p>';
+    font-weight: 600;
+    color: var(--nav-text-color);
+}
+
+.content-body::after {
+    content: '<p>';
+    font-weight: 600;
+    color: var(--nav-text-color);
+}
+
 .school-logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10px;
 }
 
 .school-logo img {
     height: 100px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .accordion {
+        width: 70%;
+    }
+
+    .content-header h4 {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .accordion {
+        width: 90%;
+    }
+
+    .content-header h4 {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .accordion-item .accordion-content {
+        flex-direction: column-reverse;
+    }
+    .content-header {
+        flex-direction: column;
+    }
+    .accordion-content-text {
+        width: 100%;
+    }
+
+    .content-text {
+        font-size: 15px;
+    }
+    .content-body {
+        padding: 0 35px;
+    }
+    .school-logo {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .content-body {
+        padding: 0 15px;
+    }
 }
