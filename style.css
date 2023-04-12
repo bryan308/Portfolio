@@ -438,6 +438,7 @@ input:checked+.slider:before {
     transform: translateX(var(--tx)) rotate(var(--r));
     transition: transform .1s linear;
     will-change: transform;
+    overflow: hidden;
 }
 
 .who-title h2 {
@@ -696,9 +697,7 @@ input:checked+.slider:before {
     .content-header h4 {
         margin-right: 10px;
     }
-}
 
-@media screen and (max-width: 426px) {
     .accordion-item .accordion-content {
         flex-direction: column-reverse;
     }
@@ -708,10 +707,9 @@ input:checked+.slider:before {
     .accordion-content-text {
         width: 100%;
     }
+}
 
-    .content-text {
-        font-size: 15px;
-    }
+@media screen and (max-width: 426px) {
     .content-body {
         padding: 0 35px;
     }
