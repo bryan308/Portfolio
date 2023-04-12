@@ -37,7 +37,7 @@
     --background-image: url(images/bgimgL.jpg);
     --logo-image: url(images/weblogoL.png);
     --logo-bg: #e3e3e3d5;
-    --dropdown-color: linear-gradient(270deg, rgba(255,167,99,1) 0%, rgba(126,190,222,1) 26%);
+    --dropdown-color: linear-gradient(270deg, #ffa763 0%, #7ebede 26%);
     --bg-hamburger: #b8caccf9;
 }
 
@@ -426,6 +426,20 @@ input:checked+.slider:before {
     padding: 3rem 0;
 }
 
+.who-content {
+    z-index: 2;
+}
+
+.box {
+    margin: 0 0 0 100px;
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(45deg, rgba(255,167,99,1) 0%, rgba(126,190,222,1) 100%);
+    transform: translateX(var(--tx)) rotate(var(--r));
+    transition: transform .1s linear;
+    will-change: transform;
+}
+
 .who-title h2 {
     color: var(--nav-text-color);
     padding-left: 2rem;
@@ -684,7 +698,7 @@ input:checked+.slider:before {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     .accordion-item .accordion-content {
         flex-direction: column-reverse;
     }
