@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="playground.css">
     <title>@cdrcangulo</title>
@@ -78,21 +79,33 @@
             <div class="who-container">
                 <div class="who-item">
                     <div class="who-content">
-                        <h3>Hi! I'm <span>Cedric Angulo</span></h3>
-                        <p>
-                        I developed a passion for computers and programming during a high school TLE course. As a senior ICT student, I am currently learning JavaScript and excited to master it and learn more languages. My interest in computers started in grade 10 when I was surprised to discover that everything on a website is made with HTML and CSS!
-                        </p>
-                        <h3>My Goal</h3>
-                        <p>
-                        I hope to study computer science or information technology in college and pursue a career in the tech industry. While I may not have all the experience or knowledge of a seasoned professional, I am eager to learn and grow in these fields. My goal is to make a positive impact on the world through my work in technology, and I am still considering which field will best allow me to achieve this goal.
-                        </p>
+                        <div class="who-content-title">
+                            <h3>
+                                Hi! I'm <span>Cedric Angulo</span>
+                            </h3>
+                        </div>
+                        <div class="who-content-body">
+                            <p>
+                                I developed a passion for computers and programming during a high school TLE course. As a senior ICT student, I am currently learning JavaScript and excited to master it and learn more languages. My interest in computers started in grade 10 when I was surprised to discover that everything on a website is made with HTML and CSS!
+                            </p>
+                        </div>
+                        <div class="who-content-title">
+                            <h3>
+                                My Goal
+                            </h3>
+                        </div>
+                        <div class="who-content-body">
+                            <p>
+                                I hope to study computer science or information technology in college and pursue a career in the tech industry. While I may not have all the experience or knowledge of a seasoned professional, I am eager to learn and grow in these fields. My goal is to make a positive impact on the world through my work in technology, and I am still considering which field will best allow me to achieve this goal.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/IMG_20191207_084513_1.jpg">
-                    <img src="images/IMG_20211211_190617.jpg">
-                    <img src="images/IMG_20221021_131147.png">
-                    <img src="images/IMG_20190423_044541.jpg">
+                    <img src="images/who-image1.jpg" alt="me1">
+                    <img src="images/who-image2.jpg" alt="me2">
+                    <img src="images/who-image3.jpg" alt="me3">
+                    <img src="images/who-image4.jpg" alt="me4">
                 </div>
             </div>
             <div class="who-container-2">
@@ -100,14 +113,14 @@
                     <div class="title">Education</div>
                     <div class="accordion-item">
                         <div class="accordion-header">
-                            <div class="accordion-title">Grade 12 TVL ICT (2022-Current)</div>
+                            <div class="accordion-title">Grade 12 TVL ICT <span>(2022-Current)</span></div>
                                 <i class="accordion-icon fa fa-angle-down"></i>
                         </div>
                             <div class="accordion-content">
                                 <div class="accordion-content-text">
                                     <div class="content-text">
                                         <div class="content-header">
-                                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Soledad, Santa Rosa, Nueva Ecija</h4>
+                                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Soledad, Santa Rosa, NE.</h4>
                                             <a href="https://www.facebook.com/profile.php?id=100064118198317" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> SRNHS</a>
                                         </div>
                                         <div class="content-body">
@@ -122,7 +135,7 @@
                     </div>
                     <div class="accordion-item">
                         <div class="accordion-header">
-                            <div class="accordion-title">Grade 11 TVL ICT (2021-2022)</div>
+                            <div class="accordion-title">Grade 11 TVL ICT <span>(2021-2022)</span></div>
                                 <i class="accordion-icon fa fa-angle-down"></i>
                         </div>
                         <div class="accordion-content">
@@ -138,13 +151,13 @@
                                 </div>
                             </div>
                             <div class="school-logo">
-                                <img src="images/ZNHS logo.png" alt="srnhs logo">
+                                <img src="images/ZNHS logo.png" alt="znhs logo">
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <div class="accordion-header">
-                            <div class="accordion-title">Grade 10 ICT  (2019-2020)</div>
+                            <div class="accordion-title">Grade 10 ICT  <span>(2019-2020)</span></div>
                                 <i class="accordion-icon fa fa-angle-down"></i>
                         </div>
                             <div class="accordion-content">
@@ -155,12 +168,12 @@
                                             <a href="https://www.facebook.com/snhs.extension" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> LNHS</a>
                                         </div>
                                         <div class="content-body">
-                                            My passion for computers began to flourish, setting me on a path to further explore the world of information technology.
+                                            In Grade 10 ICT at Locloc National High School, I discovered my passion for computers, igniting my curiosity to explore the captivating field of information technology.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="school-logo">
-                                    <img src="images/LNHS logo.png" alt="srnhs logo">
+                                    <img src="images/LNHS logo.png" alt="lnhs logo">
                                 </div>
                         </div>
                     </div>
@@ -171,6 +184,8 @@
 </body>
 <script src="function.js"></script>
 <script>
+      AOS.init();
+
     var copy = document.querySelector(".logos-slide").cloneNode(true);
     document.querySelector(".logos").appendChild(copy);
 </script>
