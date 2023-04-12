@@ -70,3 +70,29 @@ const checkbox = document.querySelector("input[type='checkbox']");
   checkbox.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 })
+
+// Add an event listener for the DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the box element
+  var box = document.querySelector('.box');
+
+  // Create a basicScroll instance
+  var instance = basicScroll.create({
+    elem: box,
+    from: 'bottom-bottom',
+    to: 'top-top',
+    direct: true,
+    props: {
+      '--r': {
+        from: '0',
+        to: '1turn'
+      },
+      '--tx': {
+        from: '-100px',
+        to: '300px'
+      }
+    }
+  });
+  // Start the basicScroll instance
+  instance.start();
+});
