@@ -39,6 +39,7 @@ navbarLinks.forEach(link => {
 
 document.addEventListener('DOMContentLoaded', function () {
   var accordionHeaders = document.querySelectorAll('.accordion-header');
+  var maxHeightIncrement = 200; // change this value to the desired increment
 
   accordionHeaders.forEach(function (header) {
     header.addEventListener('click', function () {
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var accordionContent = this.nextElementSibling;
       var accordionIcon = this.querySelector('.accordion-icon');
       if (this.classList.contains('active')) {
-        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        accordionContent.style.maxHeight = (accordionContent.scrollHeight + maxHeightIncrement) + 'px';
         accordionIcon.style.transform = 'rotate(180deg)';
       } else {
         accordionContent.style.maxHeight = null;
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-});  
+});
 
 const checkbox = document.querySelector("input[type='checkbox']");
   
