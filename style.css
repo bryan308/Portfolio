@@ -481,7 +481,7 @@ input:checked+.slider:before {
 }
 
 .who-content-body p::after {
-    content: '<p>';
+    content: '</p>';
     font-weight: 600;
     color: var(--nav-text-color);
 }
@@ -662,7 +662,7 @@ input:checked+.slider:before {
 }
 
 .content-body::after {
-    content: '<p>';
+    content: '</p>';
     font-weight: 600;
     color: var(--nav-text-color);
 }
