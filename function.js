@@ -1,21 +1,19 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const navLink = document.querySelectorAll(".nav-link");
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-hamburger.addEventListener("click", mobileMenu);
+let prevScrollpos = window.pageYOffset;
 
-function mobileMenu() {
-hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
+window.addEventListener('scroll', function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.transform = 'translateY(0)';
+    navbar.style.transition = 'transform 0.3s ease-in';
+  } else {
+    navbar.style.transform = 'translateY(-100%)';
+    navbar.style.transition = 'transform 0.3s ease-out';
+  }
+  prevScrollpos = currentScrollPos;
+});
 
 const navbar = document.querySelector('.navbar');
-const navbarLinks = document.querySelectorAll('.nav-item .nav-link');
+const navbarLinks = document.querySelectorAll('.navbar-item a');
 
 navbarLinks.forEach(link => {
   link.addEventListener('click', e => {
@@ -24,11 +22,11 @@ navbarLinks.forEach(link => {
     const targetElement = document.querySelector(targetId);
     const navbarHeight = navbar.offsetHeight;
     const targetPosition = targetElement.offsetTop - navbarHeight;
-    const duration = 20000;
+    const duration = 1000;
     const delay = 100;
     setTimeout(() => {
       window.scroll({
-        top: targetPosition + 150,
+        top: targetPosition,
         left: 0,
         behavior: 'smooth',
         duration: duration
@@ -37,62 +35,17 @@ navbarLinks.forEach(link => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var accordionHeaders = document.querySelectorAll('.accordion-header');
-  var maxHeightIncrement = 200; // change this value to the desired increment
+const cursor = document.querySelector('.cursor');
 
-  accordionHeaders.forEach(function (header) {
-    header.addEventListener('click', function () {
-      // Close other active accordions
-      var activeAccordion = document.querySelector('.accordion-header.active');
-      if (activeAccordion && activeAccordion !== this) {
-        activeAccordion.classList.remove('active');
-        activeAccordion.querySelector('.accordion-icon').style.transform = '';
-        activeAccordion.nextElementSibling.style.maxHeight = null;
-      }
-
-      this.classList.toggle('active');
-      var accordionContent = this.nextElementSibling;
-      var accordionIcon = this.querySelector('.accordion-icon');
-      if (this.classList.contains('active')) {
-        accordionContent.style.maxHeight = (accordionContent.scrollHeight + maxHeightIncrement) + 'px';
-        accordionIcon.style.transform = 'rotate(180deg)';
-      } else {
-        accordionContent.style.maxHeight = null;
-        accordionIcon.style.transform = '';
-      }
-    });
-  });
+document.addEventListener('mousemove', e => {
+  cursor.style.top = e.pageY - 10 + "px";
+  cursor.style.left = e.pageX - 10 + "px";
 });
 
-const checkbox = document.querySelector("input[type='checkbox']");
-  
-  checkbox.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-})
+document.addEventListener('click', () => {
+  cursor.classList.add("expand");
 
-// Add an event listener for the DOMContentLoaded event
-document.addEventListener('DOMContentLoaded', function() {
-  // Select the box element
-  var box = document.querySelector('.box');
-
-  // Create a basicScroll instance
-  var instance = basicScroll.create({
-    elem: box,
-    from: 'bottom-bottom',
-    to: 'top-top',
-    direct: true,
-    props: {
-      '--r': {
-        from: '0',
-        to: '1turn'
-      },
-      '--tx': {
-        from: '-100px',
-        to: '300px'
-      }
-    }
-  });
-  // Start the basicScroll instance
-  instance.start();
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
 });
