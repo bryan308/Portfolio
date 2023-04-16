@@ -52,6 +52,7 @@ body {
     width: 100%;
     padding: 0 50px 0 16px;
     outline: none;
+    border: 0px solid #00000000;
     border-radius: 10px;
 	box-shadow: inset 1px 1px 2px 1px #aaaaaa;
 }
