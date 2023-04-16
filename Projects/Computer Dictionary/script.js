@@ -268,7 +268,7 @@ function reset() {
 	// Clears the value of definition
 	document.getElementById("definition").innerHTML = "";
 	// Clears the value of output Acronym
-	document.getElementById("acronym").innerHTML = "Backronym:";
+	document.getElementById("acronym").innerHTML = "Abbreviation:";
 }
 
 var alertBoxVisible = false;
