@@ -141,7 +141,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 45px 70px;
-    height: 45px;
+    height: 80px;
     width: 100%;
     backdrop-filter: blur(8px);
     z-index: var(--layer-4);
@@ -455,7 +455,7 @@ input:checked+.slider:before {
     .intro-subtitle h4 {
         font-size: var(--font-size-xs);
     }
-    
+
     .intro-text {
         text-align: left;
     }
