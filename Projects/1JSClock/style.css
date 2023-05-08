@@ -20,7 +20,7 @@ body, button {
 }
 
 body {
-	background-color: var(--bg);
+	background-color: var(--bg);	
 	height: 100vh;
 	display: grid;
 	place-items: center;
@@ -99,19 +99,19 @@ body {
 }
 [data-group="d"]:focus,
 [data-group="d"]:hover {
-	color: rgb(255, 78, 0);
+	color: #ff4e00;
 }
 [data-group="h"]:focus,
 [data-group="h"]:hover {
-	color: rgb(191, 49, 0);
+	color: #bf3100;
 }
 [data-group="m"]:focus,
 [data-group="m"]:hover {
-	color: rgb(142, 166, 4);
+	color: #8ea604;
 }
 [data-group="s"]:focus,
 [data-group="s"]:hover {
-	color: rgb(245, 187, 0);
+	color: #f5bb00;
 }
 [data-group]:focus ~ .progClock__rings [data-units],
 [data-group]:hover ~ .progClock__rings [data-units] {

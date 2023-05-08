@@ -7,8 +7,11 @@ body {
 	font-family: "Segoe UI",SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 120%;
 	line-height: 1.4;
+	height: 100vh;
 	margin: 0 auto;
 	padding: 2em;
+	display: flex;
+	justify-content: center;
 }
 
 .combo {
@@ -130,7 +133,7 @@ body {
 
 /* Removable Options in Multi-Select */
 .remove-option {
-	background-color: #666057;
+	background-color: #eae0d5;
 	border: 1px solid #bcb8b1;
 	border-radius: 3px;
 	color: #fff;
