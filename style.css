@@ -455,9 +455,7 @@ input:checked+.slider:before {
     .intro-subtitle h4 {
         font-size: var(--font-size-xs);
     }
-}
-
-@media only screen and (max-width: 426px) {
+    
     .intro-text {
         text-align: left;
     }
@@ -794,7 +792,7 @@ input:checked+.slider:before {
 
 @media screen and (max-width: 768px) {
     .accordion {
-        width: 75%;
+        width: 90%;
     }
 
     .accordion-item .accordion-content {
@@ -1007,7 +1005,9 @@ input:checked+.slider:before {
         width: 90%;
         flex-direction: column;
     }
-
+    .cards {
+        margin: 0;
+    }
     .rect-content {
         width: 100%;
     }
@@ -1032,9 +1032,7 @@ input:checked+.slider:before {
         font-size: var(--font-size-h4);
     }
 
-    .cards {
-        margin: 0;
-    }
+    
     .rect {
         border-radius: 5px;
     }
