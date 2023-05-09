@@ -624,15 +624,15 @@ input:checked+.slider:before {
         max-height: 150px;
         max-width: 150px;
     }
-}
 
-@media screen and (max-width: 426px) {
     .who-title h2 {
-        font-size: var(--font-size-h4);
+        font-size: var(--font-size-h3);
     }
 
     .about-content h1 {
+        text-align: left;
         font-size: var(--font-size-large);
+        padding-left: 30px;
     }
 
     .about-content p {
@@ -809,6 +809,12 @@ input:checked+.slider:before {
 
     .content-body {
         text-align: center;
+    }
+
+    .educ-title {
+        font-size: var(--font-size-large);
+        text-transform: uppercase;
+        font-weight: 500;
     }
 }
 
@@ -1025,13 +1031,13 @@ input:checked+.slider:before {
     .rect-image {
         width: 100%;
     }
+    
+    .works-title h2 {
+        font-size: var(--font-size-h3);
+    }
 }
 
 @media screen and (max-width: 426px) {
-    .works-title h2 {
-        font-size: var(--font-size-h4);
-    }
-
     
     .rect {
         border-radius: 5px;
@@ -1137,6 +1143,10 @@ input:checked+.slider:before {
 }
 
 @media  screen and (max-width: 768px) {
+    .contact-title h2 {
+        font-size: var(--font-size-h3);
+    }
+
     .contact-content {
         flex-direction: column-reverse;
     }
