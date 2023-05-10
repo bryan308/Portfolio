@@ -66,6 +66,7 @@
     --font-size-medium: 1.563rem; /* 25.00px */
     --font-size-small: 1.25rem; /* 20.00px */
     --font-size-xs: 1rem; /* 16.00px */
+    --font-size-xxs: .813rem; /* 16.00px */
 
     --layer-4: 4;
     --layer-3: 3;
@@ -646,6 +647,13 @@ input:checked+.slider:before {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .about-content p {
+        font-size: var(--font-size-xxs);
+    }
+}
+
+
 @media screen and (max-width: 375px) {
     .who-content .who-title h2 {
         font-size: 3.5rem;
@@ -795,22 +803,11 @@ input:checked+.slider:before {
         width: 90%;
     }
 
-    .accordion-item .accordion-content {
-        flex-direction: column-reverse;
-    }
-
-    .content-header {
-        flex-direction: column;
-    }
-
     .accordion-content-text {
         width: 100%;
     }
 
-    .content-body {
-        text-align: center;
-    }
-
+    
     .educ-title {
         font-size: var(--font-size-large);
         text-transform: uppercase;
@@ -818,7 +815,34 @@ input:checked+.slider:before {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .content-header h4,
+    .content-header a {
+        font-size: var(--font-size-medium);
+    }
+
+    .content-body {
+        font-size: var(--font-size-xxs);
+    }
+}
+
 @media screen and (max-width: 426px) {
+    .accordion-item .accordion-content {
+        flex-direction: column-reverse;
+    }
+    
+    .content-header {
+        flex-direction: column;
+    }
+
+    .accordion-title {
+        font-size: var(--font-size-medium);
+    }
+
+    .content-body {
+        text-align: center;
+    }
+
     .educ-title {
         font-size: var(--font-size-large);
         text-transform: uppercase;
@@ -836,13 +860,7 @@ input:checked+.slider:before {
     .content-header a {
         font-size: var(--font-size-medium);
     }
-
-    .content-header {
-        align-items: flex-start;
-    }
-    .content-body {
-        text-align: left;
-    }
+    
     .school-logo {
         padding: 10px 0;
     }
@@ -898,6 +916,7 @@ input:checked+.slider:before {
     background: #fcfcfc;
     overflow: hidden;
     box-shadow: var(--accordion-shadow);
+    border-radius: 3px;
 }
 
 .rect:nth-child(1) {
@@ -1037,6 +1056,23 @@ input:checked+.slider:before {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .rect-content {
+        padding: 30px;
+    }
+
+    .rect-content h3 {
+        font-size: var(--font-size-large);
+    }
+
+    .rect-content h5 {
+        font-size: var(--font-size-xxs);
+    }
+
+    .rect-image img {
+        height: 14rem;
+    }
+}
 @media screen and (max-width: 426px) {
     
     .rect {
@@ -1146,23 +1182,37 @@ input:checked+.slider:before {
     .contact-title h2 {
         font-size: var(--font-size-h3);
     }
+    
+    .contact-image .me-logo {
+        height: 230px;
+        width: 230px;
+    }
 
+    .contact-text {
+        padding: 0 20px;
+        width: 60%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .contact-content {
         flex-direction: column-reverse;
     }
-
+    
     .contact-image .me-logo {
         background-image: url(images/downlook.png);
         height: 200px;
         width: 200px;
     }
-
+    
     .contact-image .me-logo.hover {
         background-image: url(images/downlook2.png);
     }
-    
+
     .contact-text {
-        width: 70%;
+        padding: 20px;
+        width: 90%;
         text-align: center;
     }
 }
