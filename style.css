@@ -824,6 +824,10 @@ input:checked+.slider:before {
     .content-body {
         font-size: var(--font-size-xxs);
     }
+
+    .school-logo img {
+        height: 80px;
+    }
 }
 
 @media screen and (max-width: 426px) {
