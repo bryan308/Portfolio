@@ -830,22 +830,23 @@ input:checked+.slider:before {
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 450px) {
+
     .accordion-item .accordion-content {
         flex-direction: column-reverse;
     }
     
     .content-header {
         flex-direction: column;
+        align-items: flex-start;
     }
-
+    
     .accordion-title {
         font-size: var(--font-size-medium);
     }
+}
 
-    .content-body {
-        text-align: center;
-    }
+@media screen and (max-width: 426px) {
 
     .educ-title {
         font-size: var(--font-size-large);
