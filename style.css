@@ -748,6 +748,10 @@ input:checked+.slider:before {
     color: var(--active-text);
 }
 
+.header-image img {
+    display: none;
+}
+
 .content-header h4 {
     font-family: var(--title-font);
     font-size: var(--font-size-large);
@@ -760,10 +764,10 @@ input:checked+.slider:before {
 }
 
 .content-header a {
+    color: var(--text-color);
     font-family: var(--title-font);
     font-size: var(--font-size-large);
     font-weight: 500;
-    color: var(--text-color);
 }
 
 .content-header a:hover {
@@ -786,6 +790,7 @@ input:checked+.slider:before {
 
 .school-logo img {
     height: 150px;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
 }
 
 @media screen and (max-width: 1024px) {
@@ -837,10 +842,26 @@ input:checked+.slider:before {
     }
     
     .content-header {
-        flex-direction: column;
         align-items: flex-start;
     }
-    
+
+    .content-header {
+        display: flex;
+        align-items: center;
+        padding: 0 5px 0 10px;
+    }
+
+    .header-image img {
+        display: block;
+        height: 100px;
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    }
+
+    .school-logo img {
+        display: none;
+    }
+
+
     .accordion-title {
         font-size: var(--font-size-medium);
     }
@@ -1108,7 +1129,7 @@ input:checked+.slider:before {
 
 .contact-container {
     background: var(--contact-linear);
-    padding-bottom: 150px;
+    padding-bottom: 120px;
 }
 
 .contact-title h2 {
@@ -1220,4 +1241,31 @@ input:checked+.slider:before {
         width: 90%;
         text-align: center;
     }
+
+    .footer .soc-med {
+        justify-content: center;
+        padding: 0 30px;
+    }
+}
+
+.soc-med {
+    display: flex;
+    background: var(--primary-bg);
+    justify-content: flex-end;
+    padding: 0 30px;
+}
+
+.icon {
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.icon a {
+    color: var(--active-text);
+    font-size: var(--font-size-medium);
+    transition: .1s ease-in-out;
+}
+
+.fa:hover {
+    color: var(--secondary-color);
 }
