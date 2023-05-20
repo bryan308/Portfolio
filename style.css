@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -12,21 +7,24 @@
     box-sizing: border-box;
 }
 
+/* Set the initial width of the scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
     height: 5px;
-    transition: 5s ease-in-out;
+    transition: width 0.5s ease-in-out; /* Add transition effect */
 }
-  
+
+/* Style the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 10px;
 }
-  
+
+/* Adjust the width of the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--secondary-color);
-    border-radius: 10px;
+    width: 10px; /* Set the width to 10 pixels */
 }
+
 
 :root {
     --logo-image: url(images/weblogoL.png);
@@ -589,6 +587,69 @@ input:checked+.slider:before {
     transform: scale(1.2) rotate(-2deg);
 }
 
+.certificate {
+    margin: 0 0 80px 0;
+}
+
+.cert-title {
+    font-family: 'Inter', sans-serif;
+    color: var(--active-text);
+    font-size: var(--font-size-h5);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+.certificate-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cert-text {
+    text-align: center;
+    width: 50%;
+}
+
+.cert-text p {
+    font-size: var(--font-size-xs);
+    margin: 10px 0;
+}
+
+.cert {
+    position: relative;
+}
+
+.cert img {
+    height: 300px;
+    border: 7px solid var(--primary-color);
+    z-index: var(--layer-1);
+}
+
+.cert .shine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(120deg, #e5e5e505 30%, #f0f0f0bc 38%, #ffffffa7 40%, #e5e5e500 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: shine-animation 2s infinite;
+    z-index: var(--layer-2);
+}
+
+@keyframes shine-animation {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+
+
 @media screen and (max-width: 1024px) {
     .about-content h3 {
         margin: auto;
@@ -645,15 +706,39 @@ input:checked+.slider:before {
         max-height: 150px;
         max-width: 150px;
     }
+
+    .cert-title {
+        font-size: var(--font-size-large);
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .cert-text {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-
     .about-content p {
         font-size: var(--font-size-xxs);
     }
 }
 
+@media screen and (max-width: 450px) {
+    .certificate-content .cert img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .cert-title h3 {
+        font-size: var(--font-size-large);
+    }
+
+    .cert-text p {
+        font-size: var(--font-size-xxs);
+    }
+}
 
 @media screen and (max-width: 375px) {
 
@@ -671,6 +756,14 @@ input:checked+.slider:before {
         max-height: 130px;
         max-width: 130px;
     }
+
+    .certificate .certificate-content .cert img {
+        height: 190px;
+    }
+
+    .cert-text {
+        width: 100%;
+    }
 }
 
 /* Accordion */
@@ -678,7 +771,7 @@ input:checked+.slider:before {
     display: block;
     margin: auto;
     width: 50%;
-    padding: 5rem 0;
+    padding: 5rem 0 2rem 0;
 }
 
 .educ-title {
