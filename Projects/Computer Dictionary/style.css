@@ -408,7 +408,7 @@ button:hover::before {
     -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
     opacity: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .closebtn {
@@ -472,6 +472,9 @@ button:hover::before {
 	}
 	.closebtn {
 		right: 5px;
+	}
+	.alert {
+		top: 10%;
 	}
 }
 
