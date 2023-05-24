@@ -473,7 +473,7 @@ button:hover::before {
 	.closebtn {
 		right: 5px;
 	}
-	.alert {
+	body .alert {
 		top: 10%;
 	}
 }
