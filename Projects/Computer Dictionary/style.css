@@ -470,7 +470,9 @@ button:hover::before {
 	.search-container .buttons {
 		padding-top: 10px;
 	}
-
+	.closebtn {
+		right: 5px;
+	}
 }
 
 @media screen and (max-width: 600px) {
