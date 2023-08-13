@@ -105,10 +105,10 @@ function randomValues() {
   });
 }
 
-// window.addEventListener('load', function() {
-//   randomValues();
-//   setInterval(randomValues, 4000);
-// });
+window.addEventListener('load', function() {
+   randomValues();
+   setInterval(randomValues, 4000);
+});
 
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
