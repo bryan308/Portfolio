@@ -706,7 +706,7 @@ input:checked+.slider:before {
     }
 
     .about-content h1 {
-        font-size: var(--font-size-h6);
+        font-size: var(--font-size-large);
         text-align: left;
         /* padding-left: 30px; */
     }
