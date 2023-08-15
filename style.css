@@ -1408,8 +1408,8 @@ input:checked+.slider:before {
 @media screen and (max-width: 768px) {
 
     .capstone-container {
-        /* flex-direction: column-reverse; */
-        flex-direction: column;
+        flex-direction: column-reverse;
+        /* flex-direction: column; */
     }
     
     .capstone-item {
