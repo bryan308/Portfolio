@@ -746,6 +746,9 @@ input:checked+.slider:before {
     .certificate-content .cert img {
         height: 250px;
     }
+    .cert-text p {
+        font-size: var(--font-size-xxs);
+    }
 }
 
 @media screen and (max-width: 426px) {
@@ -764,10 +767,6 @@ input:checked+.slider:before {
 
     .cert-title h3 {
         font-size: var(--font-size-large);
-    }
-
-    .cert-text p {
-        font-size: var(--font-size-xxs);
     }
 }
 
