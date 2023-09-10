@@ -1566,6 +1566,9 @@ input:checked+.slider:before {
     .rect-image img {
         height: 10rem;
     }
+    .contact-container .contact-text p {
+	font-size: var(--font-size-xxs);
+    }
 }
 
 @media screen and (max-width: 375px ) {
@@ -1616,7 +1619,7 @@ input:checked+.slider:before {
 }
 
 .contact-text p {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-xxs);
     color: var(--text-color);
     font-weight: 400;
 }
