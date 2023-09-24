@@ -79,7 +79,17 @@
     --layer-1: 1;
     --layer-0: -1;
 
-    --card1-bg: #fcfcfc;
+    --cardbg1: url(/images/cardbg/cardbg1L.png);
+    --cardbg2: url(/images/cardbg/cardbg2L.png);
+    --cardbg3: url(/images/cardbg/cardbg3L.png);
+    --cardbg4: url(/images/cardbg/cardbg4L.png);
+    --cardbg5: url(/images/cardbg/cardbg5L.png);
+    --cardbg6: url(/images/cardbg/cardbg6L.png);
+    --cardbg7: url(/images/cardbg/cardbg7L.png);
+    --cardbg8: url(/images/cardbg/cardbg8L.png);
+    --cardbg9: url(/images/cardbg/cardbg9L.png);
+
+    /* --card1-bg: #fcfcfc;
     --card2-bg: #fcfcfc;
     --card3-bg: #fcfcfc;
     --card4-bg: #fcfcfc;
@@ -87,6 +97,7 @@
     --card6-bg: #fcfcfc;
     --card7-bg: #fcfcfc;
     --card8-bg: #fcfcfc;
+    --card9-bg: #fcfcfc; */
     
     --el-opa: 0.5;
 }
@@ -105,7 +116,8 @@
     --primary-linear: linear-gradient(83.21deg, #2f40d8 0%, #52b7ee 100%);
     --secondary-linear: linear-gradient(180deg, #121212 0%, #00000000 20%);
     --contact-linear: linear-gradient(0deg, #121212 0%, #00000000 50%);
-    --third-linear: linear-gradient(290deg, #7eb6ff 0%, #af4edc 50%, #ff4469 100%);
+    /* --third-linear: linear-gradient(290deg, #7eb6ff 0%, #af4edc 50%, #ff4469 100%); */
+    --third-linear: linear-gradient(290deg, #003dcc 0%, #f200ff 100%);
     --radial-grad: radial-gradient(#00000080, transparent 70%);
         
     --primary-bg: #121212;
@@ -119,14 +131,25 @@
     --HTML: #ff6038;
     --PHP: #6576b9;
     
-    --card1-bg: linear-gradient(83.21deg, #4250c8 0%, #3593c5 100%);
-    --card2-bg: linear-gradient(83.21deg, #14213d 0%, #cf8000 100%);
-    --card3-bg: linear-gradient(83.21deg, #a9a9a9cb 5%, #0b0618 70%);
-    --card4-bg: linear-gradient(83.21deg, #4f4f4f 0%, #f1c100 100%);
-    --card5-bg: linear-gradient(90deg, rgba(255,78,0,1) 0%, rgb(165, 41, 0) 33%, rgb(123, 145, 0)67%, rgb(230, 176, 0) 100%);
-    --card6-bg: linear-gradient(83.21deg, #413D3D 0%, #f0c30e 100%);
-    --card7-bg: linear-gradient(83.21deg, #b0b0b096 0%, #252422 100%);
-    --card8-bg: linear-gradient(83.21deg, #c1b09f 5%, #4b4032 100%);
+    --cardbg1: url(/images/cardbg/cardbg1D.png);
+    --cardbg2: url(/images/cardbg/cardbg2D.png);
+    --cardbg3: url(/images/cardbg/cardbg3D.png);
+    --cardbg4: url(/images/cardbg/cardbg4D.png);
+    --cardbg5: url(/images/cardbg/cardbg5D.png);
+    --cardbg6: url(/images/cardbg/cardbg6D.png);
+    --cardbg7: url(/images/cardbg/cardbg7D.png);
+    --cardbg8: url(/images/cardbg/cardbg8D.png);
+    --cardbg9: url(/images/cardbg/cardbg9D.png);
+
+    /* --card1-bg: linear-gradient(83.21deg, #de471d 0%, #761d15 100%);
+    --card2-bg: linear-gradient(83.21deg, #4250c8 0%, #3593c5 100%);
+    --card3-bg: linear-gradient(83.21deg, #14213d 0%, #cf8000 100%);
+    --card4-bg: linear-gradient(83.21deg, #a9a9a9cb 5%, #0b0618 70%);
+    --card5-bg: linear-gradient(83.21deg, #4f4f4f 0%, #f1c100 100%);
+    --card6-bg: linear-gradient(90deg, #ff4e00 0%, rgb(165, 41, 0) 33%, rgb(123, 145, 0)67%, #e6b000 100%);
+    --card7-bg: linear-gradient(83.21deg, #413D3D 0%, #f0c30e 100%);
+    --card8-bg: linear-gradient(83.21deg, #b0b0b096 0%, #252422 100%);
+    --card9-bg: linear-gradient(83.21deg, #c1b09f 5%, #4b4032 100%); */
 
     --accordion-shadow: 0;
 
@@ -349,13 +372,14 @@ input:checked+.slider:before {
     transform: translateX(-50%) translateY(-50%);
     z-index: var(--layer-0);
 }
-  
+
 .el {
     background: var(--third-linear);
     min-height: 70px;
     min-width: 70px;
     border-radius: 10%;
-    opacity: var(--el-opa);
+    /* opacity: var(--el-opa); */
+    opacity: .4;
 }
 
 .intro-title h1 {
@@ -509,6 +533,7 @@ input:checked+.slider:before {
     background-size: 20px 20px;
     background-position: center;
     overflow: hidden;
+    padding-bottom: 150px;
 }
 
 .who-content {
@@ -531,7 +556,7 @@ input:checked+.slider:before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 0 0;
+    margin: 20px 0;
 }
 
 .circle {
@@ -603,9 +628,9 @@ input:checked+.slider:before {
     transform: scale(1.2) rotate(-2deg);
 }
 
-.certificate {
+/* .certificate {
     margin: 0 0 80px 0;
-}
+} */
 
 .cert-title {
     font-family: 'Inter', sans-serif;
@@ -813,7 +838,7 @@ input:checked+.slider:before {
     display: block;
     margin: auto;
     width: 50%;
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0;
 }
 
 .educ-title {
@@ -1051,7 +1076,7 @@ input:checked+.slider:before {
     background-size: 20px 20px;
     background-position: center;
     height: auto;
-    padding-bottom: 50px;
+    padding: 0 0 50px 0;
 }
 
 .works-title h2 {
@@ -1087,42 +1112,83 @@ input:checked+.slider:before {
 }
 
 .rect:nth-child(1) {
-    background: var(--card1-bg);
+    /* background: var(--card1-bg); */
+    background-image: var(--cardbg1);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(2) {
-    background: var(--card2-bg);
+    /* background: var(--card2-bg); */
+    background-image: var(--cardbg2);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(3) {
-    background: var(--card3-bg);
+    /* background: var(--card3-bg); */
+    background-image: var(--cardbg3);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(4) {
-    background: var(--card4-bg);
+    /* background: var(--card4-bg); */
+    background-image: var(--cardbg4);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(5) {
-    background: var(--card5-bg);
+    /* background: var(--card5-bg); */
+    background-image: var(--cardbg5);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(6) {
-    background: var(--card6-bg);
+    /* background: var(--card6-bg); */
+    background-image: var(--cardbg6);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(7) {
-    background: var(--card7-bg);
+    /* background: var(--card7-bg); */
+    background-image: var(--cardbg7);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
 .rect:nth-child(8) {
-    background: var(--card8-bg);
+    /* background: var(--card8-bg); */
+    background-image: var(--cardbg8);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: var(--gen-transition);
+}
+
+.rect:nth-child(9) {
+    /* background: var(--card9-bg); */
+    background-image: var(--cardbg9);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: var(--gen-transition);
 }
 
@@ -1134,7 +1200,7 @@ input:checked+.slider:before {
     align-items: flex-start;
     width: 60%;
     height: 100%;
-    padding: 20px 50px;
+    padding: 20px 50px 20px 0;
     color: var(--text-color);
     /* border-left: 4px solid var(--active-text); */
 }
@@ -1160,7 +1226,7 @@ input:checked+.slider:before {
     object-fit: contain;
     height: 20rem;
     width: 100%;
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
 }
 
 .rect-content h3 {
@@ -1201,7 +1267,7 @@ input:checked+.slider:before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 60px 0 40px 0;
+    padding: 20px 0 80px 0;
 }
 
 .works-image {
@@ -1567,7 +1633,7 @@ input:checked+.slider:before {
         height: 10rem;
     }
     .contact-container .contact-text p {
-	font-size: var(--font-size-xxs);
+        font-size: var(--font-size-xxs);
     }
 }
 
@@ -1619,7 +1685,7 @@ input:checked+.slider:before {
 }
 
 .contact-text p {
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-xs);
     color: var(--text-color);
     font-weight: 400;
 }
