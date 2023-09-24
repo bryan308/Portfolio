@@ -79,15 +79,15 @@
     --layer-1: 1;
     --layer-0: -1;
 
-    --cardbg1: url(/images/cardbg/cardbg1L.png);
-    --cardbg2: url(/images/cardbg/cardbg2L.png);
-    --cardbg3: url(/images/cardbg/cardbg3L.png);
-    --cardbg4: url(/images/cardbg/cardbg4L.png);
-    --cardbg5: url(/images/cardbg/cardbg5L.png);
-    --cardbg6: url(/images/cardbg/cardbg6L.png);
-    --cardbg7: url(/images/cardbg/cardbg7L.png);
-    --cardbg8: url(/images/cardbg/cardbg8L.png);
-    --cardbg9: url(/images/cardbg/cardbg9L.png);
+    --cardbg1: url(/images/cardbg1L.png);
+    --cardbg2: url(/images/cardbg2L.png);
+    --cardbg3: url(/images/cardbg3L.png);
+    --cardbg4: url(/images/cardbg4L.png);
+    --cardbg5: url(/images/cardbg5L.png);
+    --cardbg6: url(/images/cardbg6L.png);
+    --cardbg7: url(/images/cardbg7L.png);
+    --cardbg8: url(/images/cardbg8L.png);
+    --cardbg9: url(/images/cardbg9L.png);
 
     /* --card1-bg: #fcfcfc;
     --card2-bg: #fcfcfc;
@@ -131,15 +131,15 @@
     --HTML: #ff6038;
     --PHP: #6576b9;
     
-    --cardbg1: url(/images/cardbg/cardbg1D.png);
-    --cardbg2: url(/images/cardbg/cardbg2D.png);
-    --cardbg3: url(/images/cardbg/cardbg3D.png);
-    --cardbg4: url(/images/cardbg/cardbg4D.png);
-    --cardbg5: url(/images/cardbg/cardbg5D.png);
-    --cardbg6: url(/images/cardbg/cardbg6D.png);
-    --cardbg7: url(/images/cardbg/cardbg7D.png);
-    --cardbg8: url(/images/cardbg/cardbg8D.png);
-    --cardbg9: url(/images/cardbg/cardbg9D.png);
+    --cardbg1: url(/images/cardbg1D.png);
+    --cardbg2: url(/images/cardbg2D.png);
+    --cardbg3: url(/images/cardbg3D.png);
+    --cardbg4: url(/images/cardbg4D.png);
+    --cardbg5: url(/images/cardbg5D.png);
+    --cardbg6: url(/images/cardbg6D.png);
+    --cardbg7: url(/images/cardbg7D.png);
+    --cardbg8: url(/images/cardbg8D.png);
+    --cardbg9: url(/images/cardbg9D.png);
 
     /* --card1-bg: linear-gradient(83.21deg, #de471d 0%, #761d15 100%);
     --card2-bg: linear-gradient(83.21deg, #4250c8 0%, #3593c5 100%);
