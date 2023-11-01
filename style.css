@@ -622,7 +622,6 @@ a {
 /* WHO page styles */
 .who {
     height: auto;
-    padding: 80px 0 0 0;
     background: linear-gradient(to right, rgba(111, 111, 111, 0.100) .5px, transparent 1px),
     linear-gradient(to bottom, rgba(111, 111, 111, 0.100) .5px, transparent 1px);
     background-size: 20px 20px;
@@ -667,7 +666,7 @@ a {
     height: 170%;
     width: 150%;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     filter: blur(90px);
     z-index: var(--layer-0);
 
