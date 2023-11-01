@@ -1,50 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">  
-    <link rel="icon" href="images/weblogoL.png">
-    <title>@cdrcangulo</title>
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta   name="viewport" 
+                content="width=device-width, 
+                        initial-scale=1.0, 
+                        user-scalable=no"
+        >
+        <link   rel="stylesheet" 
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer" />
+        <link   rel="stylesheet" 
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        >
+        <link   href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+                rel="stylesheet"
+        >
+        <link   rel="stylesheet" 
+                href="style.css"
+        >  
+        <link   rel="icon" 
+                href="images/weblogoL.png"
+        >
+        <title>@cdrcangulo</title>
+    </head>
+
+<body oncontextmenu="return true;">
     <section class="intro" id="intro">
         <header class="header">
             <nav class="navbar">
-                <a href="#" class="nav-logo" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"></a>
+                <div id="menuToggle"
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="100"
+                    >
+                    <input id="checkbox" type="checkbox">
+                    <label class="togglE" for="checkbox">
+                        <div class="bar bar--top"></div>
+                        <div class="bar bar--middle"></div>
+                        <div class="bar bar--bottom"></div>
+                    </label>
+                </div>
+                <div href="" class="nav-logo"                     
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="100"
+                ></div>
                 <ul class="nav-menu">
-                    <li class="nav-item" data-aos="flip-up" data-aos-duration="500" data-aos-delay="100">
+                    <li class="nav-item"                     
+                        data-aos="fade-zoom-in" 
+                        data-aos-easing="ease"
+                        data-aos-duration="500" 
+                        data-aos-delay="100"
+                    >
                         <a href="#intro" class="nav-link">intro</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-up" data-aos-duration="500" data-aos-delay="300">
+                    <li class="nav-item" 
+                        data-aos="fade-zoom-in" 
+                        data-aos-easing="ease"
+                        data-aos-duration="500" 
+                        data-aos-delay="200"
+                    >
                         <a href="#who" class="nav-link">who</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-up" data-aos-duration="500" data-aos-delay="600">
+                    <li class="nav-item" 
+                        data-aos="fade-zoom-in" 
+                        data-aos-easing="ease"
+                        data-aos-duration="500" 
+                        data-aos-delay="300"
+                    >
                         <a href="#works" class="nav-link">works</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-up" data-aos-duration="500" data-aos-delay="900">
+                    <li class="nav-item" 
+                        data-aos="fade-zoom-in" 
+                        data-aos-easing="ease"
+                        data-aos-duration="500" 
+                        data-aos-delay="400"
+                    >
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
-                    <label class="switch" data-aos="flip-up" data-aos-duration="500" data-aos-delay="1200">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
+                    <hr class="section-divider">
+                    <li class="nav-item"
+                        data-aos="fade-zoom-in" 
+                        data-aos-easing="ease"
+                        data-aos-duration="500" 
+                        data-aos-delay="500"
+                    >
+                        <div class="switch-container">
+                            <label class="toggle" for="switch">
+                                <input id="switch" class="input" type="checkbox">
+                                <div class="icon icon--moon">
+                                    <svg height="25" width="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="icon icon--sun">
+                                    <svg height="25" width="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                                    </svg>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </nav>
         </header>
         
-        <div class="intro-content">
+        <div class="intro-content" >
             <div class="shape-container">
-                <div class='el'></div>
-                <div class='el'></div>
                 <div class='el'></div>
                 <div class='el'></div>
                 <div class='el'></div>
@@ -57,13 +126,28 @@
                 <div class='el'></div>
             </div> 
             <div class="intro-text">
-                <div class="intro-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <div class="intro-title"
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="100"
+                >
                     <h1>Hi, I'm Cedric!</h1>
                 </div>
-                <div class="intro-loc" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div class="intro-loc"
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="300"
+                >
                     <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Nueva Ecija, PH</span></p>
                 </div>
-                <div class="intro-subtitle" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                <div class="intro-subtitle"
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="500"
+                >
                     <h4>Currently a First year College <span>BSIT Student</span> in <span><a href="https://neust.edu.ph/" target="_blank">Nueva Ecija University of Science and Technology</a></span></h4>
                 </div>
             </div>
@@ -74,23 +158,48 @@
     </section>
     <section class="who" id="who">
         <div class="who-content">
-            <div class="who-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="who-title"
+                data-aos="fade-zoom-in" 
+                data-aos-easing="ease"
+                data-aos-duration="500" 
+                data-aos-delay="1-00"
+            >
                 <h2>WHO</h2>
             </div>
             <div class="who-container">
                 <div class="circle"></div>
                 <div class="who-item">
                     <div class="about-content">                 
-                        <h1 data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">Hi again, <span>I'm Cedric Angulo</span></h1>
-                        <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
+                        <h1 
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="100"
+                        >Hi again, <span>I'm Cedric Angulo</span></h1>
+                        <p
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="300"
+                        >
                             I am currently a First year BSIT student at Nueva Ecija University of Science and Technology (NEUST). I got interested in computers and programming during a highschool TLE course. Moving up to senior high school, I took TVL specialized in ICT. Upon further learning and research, I found out that everything on a website is made with HTML and CSS, and with that information I gain more interest in pursuing computers and programming.
                         </p>
-                        <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="600">
+                        <p
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="500"
+                        >
                             As a First year BSIT student at NEUST, I am currently learning C++ since it is the required programming language for our first-year curriculum. In the future, if I have some free time or during vacations, I plan to start learning ReactJS on my own. I am really interested in exploring web development more deeply!
                         </p>
                     </div>
                 </div>
-                <div class="about-image" data-aos="fade-left" data-aos-duration="400" data-aos-delay="800">
+                <div class="about-image"
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="800"
+                >
                     <div class="img">
                         <img src="images/who-image1.jpg" alt="me1">
                     </div>
@@ -108,108 +217,104 @@
             </div>
             
             <div class="who-container-2">
-                <div class="accordion">
-                    <div class="educ-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                        Education
-                    </div>
-                    <div class="accordion-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="400">
-                        <div class="accordion-header">
-                            <div class="accordion-title">Grade 12 TVL ICT <span>(2022-2023)</span></div>
-                            <i class="accordion-icon fa fa-angle-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-content-text">
-                                <div class="content-text">
-                                    <div class="content-header">
-                                        <div class="header-text">
-                                            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Soledad, Santa Rosa, NE.</h4>
-                                            <a href="https://www.facebook.com/profile.php?id=100064118198317" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> SRNHS</a>
-                                        </div>
-                                        <div class="header-image">
-                                            <img src="images/SRNHS logo.png" alt="srnhs logo">
-                                        </div>
-                                    </div>
-                                    <div class="content-body">
-                                        I graduated from Santa Rosa National High School with honors, having completed Grade 12 TVL ICT in 2022-2023. During my time at the school, I gained a lot of knowledge in Information and Communications Technology (ICT), particularly in web development and programming. I am very thankful for Mr. Rey Laura, my teacher in our major subject, for his guidance throughout my learning journey.
-                                    </div>
-                                </div>
+                <div class="educ-title" 
+                    data-aos="fade-zoom-in" 
+                    data-aos-easing="ease"
+                    data-aos-duration="500" 
+                    data-aos-delay="900"
+                >
+                    Education
+                </div>
+                <div class="timeline">
+                    <ul>
+                        <li class="timeline-element"
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="300"
+                        >
+                            <div class="right_content">
+                                <h2>Freshman BSIT</h2>
+                                <p>In my first year as a BSIT student at Nueva Ecija University, I'm building a foundation in computing, programming, and networking. I aspire to become a full stack developer or a database analyst, and I'm excited about the educational journey ahead, exploring various subjects and opportunities.
+                                </p>
                             </div>
-                            <div class="school-logo">
-                                <img src="images/SRNHS logo.png" alt="srnhs logo">
+                            <div class="left_content">
+                                <h3>2023 - Present</h3>
                             </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
-                        <div class="accordion-header">
-                            <div class="accordion-title">Grade 11 TVL ICT <span>(2021-2022)</span></div>
-                            <i class="accordion-icon fa fa-angle-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-content-text">
-                                <div class="content-text">
-                                    <div class="content-header">
-                                        <div class="header-text">
-                                            <h4>
-                                                <i class="fa fa-map-marker" aria-hidden="true"></i> Iba, Zambales
-                                            </h4>
-                                            <a href="https://www.facebook.com/ZambalesNationalHighSchool" target="_blank"><i class="fa fa-link" aria-hidden="true"></i> ZNHS</a>
-                                        </div>
-                                        <div class="header-image">
-                                            <img src="images/ZNHS logo.png" alt="znhs logo">
-                                        </div>
-                                    </div>
-                                    <div class="content-body">
-                                        I learned about hardware in Grade 11 TVL ICT through online classes at Zambales National High School, despite the challenges of the online setup.
-                                    </div>
-                                </div>
+                        </li>
+                        <li class="timeline-element"
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="500"
+                        >
+                            <div class="right_content">
+                                <h2>Grade 12 ICT</h2>
+                                <p>I graduated with honors from Santa Rosa National High School in 2022-2023 after completing Grade 12 TVL ICT. I focused on ICT, with a strong emphasis on web development and programming. I'm grateful to Mr. Rey Laura, my major subject teacher, for his guidance during my learning journey.
+                                </p>
                             </div>
-                            <div class="school-logo">
-                                <img src="images/ZNHS logo.png" alt="znhs logo">
+                            <div class="left_content">
+                                <h3>2022 - 2023</h3>
                             </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item" data-aos="fade-up" data-aos-duration="400" data-aos-delay="800">
-                        <div class="accordion-header">
-                            <div class="accordion-title">Grade 10 ICT  <span>(2019-2020)</span></div>
-                            <i class="accordion-icon fa fa-angle-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-content-text">
-                                <div class="content-text">
-                                    <div class="content-header">
-                                        <div class="header-text">
-                                            <h4>
-                                                <i class="fa fa-map-marker" aria-hidden="true"></i> Locloc, Palauig, Zambales
-                                            </h4>
-                                            <a href="https://www.facebook.com/snhs.extension" target="_blank">
-                                                <i class="fa fa-link" aria-hidden="true"></i> LNHS
-                                            </a>
-                                        </div>
-                                        <div class="header-image">
-                                            <img src="images/LNHS logo.png" alt="lnhs logo">
-                                        </div>
-                                    </div>
-                                    <div class="content-body">
-                                        In Grade 10 ICT at Locloc National High School, I discovered my passion for computers, igniting my curiosity to explore the captivating field of information technology.
-                                    </div>
-                                </div>
+                        </li>
+                        <li class="timeline-element"
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="700"
+                        >
+                            <div class="right_content">
+                                <h2>Grade 11 ICT</h2>
+                                <p>I learned about hardware in Grade 11 TVL ICT through online classes at Zambales National High School, despite the challenges of the online setup.
+                                </p>
                             </div>
-                            <div class="school-logo">
-                                <img src="images/LNHS logo.png" alt="lnhs logo">
+                            <div class="left_content">
+                                <h3>2021 - 2022</h3>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="timeline-element"
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="900"
+                        >
+                            <div class="right_content">
+                                <h2>Grade 10 ICT</h2>
+                                <p>In Grade 10 ICT at Locloc National High School, I discovered my passion for computers, igniting my curiosity to explore the captivating field of information technology.
+                                </p>
+                            </div>
+                            <div class="left_content">
+                                <h3>2019 - 2020</h3>
+                            </div>
+                        </li>
+                        <div style="clear:both;"></div>
+                    </ul>
                 </div>
                 <div class="certificate">
-                    <div class="cert-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div class="cert-title"
+                        data-aos="fade-zoom-in" 
+                        data-aos-easing="ease"
+                        data-aos-duration="500" 
+                        data-aos-delay="100"
+                    >
                         Certificate
                     </div>
                     <div class="certificate-content">
-                        <div class="cert" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                        <div class="cert"
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="300"
+                        >
                             <img src="images/Certificate.jpg" alt="">
                             <span class="shine"></span>
                         </div>
-                        <div class="cert-text" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                        <div class="cert-text"
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="500"
+                        >
                             <p>This is my certificate of completion, it signifies my successful completion of the On-the-Job Training program at J-Connection Computer Repair Shop.</p>
                         </div>
                     </div>
@@ -219,49 +324,57 @@
     </section>
     <section class="works" id="works">
         <div class="works-content">
-            <div class="works-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="works-title"
+                data-aos="fade-zoom-in" 
+                data-aos-easing="ease"
+                data-aos-duration="500" 
+                data-aos-delay="100"
+            >
                 <h2>works</h2>
             </div>
             <div class="capstone-container">
                 <!-- <div class="circle"></div> -->
                 <div class="capstone-item">
                     <div class="capstone-content">               
-                        <h1 data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">Grade 12 Capstone Project<br><span>Students' Transcripts System</span></h1>
-                        <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
+                        <h1 
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="300"
+                        >Grade 12 Capstone Project<br><span>Students' Transcripts System</span></h1>
+                        <p
+                            data-aos="fade-zoom-in" 
+                            data-aos-easing="ease"
+                            data-aos-duration="500" 
+                            data-aos-delay="500"
+                        >
                             It is a web-based application designed to assist school registrars in managing and creating Old Curriculum SF10 records. This ongoing project was developed within a month only, resulting in certain limitations, particularly in security. The main objective is to generate an internal-use excel file in (.xlsx) format, as the system is not intended for public access.
                         </p>
-                        <!-- <ul>
-                            <p>Features</p>
-                            <li>
-                                <p>Export to Excel file</p>
-                            </li>
-                            <li>
-                                <p>Export to Excel file</p>
-                            </li>
-                            <li>
-                                <p>Export to Excel file</p>
-                            </li>
-                        </ul> -->
                         <div class="languages-used">
-                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Languages</div>
+                            <div
+                                data-aos="fade-zoom-in" 
+                                data-aos-easing="ease"
+                                data-aos-duration="500" 
+                                data-aos-delay="700"
+                            >Languages</div>
                             <div class="bars">
-                                <div class="langs" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" style="width: 88.6%; background-color: var(--PHP);"></div>
-                                <div class="langs" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" style="width: 8.7%; background-color: var(--CSS);"></div>
-                                <div class="langs" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" style="width: 2.1%; background-color: var(--HTML);"></div>
-                                <div class="langs" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800" style="width: 0.6%; background-color: var(--JavaScript);"></div>
+                                <div class="langs" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1100" style="width: 88.6%; background-color: var(--PHP);"></div>
+                                <div class="langs" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1300" style="width: 8.7%; background-color: var(--CSS);"></div>
+                                <div class="langs" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1500" style="width: 2.1%; background-color: var(--HTML);"></div>
+                                <div class="langs" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1700" style="width: 0.6%; background-color: var(--JavaScript);"></div>
                             </div>
                             <div class="languages">
                                 <ul class="list-languages">
-                                    <li class="php-bullet" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                                    <li class="php-bullet" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1100">
                                         PHP <span>88.6%</span>
                                     </li>
-                                    <li class="css-bullet" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                                    <li class="css-bullet" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1300">
                                         CSS <span>8.7%</span>
                                     </li>
-                                    <li class="html-bullet" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                                    <li class="html-bullet" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1500">
                                         HTML <span>2.1%</span>
                                     </li>
-                                    <li class="js-bullet" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+                                    <li class="js-bullet" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="1700">
                                         JavaScript <span>0.6%</span>
                                     </li>
                                 </ul>
@@ -269,9 +382,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- card -->
-                <div class="works-image" data-aos="fade-left" data-aos-duration="400" data-aos-delay="800">
-                    <!-- slideshow-container -->
+                <div class="works-image" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                     <div class="img">
                         <img class="slide" src="images/sts1.png" alt="">
                         <img class="slide" src="images/sts2.png" alt="">
@@ -283,94 +394,94 @@
             </div>
             <div class="cards">
                 <div class="first row">
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/classDirectory.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>Class Directory</h3>
                             <h5>The Class Directory provides my classmates with a convenient way to access class schedules, view class officers, and download soft copy modules for each subject.</h5>
-                            <a href="https://sumacab1absit.vercel.app" target="_blank">view</a>
+                            <a href="https://sumacab1absit.vercel.app" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/ComAcronym.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>Computer Dictionary</h3>
                             <h5>This computer acronym dictionary is a reference resource that provides a list of commonly used acronyms in computer science and information technology, helpful for those new to the field or encountering unfamiliar acronyms in technical documents or discussions.</h5>
-                            <a href="Projects/Computer Dictionary/index.html" target="_blank">view</a>
+                            <a href="Projects/Computer Dictionary/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/Passchecker.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>Password evaluator</h3>
                             <h5>This password checker is a tool that evaluates the strength of a password by analyzing factors such as length, complexity, and character variety, and provides feedback to the user on whether the password is strong, medium, or weak.</h5>
-                            <a href="Projects/Passchecker/index.html" target="_blank">view</a>
+                            <a href="Projects/Passchecker/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/snakeGame.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>Snake Game</h3>
                             <h5>A classic video game where you control a snake to eat food and grow longer, while avoiding hitting walls or your own tail.</h5>
-                            <a href="Projects/JSGame/index.html" target="_blank">view</a>
+                            <a href="Projects/JSGame/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/jsQuiz.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>JavaScript Quiz</h3>
                             <h5>Our updated JavaScript quiz features 10 questions with 4 options each. As you answer the questions, you will see your current score displayed on the screen. Once you finish the quiz, you will be able to see your total score.</h5>
-                            <a href="Projects/JSQuiz final/index.html" target="_blank">view</a>
+                            <a href="Projects/JSQuiz final/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/JS-Clock.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>JavaScript Clock</h3>
                             <h5>We made a clock that shows the time and date using circular progress bars. It updates automatically and we can customize the colors and sizes of the progress bars. We used HTML, CSS, and JavaScript to create it. The clock is unique and visually appealing.</h5>
-                            <a href="Projects/1JSClock/index.html" target="_blank">view</a>
+                            <a href="Projects/1JSClock/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/JSquizz.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>JavaScript Quiz</h3>
                             <h5>Our JavaScript quiz has 10 questions with 4 options each. When an answer is selected, a pop-up window appears to notify the user if their answer was correct or incorrect. The quiz tests knowledge of JavaScript and is an interactive way to learn and improve skills.</h5>
-                            <a href="Projects/JSQuiz/index.html" target="_blank">view</a>
+                            <a href="Projects/JSQuiz/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/Accordion-dropdown.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>Accordion Dropdown</h3>
                             <h5>Our JavaScript accordion dropdown is a responsive content toggle with animated transitions. It features a 10-question quiz with 4 options per question, displaying incorrect answers in red and correct answers in green to aid users in identifying areas for review and tracking their progress.</h5>
-                            <a href="Projects/JSDropdown/index.html" target="_blank">view</a>
+                            <a href="Projects/JSDropdown/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
-                    <div class="rect" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">
+                    <div class="rect" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <div class="rect-image">
                             <img src="images/comboboxx.png" alt="">
                         </div>
                         <div class="rect-content">
                             <h3>JavaScript ComboBox</h3>
                             <h5>We have three types of ComboBox: a read-only select, an editable, and a multi-select. The first is a simple dropdown list, the second allows users to enter their own value, and the third allows multiple selections. All three types offer different functionality and can be used in various situations.</h5>
-                            <a href="Projects/JSComboBox/index.html" target="_blank">view</a>
+                            <a href="Projects/JSComboBox/index.html" target="_blank">view <i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
@@ -379,34 +490,34 @@
     </section>
     <section class="contact" id="contact">
         <div class="contact-container">
-            <div class="contact-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="contact-title" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                 <h2>Contact</h2>
             </div>
             <div class="contact-content">
                 <div class="contact-text">
-                    <h3 data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">Get in touch</h3>
-                    <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="600">Welcome to my website! If you have questions or just want to say hi, feel free to contact me. I'm a student who enjoys learning and making new friends. I'll respond as quickly as possible.</p>
-                    <div class="hello-button" data-aos="fade-right" data-aos-duration="500" data-aos-delay="800">
+                    <h3 data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">Get in touch</h3>
+                    <p data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">Welcome to my website! If you have questions or just want to say hi, feel free to contact me. I'm a student who enjoys learning and making new friends. I'll respond as quickly as possible.</p>
+                    <div class="hello-button" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                         <a href="mailto:cdrcangulo@gmail.com">Say Hi!</a>
                     </div>
                 </div>
-                <div class="contact-image" data-aos="fade-left" data-aos-duration="500" data-aos-delay="1100">
+                <div class="contact-image" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">
                     <div class="me-logo"></div>
                 </div>
             </div>
         </div>
         <div class="footer">
             <div class="soc-med">
-                <div class="facebook icon" >
+                <div class="facebook social-icon" >
                     <a href="https://www.facebook.com/bryan.18.hp/" target="_blank" class="fa fa-facebook-official" aria-hidden="true"></a>
                 </div>
-                <div class="LinkedIn icon">
+                <div class="LinkedIn social-icon">
                     <a href="https://linkedin.com/in/cedric-angulo-2632ab256" target="_blank" class="fa fa-linkedin-square" aria-hidden="true"></a>
                 </div>
-                <div class="GitHub icon">   
+                <div class="GitHub social-icon">
                     <a href="https://github.com/bryan308" target="_blank" class="fa fa-github" aria-hidden="true"></a>
                 </div>
-                <div class="Mail icon">
+                <div class="Mail social-icon">
                     <a href="mailto:cdrcangulo@gmail.com" target="_blank" class="fa fa-envelope" aria-hidden="true"></a>
                 </div>
             </div>
@@ -423,6 +534,33 @@
   AOS.init();
 </script>
 <script>
+    const checkbox = document.querySelector(".input");
+    
+    // Function to set the dark mode preference in localStorage
+    function setDarkModePreference(isDarkMode) {
+        localStorage.setItem('darkMode', isDarkMode);
+    }
+    
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        const isDarkMode = document.body.classList.contains("dark");
+        document.body.classList.toggle("dark", !isDarkMode);
+        setDarkModePreference(!isDarkMode);
+    }
+    
+    // Check localStorage for dark mode preference on page load
+    function checkDarkModePreference() {
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        document.body.classList.toggle('dark', isDarkMode);
+        checkbox.checked = isDarkMode;
+    }
+    
+    // Attach the event listener for the checkbox
+    checkbox.addEventListener("click", toggleDarkMode);
+    
+    // Check for user's preference on page load
+    checkDarkModePreference();
+
 $(document).ready(function() {
     $('.hello-button a').hover(
         function() {

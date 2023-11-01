@@ -1,17 +1,24 @@
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector("#checkbox");
 const navMenu = document.querySelector(".nav-menu");
+const navMenuOverlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".nav-link");
+
 navLink.forEach(n => n.addEventListener("click", closeMenu));
-hamburger.addEventListener("click", mobileMenu);
+hamburger.addEventListener("change", mobileMenu);
 
 function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+  if (hamburger.checked) {
+    navMenu.classList.add("active");
+  } else {
+    navMenu.classList.remove("active");
+  }
 }
 
 function closeMenu() {
-    hamburger.classList.remove("active");
+  if (hamburger.checked) {
+    hamburger.checked = false;
     navMenu.classList.remove("active");
+  }
 }
 
 const navbar = document.querySelector('.navbar');
@@ -65,37 +72,30 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-const checkbox = document.querySelector("input[type='checkbox']");
-  
-  checkbox.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-})
-
-
 function randomValues() {
   anime({
     targets: '.shape-container .el',
-    translateX: function() {
+    translateX: function () {
       return anime.random(-20, 20) + 'vw';
     },
-    translateY: function() {
+    translateY: function () {
       return anime.random(-20, 20) + 'vh';
     },
-    scale: function() {
+    scale: function () {
       return anime.random(0.3, 1.6);
     },
-    rotate: function() {
+    rotate: function () {
       return anime.random(-360, 360);
     },
-    duration: function() {
+    duration: function () {
       return anime.random(2000, 4000);
     },
     borderRadius: [
-      { 
-        value: '10%' 
+      {
+        value: '10%'
       },
       {
-        value: anime.random(10 ,15) + '%', duration: 50 
+        value: anime.random(10, 15) + '%', duration: 50
       },
       {
         value: '50%', duration: 500
@@ -105,9 +105,9 @@ function randomValues() {
   });
 }
 
-window.addEventListener('load', function() {
-   randomValues();
-   setInterval(randomValues, 4000);
+window.addEventListener('load', function () {
+  randomValues();
+  setInterval(randomValues, 4000);
 });
 
 const slides = document.querySelectorAll('.slide');
