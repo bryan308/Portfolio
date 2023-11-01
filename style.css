@@ -838,7 +838,7 @@ a {
 .timeline ul .timeline-element:nth-child(even) .left_content {
     position: absolute;
     top: 12px;
-    left: -180px;
+    left: -165px;
     margin: 0;
     padding: 8px 16px;
 
@@ -878,7 +878,7 @@ a {
     }
 
     .timeline ul .timeline-element:nth-child(even):before {
-        top: -18px;
+        top: 5px;
         left: 16px;
     }
 
