@@ -1304,7 +1304,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 80px 0;
+    padding: 0px 0 80px 0;
 }
 
 .works-image {
@@ -1578,9 +1578,6 @@ a {
 }
 
 @media screen and (max-width: 470px) {
-    .capstone-container {
-        margin: 20px 0;
-    }
 
     .capstone-content h1 {
         font-size: var(--font-size-medium);
@@ -1618,10 +1615,6 @@ a {
 }
 
 @media screen and (max-width: 426px) {
-
-    .capstone-container {
-        margin: 20px 0;
-    }
 
     .capstone-content h1 {
         font-size: var(--font-size-medium);
