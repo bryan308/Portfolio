@@ -888,9 +888,6 @@ a {
         left: 50px;
         right: inherit;
     }
-}
-
-@media (max-width: 426px) {
     .timeline ul .timeline-element .right_content p {
         font-size: var(--font-size-xxs);
     }
