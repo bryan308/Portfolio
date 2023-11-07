@@ -30,7 +30,7 @@
 
 
 :root {
-    --logo-image: url(images/weblogoL.png);
+    --logo-image: url(images/weblogoL.webp);
     --default-font-family: 'Montserrat', sans-serif;
     --title-font: 'Teko', sans-serif;
     --subheader-font: 'Inter', sans-serif;
@@ -124,7 +124,7 @@
 }
 
 .dark {
-    --logo-image: url(images/weblogoD.png);
+    --logo-image: url(images/weblogoD.webp);
 
     --text-color: #fdfdfded;
     --active-text: #ffffff;
