@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Students' List</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li class="active-menu">
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1 data-aos="fade-right">
+                        Students List <i class="fa-regular fa-rectangle-list"></i> <span class="fade-textt">(Old
+                            Curriculum)</span>
+                    </h1>
+                    <hr class="section-divider">
+                </div>
+                <div class="main-content">
+                    <div class="table-controls">
+                        <div class="search-tab">
+                            <form class="search-form" action="old_result.html" method="get">
+                                <div class="submit-button">
+                                    <button type="submit" class="btn">Search</button>
+                                </div>
+                                <div class="name-filter">
+                                    <input class="search-input" placeholder="search student..." type="search"
+                                        name="searchname" pattern="[a-zA-Z0-9_\d.\s]*|[1-9][0-9]*" autocomplete="off"
+                                        minlength="2" maxlength="15">
+                                </div>
+                                <div class="year-filter">
+                                    <select class="search-input" name="searchyear">
+                                        <option value="">All</option>
+                                        <option value="">2019</option>
+                                        <option value="">2018</option>
+                                        <option value="">2011</option>
+                                        <option value="">2005</option>
+                                        <option value="">1989</option>
+                                        <option value="" selected></option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="table-con-action">
+                            <button class="btn">
+                                <a class="add" href="old_add.html">Add <i class="fa-solid fa-user-plus"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-container w_5_border s_radius">
+                        <table class="table_list_sep full_width">
+                            <tr class="s_radius w_border">
+                                <th class="th txt_center">
+                                    School Year
+                                </th>
+                                <th class="th txt_center">
+                                    Last Name
+                                </th>
+                                <th class="th txt_center">
+                                    First Name
+                                </th>
+                                <th class="th txt_center m_width">
+                                    Middle Name
+                                </th>
+                                <th class="th txt_center">
+                                    Birth Date
+                                </th>
+                                <th class="th txt_center s_width">
+                                    Gender
+                                </th>
+                                <th class="th txt_center s_width">Details</th>
+                            </tr>
+                            <tr>
+                                <td colspan='7' style='text-align: center;'>No records found. <i
+                                        class='fa-solid fa-triangle-exclamation' style='color: orange;'></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/clock.js"></script>
+<script src="js/script.js"></script>
+
+</html>

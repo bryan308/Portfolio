@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Student's Info</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li>
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1 data-aos="fade-right" style="font-weight: 400;"><span style="font-weight: 600;">
+                            JUAN G. DELA CRUZ's
+                        </span>
+                        Information <i class="fa-solid fa-circle-info"></i>
+                    </h1>
+                    <hr class="section-divider">
+                </div>
+                <div data-aos="fade-in" data-aos-duration="700" class="main-content">
+                    <div class="table-controls">
+                        <div class="buttons-left">
+                            <button class="btn">
+                                <a href="new_list.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
+                            </button>
+                            <button class="btn">
+                                <a href="new_edit_page1.html"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                            </button>
+                        </div>
+                        <div class="buttons-right">
+                            <button class="export"><a data-aos="fade-left" data-aos-duration="600">EXPORT <i
+                                        class="fa-solid fa-file-export"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="table" style="margin: 5px 0 30px 0;">
+                            <div class="flex full_width spc_between">
+                                <div class="cell flex xl_width row_vcenter row_hcenter">
+                                    <img class="m_height" src="images/Deped_logo1.png" alt="DepEd Logo">
+                                </div>
+                                <div class="cell txt_center">
+                                    <div class="fs_xs">Republic of the Philippines</div>
+                                    <div class="fs_xs">Department of Education</div>
+                                    <div class="fs_medium bold_letter">Learner Permanent Record for Junior High School
+                                        (SF10-JHS)</div>
+                                    <div class="fs_xxs"><i>(Formerly Form 137)</i></div>
+                                </div>
+                                <div class="cell flex xl_width row_vcenter row_hcenter">
+                                    <img class="m_width" src="images/Deped_logo2.png" alt="DepEd Logo">
+                                </div>
+                            </div>
+                            <tr>
+                                <th class="th" colspan="10" style="border: 3px solid black;">LEARNER'S INFORMATION</th>
+                            </tr>
+                            <tr>
+                                <td colspan="10" class="n_border cell">
+                                    <div class="flex flex_row_vcenter spc_between">
+                                        <div class="cell">LAST NAME:
+                                            <input type="text" class="underline l_width txt_center fs_xxs"
+                                                name="last_name" value="DELA CRUZ" readonly>
+                                        </div>
+                                        <div class="cell">FIRST NAME:
+                                            <input type="text" class="underline l_width txt_center fs_xxs"
+                                                name="first_name" name="" value="JUAN" readonly>
+                                        </div>
+                                        <div class="cell">NAME EXT. (Jr,I,II):
+                                            <input type="text" class="underline s_width txt_center fs_xxs"
+                                                name="name_ext" name="" value="" readonly>
+                                        </div>
+                                        <div class="cell">MIDDLE NAME:
+                                            <input type="text" class="underline m_width txt_center fs_xxs"
+                                                name="middle_name" name="" value="G." readonly>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex_row_vcenter spc_between">
+                                        <div class="cell">Learner Reference Number (LRN):
+                                            <input type="text" class="underline l_width txt_center fs_xxs" name="lrn"
+                                                name="" value="12312312312" readonly>
+                                        </div>
+                                        <div class="cell">Birthdate (mm/dd/yyyy):
+                                            <input type="text" class="underline l_width txt_center fs_xxs"
+                                                name="birth_date" name="" value="10/16/2003" readonly>
+                                        </div>
+                                        <div class="cell">Sex:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" name="gender"
+                                                value="MALE" readonly>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table" style="margin: 5px 0;">
+                            <tr>
+                                <th class="th" colspan="10" style="border: 3px solid black;">ELIGIBILITY FOR JHS
+                                    ENROLMENT</th>
+                            </tr>
+                        </table>
+                        <table class="table" style="margin: 5px 0 30px 0;">
+                            <tr>
+                                <td colspan="10" class="w_border">
+                                    <div class="flex flex_row_vcenter">
+                                        <div class="xs_width txt_center">
+                                            <input type="checkbox" name="efje_elem_school_completer_chckbx" checked>
+                                        </div>
+                                        <div class="full_width">
+                                            <div class="flex flex_row_vcenter spc_between">
+                                                <div class="cell">
+                                                    Elementary School Completer
+                                                </div>
+                                                <div class="cell">General Average:
+                                                    <input type="text" class="underline s_width txt_center fs_xxs"
+                                                        name="efje_general_average" value="" readonly>
+                                                </div>
+                                                <div class="cell">Citation (If Any):
+                                                    <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                        name="efje_if_any_citation" value="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex_row_vcenter spc_between">
+                                                <div class="cell">Name of Elementary School:
+                                                    <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                        name="efje_school_name" value="" readonly>
+                                                </div>
+                                                <div class="cell">School ID:
+                                                    <input type="text" class="underline s_width txt_center fs_xxs"
+                                                        name="efje_school_id" value="" readonly>
+                                                </div>
+                                                <div class="cell">Address Of School:
+                                                    <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                        name="efje_school_address" value="" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="10" class="n_border">
+                                    Other Credential Presented
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="10" class="n_border">
+                                    <div class="flex flex_row_vcenter">
+                                        <div class="xs_width txt_center">
+                                            <input type="checkbox" name="efje_pept_passer_chckbx">
+                                        </div>
+                                        <div class="full_width">
+                                            <div class="flex flex_row_vcenter spc_between">
+                                                <div class="cell">
+                                                    PEPT Passer
+                                                    Rating:
+                                                    <input type="text" class="underline m_width txt_center fs_xxs"
+                                                        name="efje_pept_passer_rating" value="" readonly>
+                                                </div>
+                                                <div class="cell">
+                                                    <input type="checkbox" name="efje_als_passer_chckbx">
+                                                    ALS A & E Passer
+                                                    Rating:
+                                                    <input type="text" class="underline m_width txt_center fs_xxs"
+                                                        name="efje_als_passer_rating" value="" readonly>
+                                                </div>
+                                                <div class="cell">
+                                                    <input type="checkbox" name="efje_others_chckbx">
+                                                    Others (Pls. Specify)
+                                                    <input type="text" class="underline m_width txt_center fs_xxs"
+                                                        name="efje_others_rating" value="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex_row_vcenter spc_between">
+                                                <div class="cell">Date of Examination/Assessment(mm/dd/yyyy):
+                                                    <input type="text" class="underline l_width txt_center fs_xxs"
+                                                        name="efje_date_of_exam" value="" readonly>
+                                                </div>
+                                                <div class="cell">Name and Address of Testing Center:
+                                                    <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                        name="efje_testing_center" value="" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table">
+                            <tr>
+                                <th class="th" colspan="10" style="border: 3px solid black;">SCHOLASTIC RECORD</th>
+                            </tr>
+                        </table>
+                        <table class="table" style="margin: 5px 0; border: 3px solid black;">
+                            <tr>
+                                <td colspan="10" class="n_border">
+                                    <div class="flex flex_row_vcenter spc_between">
+                                        <div class="cell">School:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">School ID:
+                                            <input type="text" class="underline m_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">District:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Division:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Region:
+                                            <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex_row_vcenter spc_between">
+                                        <div class="cell">Classified as Grade:
+                                            <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Section:
+                                            <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">School Year:
+                                            <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Name of Adviser/Teacher:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">
+                                            Signature:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" readonly>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2" class="txt_center xl_width bold_letter fs_xs">LEARNING AREAS
+                                </td>
+                                <td colspan="4" class="txt_center bold_letter">Quarterly Rating</td>
+                                <td colspan="1" rowspan="2" class="txt_center m_width bold_letter fs_xs">FINAL<br>RATING
+                                </td>
+                                <td colspan="3" rowspan="2" class="txt_center l_width bold_letter fs_xs">REMARKS</td>
+                            </tr>
+                            <tr>
+                                <td class="txt_center s_width bold_letter">
+                                    1
+                                </td>
+                                <td class="txt_center s_width bold_letter">
+                                    2
+                                </td>
+                                <td class="txt_center s_width bold_letter">
+                                    3
+                                </td>
+                                <td class="txt_center s_width bold_letter">
+                                    4
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                </td>
+                                <td colspan="4" class="bold_letter txt_center">
+                                    <i>General Average</i>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td colspan="3">
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="th" colspan="10"></th>
+                            </tr>
+                            <tr>
+                                <td colspan="10" class="n_border bold_letter txt_center">
+                                    <div class="flex full_width row_h_start">
+                                        <div class="cell txt_center l_width">
+                                            Remedial Classes
+                                        </div>
+                                        <div class="cell">
+                                            Conducted from(mm/dd/yyyy): <input type="text" class="underline txt_center"
+                                                value="" readonly>to (mm/dd/yyyy): <input type="text"
+                                                class="underline txt_center" value="" readonly>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="txt_center bold_letter">Learning Areas
+                                </td>
+                                <td colspan="1" class="txt_center bold_letter">Final Rating
+                                </td>
+                                <td colspan="3" class="txt_center bold_letter">Remedial Class Mark
+                                </td>
+                                <td colspan="2" class="txt_center bold_letter">Recomputed<br>Final Grade
+                                </td>
+                                <td colspan="4" class="txt_center bold_letter">Remarks
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="txt_center">
+                                </td>
+                                <td colspan="1" class="txt_center">
+                                    <input type="text" class="txt_center" value="" readonly>
+                                </td>
+                                <td colspan="3" class="txt_center">
+                                </td>
+                                <td colspan="2" class="txt_center">
+                                </td>
+                                <td colspan="4" class="txt_center">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="txt_center">
+                                </td>
+                                <td colspan="1" class="txt_center">
+                                    <input type="text" class="txt_center" value="" readonly>
+                                </td>
+                                <td colspan="3" class="txt_center">
+                                </td>
+                                <td colspan="2" class="txt_center">
+                                </td>
+                                <td colspan="4" class="txt_center">
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table" style="margin: 5px 0; border: 3px solid black;">
+                            <tr>
+                                <td colspan="10" class="n_border">
+                                    <div class="flex flex_row_vcenter spc_between">
+                                        <div class="cell">School:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">School ID:
+                                            <input type="text" class="underline m_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">District:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Division:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Region:
+                                            <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex_row_vcenter spc_between">
+                                        <div class="cell">Classified as Grade:
+                                            <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Section:
+                                            <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">School Year:
+                                            <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">Name of Adviser/Teacher:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                readonly>
+                                        </div>
+                                        <div class="cell">
+                                            Signature:
+                                            <input type="text" class="underline l_width txt_center fs_xxs" readonly>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2" class="txt_center xl_width bold_letter fs_xs">LEARNING AREAS
+                                </td>
+                                <td colspan="4" class="txt_center bold_letter">Quarterly Rating</td>
+                                <td colspan="1" rowspan="2" class="txt_center m_width bold_letter fs_xs">FINAL<br>RATING
+                                </td>
+                                <td colspan="3" rowspan="2" class="txt_center l_width bold_letter fs_xs">REMARKS</td>
+                            </tr>
+                            <tr>
+                                <td class="txt_center s_width bold_letter">
+                                    1
+                                </td>
+                                <td class="txt_center s_width bold_letter">
+                                    2
+                                </td>
+                                <td class="txt_center s_width bold_letter">
+                                    3
+                                </td>
+                                <td class="txt_center s_width bold_letter">
+                                    4
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" class="full_width bold_letter" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                </td>
+                                <td colspan="4" class="bold_letter txt_center">
+                                    <i>General Average</i>
+                                </td>
+                                <td>
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                                <td colspan="3">
+                                    <input class="txt_center full_width bold_letter" type="text" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="th" colspan="10"></th>
+                            </tr>
+                            <tr>
+                                <td colspan="10" class="n_border bold_letter txt_center">
+                                    <div class="flex full_width row_h_start">
+                                        <div class="cell txt_center l_width">
+                                            Remedial Classes
+                                        </div>
+                                        <div class="cell">
+                                            Conducted from(mm/dd/yyyy): <input type="text" class="underline txt_center"
+                                                value="" readonly>to (mm/dd/yyyy): <input type="text"
+                                                class="underline txt_center" value="" readonly>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="txt_center bold_letter">Learning Areas
+                                </td>
+                                <td colspan="1" class="txt_center bold_letter">Final Rating
+                                </td>
+                                <td colspan="3" class="txt_center bold_letter">Remedial Class Mark
+                                </td>
+                                <td colspan="2" class="txt_center bold_letter">Recomputed<br>Final Grade
+                                </td>
+                                <td colspan="4" class="txt_center bold_letter">Remarks
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="txt_center">
+                                </td>
+                                <td colspan="1" class="txt_center">
+                                    <input type="text" class="txt_center" value="" readonly>
+                                </td>
+                                <td colspan="3" class="txt_center">
+                                </td>
+                                <td colspan="2" class="txt_center">
+                                </td>
+                                <td colspan="4" class="txt_center">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="txt_center">
+                                </td>
+                                <td colspan="1" class="txt_center">
+                                    <input type="text" class="txt_center" value="" readonly>
+                                </td>
+                                <td colspan="3" class="txt_center">
+                                </td>
+                                <td colspan="2" class="txt_center">
+                                </td>
+                                <td colspan="4" class="txt_center">
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table" style="margin: 10px 0; border: 3px solid black;">
+                            <tr>
+                                <th class="th" colspan="10" style="border: 3px solid black;">CERTIFICATION</th>
+                            </tr>
+                            <tr>
+                                <td colspan="10" class="n_border">
+                                    <div class="column s_margin_t">
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">I CERTIFY that this is a true record of
+                                                <input type="text" class="underline xl_width txt_center"
+                                                    name="certification1_fullname" value="" readonly>
+                                            </div>
+                                            <div class="cell">with LRN:
+                                                <input type="text" class="underline m_width txt_center"
+                                                    name="certification1_lrn" value="" readonly>
+                                            </div>
+                                            <div class="cell">and that he/she is eligible for adminssion to Grade
+                                                <input type="text" class="underline xs_width txt_center"
+                                                    name="certification1_admission_grade" value="" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">Name of School:
+                                                <input type="text" class="underline xl_width txt_center"
+                                                    name="certification1_school_name" value="" readonly>
+                                            </div>
+                                            <div class="cell">School ID:
+                                                <input type="text" class="underline l_width txt_center"
+                                                    name="certification1_school_id" value="" readonly>
+                                            </div>
+                                            <div class="cell">Last School Year Attended:
+                                                <input type="text" class="underline l_width txt_center"
+                                                    name="certification1_last_sy_attended" value="" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex spc_between m_height row_v_end">
+                                        <div class="flex column_type row_vcenter row_v_end">
+                                            <div class="cell">
+                                                <input class="underline xl_width txt_center" type="text" name="">
+                                            </div>
+                                            <div class="cell">
+                                                Date
+                                            </div>
+                                        </div>
+                                        <div class="flex column_type row_vcenter row_v_end">
+                                            <div class="cell">
+                                                <input class="underline xxl_width txt_center bold_letter" type="text"
+                                                    name="certification1_principal_name" value="" readonly>
+                                            </div>
+                                            <div class="cell">
+                                                Signature of Principal/School Head over Printed Name
+                                            </div>
+                                        </div>
+                                        <div class="flex column_type row_vcenter row_v_end xl_width">
+                                            <div class="cell">
+                                                (Affix School Seal Here)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="paging flex">
+                        <a>Next Page<i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="js/clock.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

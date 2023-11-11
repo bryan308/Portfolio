@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Edit Info</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li>
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1 data-aos="fade-right" style="font-weight: 400;">Edit <span style="font-weight: 600;">
+                            MCKERNON, GATES W.</span>
+                        Information <i class="fa fa-pen"></i>
+                        <span class="fade-textt">306801-000083</span>
+                    </h1>
+                    <hr class="section-divider">
+                </div>
+                <div class="overlay" id="overlay"></div>
+                <div id="confirmDialog" class="confirm-dialog">
+                    <div class="delete-title" style="display: flex; gap: 5px;">
+                        <h3>WARNING</h3><i class='fa fa-exclamation-triangle'
+                            style='color: orange; margin: auto 0; font-size: 20px;'></i>
+                    </div>
+                    <p>Are you sure you want to delete GATES's record?</br> This action cannot be undone.</p>
+                    <div class="btn-wrapper">
+                        <button class="delete" onclick="deleteItemOld()">Delete</button>
+                        <button class="cancel" onclick="hideDeleteConfirmation()">Cancel</button>
+                    </div>
+                </div>
+                <div data-aos="fade-in" data-aos-duration="700" class="main-content">
+                    <div class="table-controls">
+                        <div class="buttons-left">
+                            <button class="btn">
+                                <a href="old_info.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
+                            </button>
+                        </div>
+                        <div class="buttons-right">
+                            <!-- <form action="" method="">
+                            </form> -->
+                            <button class="archive s_width" onclick="deleteItemOld()" name="archive">Archive <i
+                                    class="fa-solid fa-archive"></i></button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="edit-controls">
+                            <button class="delete" onclick="showDeleteConfirmation()" data-aos="fade-down"
+                                data-aos-duration="400">DELETE <i class="fa-solid fa-trash"></i></button>
+                        </div>
+                        <!-- <form action="" method=""> -->
+                            <div class="edit-controls">
+                                <button class="update" onclick="updateOld()" data-aos="fade-down"
+                                    data-aos-duration="600">UPDATE <i class="fa-solid fa-upload"></i></button>
+                            </div>
+                            <table class="table">
+                                <tr>
+                                    <th class="fs_small n_border" colspan="8">SECONDARY STUDENT'S PERMANENT RECORD</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="bold_letter n_border">Last Name:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value=""
+                                            pattern="[A-Z\s]+" minlength="1" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="bold_letter n_border">First Name:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value=""
+                                            pattern="[A-Z\s]+" minlength="1" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="bold_letter n_border">Middle Name:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value=""
+                                            pattern="[A-Z\s\.]+" minlength="1" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="bold_letter n_border">Name Ext.:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="bold_letter n_border">Citizenship:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value="" pattern="[^\d]+"
+                                            minlength="1" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="bold_letter n_border">Gender:
+                                        <select name="gender" class="bold_letter txt_center fs_xxs" id="gender">
+                                            <option value="MALE" selected>MALE</option>
+                                            <option value="FEMALE">FEMALE</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="bold_letter n_border">Date of Birth:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="bold_letter n_border">Place of Birth:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                </tr>
+                                <tr colspan="8">
+                                    <td colspan="4" class="bold_letter n_border">Guardian:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value="" pattern="[^\d]+"
+                                            minlength="1" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="bold_letter n_border">Occupation:
+                                        <input type="text" class="bold_letter l_width fs_xxs" value="" pattern="[^\d]+"
+                                            minlength="1" maxlength="50" autocomplete="off">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" class="bold_letter n_border">Address:
+                                        <input type="text" class="bold_letter xl_width fs_xxs" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="bold_letter n_border">Inter. Course Completed:
+                                        <input type="text" class="bold_letter xl_width fs_xxs" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="bold_letter n_border">School year:
+                                        <input type="text" class="bold_letter m_width fs_xxs" value="" pattern="[0-9]*"
+                                            minlength="4" maxlength="4" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="bold_letter n_border">General Average:
+                                        <input type="text" class="bold_letter m_width fs_xxs" value="" pattern="[0-9]*"
+                                            minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                </tr>
+                            </table>
+                            <style>
+                                .width_75 {
+                                    width: 75%;
+                                }
+                            </style>
+                            <div class="flex full_width column_type row_hcenter row_vcenter">
+                                <table class="width_75 table_list_coll xs_margin_t">
+                                    <tr>
+                                        <td colspan="8" class="bold_letter">School:
+                                            <input type="text" class="xxl_width bold_letter fs_xxs" value=""
+                                                pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Classified as:
+                                            <input type="text" class="bold_letter fs_xxs" value="" pattern="[A-Z\s]+"
+                                                minlength="10" maxlength="11" autocomplete="off">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">School year:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9" autocomplete="off"
+                                                placeholder="yyyy-yyyy">
+                                        </td>
+                                    </tr>
+                                    <tr class="record-header">
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                            Curr</br>Yr.
+                                        </td>
+                                        <td colspan="4" class="bold_letter fs_xs txt_center m_width">
+                                            Subject
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Final Rating
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Action Taken
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Credits Earned
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I" selected>I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days of School:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">Total Units Earned:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1}" minlength="1" maxlength="4" autocomplete="off"
+                                                placeholder="00.0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days Present:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">General Average:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1,2}" minlength="2" maxlength="5"
+                                                autocomplete="off" placeholder="00.00">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="width_75 table_list_coll xs_margin_t">
+                                    <tr>
+                                        <td colspan="8" class="bold_letter">School:
+                                            <input type="text" class="xxl_width bold_letter fs_xxs" value=""
+                                                pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Classified as:
+                                            <input type="text" class="bold_letter fs_xxs" value="" pattern="[A-Z\s]+"
+                                                minlength="10" maxlength="11" autocomplete="off">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">School year:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9" autocomplete="off"
+                                                placeholder="yyyy-yyyy">
+                                        </td>
+                                    </tr>
+                                    <tr class="record-header">
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                            Curr</br>Yr.
+                                        </td>
+                                        <td colspan="4" class="bold_letter fs_xs txt_center m_width">
+                                            Subject
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Final Rating
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Action Taken
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Credits Earned
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II" selected>II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days of School:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">Total Units Earned:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1}" minlength="1" maxlength="4" autocomplete="off"
+                                                placeholder="00.0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days Present:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">General Average:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1,2}" minlength="2" maxlength="5"
+                                                autocomplete="off" placeholder="00.00">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="width_75 table_list_coll xs_margin_t">
+                                    <tr>
+                                        <td colspan="8" class="bold_letter">School:
+                                            <input type="text" class="xxl_width bold_letter fs_xxs" value=""
+                                                pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Classified as:
+                                            <input type="text" class="bold_letter fs_xxs" value="" pattern="[A-Z\s]+"
+                                                minlength="10" maxlength="11" autocomplete="off">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">School year:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9" autocomplete="off"
+                                                placeholder="yyyy-yyyy">
+                                        </td>
+                                    </tr>
+                                    <tr class="record-header">
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                            Curr</br>Yr.
+                                        </td>
+                                        <td colspan="4" class="bold_letter fs_xs txt_center m_width">
+                                            Subject
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Final Rating
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Action Taken
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Credits Earned
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III" selected>III</option>
+                                                <option value="IV">IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days of School:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">Total Units Earned:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1}" minlength="1" maxlength="4" autocomplete="off"
+                                                placeholder="00.0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days Present:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">General Average:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1,2}" minlength="2" maxlength="5"
+                                                autocomplete="off" placeholder="00.00">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="width_75 table_list_coll xs_margin_t">
+                                    <tr>
+                                        <td colspan="8" class="bold_letter">School:
+                                            <input type="text" class="xxl_width bold_letter fs_xxs" value=""
+                                                pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Classified as:
+                                            <input type="text" class="bold_letter fs_xxs" value="" pattern="[A-Z\s]+"
+                                                minlength="10" maxlength="11" autocomplete="off">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">School year:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9" autocomplete="off"
+                                                placeholder="yyyy-yyyy">
+                                        </td>
+                                    </tr>
+                                    <tr class="record-header">
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                            Curr</br>Yr.
+                                        </td>
+                                        <td colspan="4" class="bold_letter fs_xs txt_center m_width">
+                                            Subject
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Final Rating
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Action Taken
+                                        </td>
+                                        <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                            Credits Earned
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="txt_center">
+                                            <select class="bold_letter txt_center fs_xxs">
+                                                <option value="I">I</option>
+                                                <option value="II">II</option>
+                                                <option value="III">III</option>
+                                                <option value="IV" selected>IV</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </td>
+                                        <td colspan="4">
+                                            <input type="text" class="bold_letter full_width fs_xxs" value=""
+                                                minlength="1" maxlength="50">
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center fs_xxs s_width" value=""
+                                                pattern="[A-Z]|\d+(\.\{2})?" minlength="1" maxlength="5"
+                                                autocomplete="off">
+                                        </td>
+                                        <td colspan="1" class="txt_center s_width">
+                                            <select class="txt_center fs_xxs">
+                                                <option value="" selected></option>
+                                                <option value="Passed">Passed</option>
+                                                <option value="Failed">Failed</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="1">
+                                            <input type="text" class="txt_center s_width fs_xxs" value="" minlength="1"
+                                                maxlength="3" autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days of School:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">Total Units Earned:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1}" minlength="1" maxlength="4" autocomplete="off"
+                                                placeholder="00.0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="bold_letter">Days Present:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,3}\.\d{1}" minlength="3" maxlength="5" autocomplete="off"
+                                                placeholder="000.0">
+                                        </td>
+                                        <td colspan="4" class="bold_letter">General Average:
+                                            <input type="text" class="bold_letter fs_xxs" value=""
+                                                pattern="\d{1,2}\.\d{1,2}" minlength="2" maxlength="5"
+                                                autocomplete="off" placeholder="00.00">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="flex full_width s_margin_t">
+                                <div class="half_width">
+                                    <div class="bold_letter txt_center fs_small">
+                                        <p>CERTIFICATION OF GRADUATION</p>
+                                    </div>
+                                    <div class="full_width bold_letter">
+                                        <p class="fs_xxs">Graduates as of <input type="text"
+                                                class="bold_letter underline half_width txt_center fs_xxs" value=""
+                                                pattern="[^\d]+" maxlength="50" minlength="1" autocomplete="off"></p>
+                                        <p class="fs_xxs">Under Special Order (A) No. <input type="text"
+                                                class="bold_letter underline half_width txt_center fs_xxs" value=""
+                                                pattern="[^\d]+" maxlength="50" minlength="1" autocomplete="off"></p>
+                                        <p class="fs_xxs">S. <input type="text"
+                                                class="bold_letter underline half_width txt_center fs_xxs" value=""
+                                                pattern="[^\d]+" maxlength="50" minlength="1" autocomplete="off"></p>
+                                    </div>
+                                </div>
+                                <div class="half_width">
+                                    <div class="bold_letter txt_center fs_small">
+                                        <p>TRANSFER</p>
+                                    </div>
+                                    <p class="fs_xxs bold_letter txt_right">
+                                        This cedrtifies that this is the true record of <input type="text"
+                                            class="bold_letter underline l_width txt_center fs_xxs" value=""
+                                            pattern="[^\d]+" maxlength="50" minlength="3" autocomplete="off"> is
+                                        eligible for graduation to <input type="text"
+                                            class="bold_letter underline l_width txt_center fs_xxs" value=""
+                                            pattern="[^\d]+" maxlength="50" minlength="3" autocomplete="off"> student as
+                                        regular/irregular and has no money/property responsibility in this school.
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var withLrnSelect = document.getElementById('with_lrn');
+    var lrnInput = document.getElementById('lrn_input');
+
+    withLrnSelect.addEventListener('change', function () {
+        if (withLrnSelect.value === 'TRUE') {
+            lrnInput.style.display = 'inline-block';
+        } else {
+            lrnInput.style.display = 'none';
+        }
+    });
+</script>
+<script src="js/clock.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

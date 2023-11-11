@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Dashboard</title>
+    <style>
+        .table-container {
+            max-height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li class="active-menu">
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li>
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1>Dashboard <i class="fa-solid fa-chart-simple"></i></h1>
+                    <hr class="section-divider">
+                </div>
+                <div class="main-dashboard">
+                    <div class="dashboard-container">
+                        <div class="stucount-table">
+                            <div class="stucount-title">
+                                <p class="table-titles">Frequency of Gender <span class="fade-textt">(Old List)</span>
+                                </p>
+                            </div>
+                            <div class="card card-gender">
+                                <div class="stucount-card">
+                                    <div class="card-icon">
+                                        <img src="images/maleicon.png" alt="Male Icon">
+                                    </div>
+                                    <div class="card-info">
+                                        <div class="card-title">Males</div>
+                                        <div class="card-frequency count-animate" id="oldGenderMale">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stucount-card">
+                                    <div class="card-icon">
+                                        <img src="images/femaleicon.png" alt="Female Icon">
+                                    </div>
+                                    <div class="card-info">
+                                        <div class="card-title">Females</div>
+                                        <div class="card-frequency count-animate" id="oldGenderFemale">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="average-table">
+                            <p class="table-titles">General Average of Students <span class="fade-textt">(Old
+                                    List)</span></p>
+                            <div class="card card-average">
+                                <div class="card-info">
+                                    <div class="card-title">General Average</div>
+                                    <div class="card-frequency count-animate" id="generalAverageOld">
+                                        <?php echo $generalAverageOld; ?>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-title">Highest Ave.</div>
+                                    <div class="card-frequency count-animate"> </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-title">Lowest Ave.</div>
+                                    <div class="card-frequency count-animate"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-container">
+                        <div class="schoolyr-table">
+                            <p class="table-titles">Number of Students by School Year <span class="fade-textt">(Old
+                                    List)</span></p>
+                            <div class="dashboard-table">
+                                <canvas id="schoolYearChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="stucount-table">
+                            <p class="table-titles">Total Students in each List</p>
+                            <div class="dashboard-table">
+                                <canvas id="oldListChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-container">
+                        <div class="stucount-table">
+                            <div class="stucount-title">
+                                <p class="table-titles">Frequency of Gender <span class="fade-textt">(New List)</span>
+                                </p>
+                            </div>
+                            <div class="card card-gender">
+                                <div class="stucount-card">
+                                    <div class="card-icon">
+                                        <img src="images/maleicon.png" alt="Male Icon">
+                                    </div>
+                                    <div class="card-info">
+                                        <div class="card-title">Males</div>
+                                        <div class="card-frequency count-animate" id="newGenderMale">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stucount-card">
+                                    <div class="card-icon">
+                                        <img src="images/femaleicon.png" alt="Female Icon">
+                                    </div>
+                                    <div class="card-info">
+                                        <div class="card-title">Females</div>
+                                        <div class="card-frequency count-animate" id="newGenderFemale">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="subject-table">
+                            <p class="table-titles"></p>
+                            <div class="card card-average">
+                                <div class="card-info">
+                                    <div class="card-title"></div>
+                                    <div class="card-frequency count-animate"></div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-title"></div>
+                                    <div class="card-frequency count-animate"></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // JavaScript code for counting animation
+    function countAnimation(element, finalValue) {
+        let currentValue = 0;
+        const increment = Math.ceil(finalValue / 60); // Adjust the increment value as desired
+        const timer = setInterval(() => {
+            currentValue += increment;
+            element.textContent = currentValue;
+            if (currentValue >= finalValue) {
+                element.textContent = finalValue;
+                clearInterval(timer);
+            }
+        }, 37); // Adjust the interval value as desired
+    }
+
+    // Call countAnimation for each element
+    const oldGenderMale = document.getElementById('oldGenderMale');
+    const oldGenderMaleValue = 2;
+    countAnimation(oldGenderMale, oldGenderMaleValue);
+
+    const oldGenderFemale = document.getElementById('oldGenderFemale');
+    const oldGenderFemaleValue = 3;
+    countAnimation(oldGenderFemale, oldGenderFemaleValue);
+
+    const newGenderMale = document.getElementById('newGenderMale');
+    const newGenderMaleValue = 5;
+    countAnimation(newGenderMale, newGenderMaleValue);
+
+    const newGenderFemale = document.getElementById('newGenderFemale');
+    const newGenderFemaleValue = 5;
+    countAnimation(newGenderFemale, newGenderFemaleValue);
+
+    // Call countAnimation for the general average element
+    const generalAverageOld = document.getElementById('generalAverageOld');
+    const generalAverageOldValue = 99;
+    countAnimation(generalAverageOld, generalAverageOldValue);
+
+
+    var schoolYearChartCanvas = document.getElementById('schoolYearChart');
+
+    // Generate the bar chart for school years
+    new Chart(schoolYearChartCanvas.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: [
+                '2019',
+                '2018',
+                '2011',
+                '2005',
+                '1989'
+            ],
+            datasets: [{
+                label: 'Number of Students',
+                data: [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.4)',
+                    'rgba(255, 159, 64, 0.4)',
+                    'rgba(255, 205, 86, 0.4)',
+                    'rgba(75, 192, 192, 0.4)',
+                    'rgba(54, 162, 235, 0.4)',
+                    'rgba(153, 102, 255, 0.4)',
+                    'rgba(201, 203, 207, 0.4)'
+                ],
+                borderColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)',
+                    'rgb(201, 203, 207)'
+                ],
+                borderWidth: 0.5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    precision: 0,
+                    suggestedMax: Math.max(
+                        5 + 5,  // Add 10 to the highest number of students
+                        10       // Ensure a minimum suggested maximum of 10
+                    )
+                }
+            }
+        }
+    });
+
+    // Retrieve the canvas elements
+    var oldListChartCanvas = document.getElementById('oldListChart');
+
+    // Generate the bar charts
+    new Chart(oldListChartCanvas.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: [
+                'New List',
+                'Old List'
+            ],
+            datasets: [{
+                label: 'Number of students',
+                data: [
+                    10,
+                    5
+                ],
+                backgroundColor: [
+                    'rgba(13, 255, 0, 0.2)',
+                    'rgba(255, 238, 0, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(13, 255, 0)',
+                    'rgba(255, 238, 0)'
+                ],
+                borderWidth: 0.5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    precision: 0,
+                    suggestedMax: Math.max(
+                        5
+                    ) + 10
+                }
+            }
+        }
+    });
+</script>
+<script src="js/clock.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/script.js"></script>
+
+</html>

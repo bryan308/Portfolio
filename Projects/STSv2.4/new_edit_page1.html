@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Edit Info</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li>
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1 data-aos="fade-right" style="font-weight: 400;">Edit <span style="font-weight: 600;">
+                            JUAN G. DELA CRUZ's
+                        </span> Information <i class="fa fa-pen"></i>
+                    </h1>
+                    <hr class="section-divider">
+                </div>
+                <div class="overlay" id="overlay"></div>
+                <div id="confirmDialog" class="confirm-dialog">
+                    <div class="delete-title" style="display: flex; gap: 5px;">
+                        <h3>WARNING</h3><i class='fa fa-exclamation-triangle'
+                            style='color: orange; margin: auto 0; font-size: 20px;'></i>
+                    </div>
+                    <p>Are you sure you want to delete JUAN's record?</br> This action cannot be undone.</p>
+                    <div class="btn-wrapper">
+                        <button class="delete" onclick="deleteItemNew()">Delete</button>
+                        <button class="cancel" onclick="hideDeleteConfirmation()">Cancel</button>
+                    </div>
+                </div>
+                <div data-aos="fade-in" data-aos-duration="700" class="main-content">
+                    <div class="table-controls">
+                        <div class="buttons-left">
+                            <button class="btn">
+                                <a href="new_info_page1.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
+                            </button>
+                        </div>
+                        <div class="buttons-right">
+                            <!-- <form action="" method=""> -->
+                            <!-- <input type="hidden" name="archived_student" value="TRUE"> -->
+                            <button class="archive s_width" type="" onclick="deleteItemNew()">
+                                Archive <i class="fa-solid fa-archive"></i>
+                            </button>
+                            <!-- </form> -->
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <form id="" action="new_delete.html" method="post">
+                            <input type="hidden" name="delete" value="1">
+                            <input type="hidden" name="ID" value="" autocomplete="off">
+                        </form>
+                        <div class="edit-controls">
+                            <!-- insert button -->
+                            <button class="delete" onclick="showDeleteConfirmation()" data-aos="fade-down"
+                                data-aos-duration="400">DELETE <i class="fa-solid fa-trash"></i></button>
+                        </div>
+                        <form action="" method="post">
+                            <div class="edit-controls">
+                                <button class="update" onclick="updateNew()" type="subimt" data-aos="fade-down"
+                                    data-aos-duration="600">UPDATE <i class="fa-solid fa-upload"></i></button>
+                            </div>
+                            <table class="table" style="margin: 5px 0 30px 0;">
+                                <div class="flex full_width spc_between">
+                                    <div class="cell flex xl_width row_vcenter row_hcenter">
+                                        <img class="m_height" src="images/Deped_logo1.png" alt="DepEd Logo">
+                                    </div>
+                                    <div class="cell txt_center">
+                                        <div class="fs_xs">Republic of the Philippines</div>
+                                        <div class="fs_xs">Department of Education</div>
+                                        <div class="fs_medium bold_letter">Learner Permanent Record for Junior High
+                                            School (SF10-JHS)</div>
+                                        <div class="fs_xxs"><i>(Formerly Form 137)</i></div>
+                                    </div>
+                                    <div class="cell flex xl_width row_vcenter row_hcenter">
+                                        <img class="m_width" src="images/Deped_logo2.png" alt="DepEd Logo">
+                                    </div>
+                                </div>
+                                <tr>
+                                    <th class="th" colspan="10" style="border: 3px solid black;">LEARNER'S INFORMATION
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" class="n_border cell">
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">LAST NAME:
+                                                <input type="text" class="underline l_width txt_center fs_xxs"
+                                                    value="DELA CRUZ" pattern="[A-Z\s]+" minlength="2" maxlength="50"
+                                                    autocomplete="off" required>
+                                            </div>
+                                            <div class="cell">FIRST NAME:
+                                                <input type="text" class="underline l_width txt_center fs_xxs"
+                                                    value="JUAN" pattern="[A-Z\s]+" minlength="2" maxlength="50"
+                                                    autocomplete="off" required>
+                                            </div>
+                                            <div class="cell">NAME EXT. (Jr,I,II):
+                                                <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                            </div>
+                                            <div class="cell">MIDDLE NAME:
+                                                <input type="text" class="underline m_width txt_center fs_xxs"
+                                                    value="G." pattern="[A-Z\s]+" minlength="2" maxlength="50"
+                                                    autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">Learner Reference Number (LRN):
+                                                <input type="text" class="underline l_width txt_center fs_xxs"
+                                                    value="12312312312" pattern="[0-9]*" minlength="12" maxlength="12"
+                                                    autocomplete="off" required>
+                                            </div>
+                                            <div class="cell">Birthdate (mm/dd/yyyy):
+                                                <input type="text" class="underline l_width txt_center fs_xxs"
+                                                    value="10/16/2003" pattern="\d{1,2}/\d{1,2}/\d{4}" minlength="8"
+                                                    maxlength="10" autocomplete="off" placeholder="mm/dd/yyyy" required>
+                                            </div>
+                                            <div class="cell">Sex:
+                                                <select name="gender" class="underline m_width txt_center" id="gender">
+                                                    <option value=""></option>
+                                                    <option value="MALE" selected>MALE</option>
+                                                    <option value="FEMALE">FEMALE</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin: 5px 0;">
+                                <tr>
+                                    <th class="th" colspan="10" style="border: 3px solid black;">ELIGIBILITY FOR JHS
+                                        ENROLMENT</th>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin: 5px 0 30px 0;">
+                                <tr>
+                                    <td colspan="10" class="w_border">
+                                        <div class="flex flex_row_vcenter">
+                                            <div class="xs_width txt_center">
+                                                <input type="checkbox" name="efje_elem_school_completer_chckbx"
+                                                    value="1">
+                                            </div>
+                                            <div class="full_width">
+                                                <div class="flex flex_row_vcenter spc_between">
+                                                    <div class="cell">
+                                                        Elementary School Completer
+                                                    </div>
+                                                    <div class="cell">General Average:
+                                                        <input type="text" class="underline s_width txt_center fs_xxs"
+                                                            value="" pattern="[0-9]*" minlength="2" maxlength="2"
+                                                            autocomplete="off">
+                                                    </div>
+                                                    <div class="cell">Citation (If Any):
+                                                        <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex_row_vcenter spc_between">
+                                                    <div class="cell">Name of Elementary School:
+                                                        <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                    <div class="cell">School ID:
+                                                        <input type="text" class="underline s_width txt_center fs_xxs"
+                                                            name="efje_school_id" value="" pattern="[0-9]*"
+                                                            minlength="6" maxlength="6" autocomplete="off">
+                                                    </div>
+                                                    <div class="cell">Address Of School:
+                                                        <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" class="n_border">
+                                        Other Credential Presented
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" class="n_border">
+                                        <div class="flex flex_row_vcenter">
+                                            <div class="xs_width txt_center">
+                                                <input type="checkbox" name="efje_pept_passer_chckbx" value="1">
+                                            </div>
+                                            <div class="full_width">
+                                                <div class="flex flex_row_vcenter spc_between">
+                                                    <div class="cell">
+                                                        PEPT Passer
+                                                        Rating:
+                                                        <input type="text" class="underline m_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                    <div class="cell">
+                                                        <input type="checkbox" name="efje_als_passer_chckbx" value="1">
+                                                        ALS A & E Passer
+                                                        Rating:
+                                                        <input type="text" class="underline m_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                    <div class="cell">
+                                                        <input type="checkbox" name="efje_others_chckbx" value="1">
+                                                        Others (Pls. Specify)
+                                                        <input type="text" class="underline m_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex_row_vcenter spc_between">
+                                                    <div class="cell">Date of Examination/Assessment(mm/dd/yyyy):
+                                                        <input type="text" class="underline l_width txt_center fs_xxs"
+                                                            value="" pattern="\d{1,2}/\d{1,2}/\d{4}" minlength="10"
+                                                            maxlength="10" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                    <div class="cell">Name and Address of Testing Center:
+                                                        <input type="text" class="underline xl_width txt_center fs_xxs"
+                                                            value="" minlength="1" maxlength="50" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table">
+                                <tr>
+                                    <th class="th" colspan="10" style="border: 3px solid black;">SCHOLASTIC RECORD</th>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin: 5px 0; border: 3px solid black;">
+                                <tr>
+                                    <td colspan="10" class="n_border">
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">School:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50">
+                                            </div>
+                                            <div class="cell">School ID:
+                                                <input type="text" class="underline m_width txt_center fs_xxs" value=""
+                                                    pattern="[0-9]*" minlength="6" maxlength="6">
+                                            </div>
+                                            <div class="cell">District:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50">
+                                            </div>
+                                            <div class="cell">Division:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50">
+                                            </div>
+                                            <div class="cell">Region:
+                                                <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="1" maxlength="50">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">Classified as Grade:
+                                                <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                    pattern="[0-9]*" minlength="1" maxlength="2" autocomplete="off">
+                                            </div>
+                                            <div class="cell">Section:
+                                                <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                            </div>
+                                            <div class="cell">School Year:
+                                                <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                    pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9"
+                                                    autocomplete="off" placeholder="yyyy-yyyy">
+                                            </div>
+                                            <div class="cell">Name of Adviser/Teacher:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50" autocomplete="off">
+                                            </div>
+                                            <div class="cell">
+                                                Signature:
+                                                <input type="text" class="underline l_width txt_center fs_xxs"
+                                                    minlength="" maxlength="" autocomplete="off" readonly>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="2" class="txt_center xl_width bold_letter fs_xs">
+                                        LEARNING AREAS
+                                    </td>
+                                    <td colspan="4" class="txt_center bold_letter">
+                                        Quarterly Rating
+                                    </td>
+                                    <td colspan="1" rowspan="2" class="txt_center m_width bold_letter fs_xs">
+                                        FINAL<br>RATING
+                                    </td>
+                                    <td colspan="3" rowspan="2" class="txt_center l_width bold_letter fs_xs">
+                                        REMARKS
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_center s_width bold_letter">
+                                        1
+                                    </td>
+                                    <td class="txt_center s_width bold_letter">
+                                        2
+                                    </td>
+                                    <td class="txt_center s_width bold_letter">
+                                        3
+                                    </td>
+                                    <td class="txt_center s_width bold_letter">
+                                        4
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                    </td>
+                                    <td colspan="4" class="bold_letter txt_center">
+                                        <i>General Average</i>
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off" readonly>
+                                    </td>
+                                    <td colspan="3" class="txt_center">
+                                        <select name="sr1_final_remark" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PROMOTED">PROMOTED</option>
+                                            <option value="RETAINED">RETAINED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="th" colspan="10"></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" class="n_border bold_letter txt_center">
+                                        <div class="flex full_width row_h_start">
+                                            <div class="cell txt_center l_width">
+                                                Remedial Classes
+                                            </div>
+                                            <div class="cell">
+                                                Conducted from(mm/dd/yyyy): <input type="text"
+                                                    class="underline txt_center" value=""
+                                                    pattern="\d{1,2}/\d{1,2}/\d{4}" minlength="10" maxlength="10"
+                                                    placeholder="mm/dd/yyyy" autocomplete="off">to (mm/dd/yyyy): <input
+                                                    type="text" class="underline txt_center" name="sr1_remedial_to"
+                                                    value="" pattern="\d{1,2}/\d{1,2}/\d{4}" minlength="10"
+                                                    maxlength="10" placeholder="mm/dd/yyyy" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="txt_center bold_letter">
+                                        Learning Areas
+                                    </td>
+                                    <td colspan="1" class="txt_center bold_letter">
+                                        Final Rating
+                                    </td>
+                                    <td colspan="3" class="txt_center bold_letter">
+                                        Remedial Class Mark
+                                    </td>
+                                    <td colspan="2" class="txt_center bold_letter">
+                                        Recomputed<br>Final Grade
+                                    </td>
+                                    <td colspan="4" class="txt_center bold_letter">
+                                        Remarks
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="txt_center">
+                                        <input class="txt_center full_width" type="text" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center" value="" pattern="[0-9]*" minlength="2"
+                                            maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td colspan="3" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="txt_center">
+                                        <select name="sr1_remarks_row1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PROMOTED">PROMOTED</option>
+                                            <option value="RETAINED">RETAINED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="txt_center">
+                                        <input class="txt_center full_width" type="text" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center" value="" pattern="[0-9]*" minlength="2"
+                                            maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td colspan="3" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="txt_center">
+                                        <select name="sr1_remarks_row1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PROMOTED">PROMOTED</option>
+                                            <option value="RETAINED">RETAINED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin: 5px 0; border: 3px solid black;">
+                                <tr>
+                                    <td colspan="10" class="n_border">
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">School:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50">
+                                            </div>
+                                            <div class="cell">School ID:
+                                                <input type="text" class="underline m_width txt_center fs_xxs" value=""
+                                                    pattern="[0-9]*" minlength="6" maxlength="6">
+                                            </div>
+                                            <div class="cell">District:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50">
+                                            </div>
+                                            <div class="cell">Division:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50">
+                                            </div>
+                                            <div class="cell">Region:
+                                                <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="1" maxlength="50">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex_row_vcenter spc_between">
+                                            <div class="cell">Classified as Grade:
+                                                <input type="text" class="underline xs_width txt_center fs_xxs" value=""
+                                                    pattern="[0-9]*" minlength="1" maxlength="2" autocomplete="off">
+                                            </div>
+                                            <div class="cell">Section:
+                                                <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="1" maxlength="50" autocomplete="off">
+                                            </div>
+                                            <div class="cell">School Year:
+                                                <input type="text" class="underline s_width txt_center fs_xxs" value=""
+                                                    pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9"
+                                                    autocomplete="off" placeholder="yyyy-yyyy">
+                                            </div>
+                                            <div class="cell">Name of Adviser/Teacher:
+                                                <input type="text" class="underline l_width txt_center fs_xxs" value=""
+                                                    pattern="[^\d]+" minlength="5" maxlength="50" autocomplete="off">
+                                            </div>
+                                            <div class="cell">
+                                                Signature:
+                                                <input type="text" class="underline l_width txt_center fs_xxs"
+                                                    minlength="" maxlength="" autocomplete="off" readonly>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="2" class="txt_center xl_width bold_letter fs_xs">
+                                        LEARNING AREAS
+                                    </td>
+                                    <td colspan="4" class="txt_center bold_letter">
+                                        Quarterly Rating
+                                    </td>
+                                    <td colspan="1" rowspan="2" class="txt_center m_width bold_letter fs_xs">
+                                        FINAL<br>RATING
+                                    </td>
+                                    <td colspan="3" rowspan="2" class="txt_center l_width bold_letter fs_xs">
+                                        REMARKS
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_center s_width bold_letter">
+                                        1
+                                    </td>
+                                    <td class="txt_center s_width bold_letter">
+                                        2
+                                    </td>
+                                    <td class="txt_center s_width bold_letter">
+                                        3
+                                    </td>
+                                    <td class="txt_center s_width bold_letter">
+                                        4
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="text" class="full_width bold_letter" value="" pattern="[^\d]+"
+                                            minlength="3" maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" id="lr1" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width" type="text" name="" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td class="txt_center">
+                                        <select name="sr1_lr1_rmks1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PASSED">PASSED</option>
+                                            <option value="FAILED">FAILED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                    </td>
+                                    <td colspan="4" class="bold_letter txt_center">
+                                        <i>General Average</i>
+                                    </td>
+                                    <td>
+                                        <input class="txt_center full_width bold_letter" type="text" value=""
+                                            pattern="[0-9]*" minlength="2" maxlength="2" autocomplete="off" readonly>
+                                    </td>
+                                    <td colspan="3" class="txt_center">
+                                        <select name="sr1_final_remark" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PROMOTED">PROMOTED</option>
+                                            <option value="RETAINED">RETAINED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="th" colspan="10"></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" class="n_border bold_letter txt_center">
+                                        <div class="flex full_width row_h_start">
+                                            <div class="cell txt_center l_width">
+                                                Remedial Classes
+                                            </div>
+                                            <div class="cell">
+                                                Conducted from(mm/dd/yyyy): <input type="text"
+                                                    class="underline txt_center" value=""
+                                                    pattern="\d{1,2}/\d{1,2}/\d{4}" minlength="10" maxlength="10"
+                                                    placeholder="mm/dd/yyyy" autocomplete="off">to (mm/dd/yyyy): <input
+                                                    type="text" class="underline txt_center" name="sr1_remedial_to"
+                                                    value="" pattern="\d{1,2}/\d{1,2}/\d{4}" minlength="10"
+                                                    maxlength="10" placeholder="mm/dd/yyyy" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="txt_center bold_letter">
+                                        Learning Areas
+                                    </td>
+                                    <td colspan="1" class="txt_center bold_letter">
+                                        Final Rating
+                                    </td>
+                                    <td colspan="3" class="txt_center bold_letter">
+                                        Remedial Class Mark
+                                    </td>
+                                    <td colspan="2" class="txt_center bold_letter">
+                                        Recomputed<br>Final Grade
+                                    </td>
+                                    <td colspan="4" class="txt_center bold_letter">
+                                        Remarks
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="txt_center">
+                                        <input class="txt_center full_width" type="text" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center" value="" pattern="[0-9]*" minlength="2"
+                                            maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td colspan="3" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="txt_center">
+                                        <select name="sr1_remarks_row1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PROMOTED">PROMOTED</option>
+                                            <option value="RETAINED">RETAINED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="txt_center">
+                                        <input class="txt_center full_width" type="text" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center" value="" pattern="[0-9]*" minlength="2"
+                                            maxlength="2" autocomplete="off">
+                                    </td>
+                                    <td colspan="3" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="2" class="txt_center">
+                                        <input class="txt_center full_width" type="text" name="" value="" minlength="1"
+                                            maxlength="50" autocomplete="off">
+                                    </td>
+                                    <td colspan="4" class="txt_center">
+                                        <select name="sr1_remarks_row1" class="option txt_center bold_letter">
+                                            <option value=""></option>
+                                            <option value="PROMOTED">PROMOTED</option>
+                                            <option value="RETAINED">RETAINED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin: 10px 0; border: 3px solid black;">
+                                <tr>
+                                    <th class="th" colspan="10" style="border: 3px solid black;">CERTIFICATION</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" class="n_border">
+                                        <div class="column s_margin_t">
+                                            <div class="flex flex_row_vcenter spc_between">
+                                                <div class="cell">I CERTIFY that this is a true record of
+                                                    <input type="text" class="underline xl_width txt_center" value=""
+                                                        minlength="5" maxlength="50" autocomplete="off">
+                                                </div>
+                                                <div class="cell">with LRN:
+                                                    <input type="text" class="underline m_width txt_center" value=""
+                                                        pattern="[0-9]*" minlength="12" maxlength="12"
+                                                        autocomplete="off">
+                                                </div>
+                                                <div class="cell">and that he/she is eligible for adminssion to Grade
+                                                    <input type="text" class="underline xs_width txt_center" value=""
+                                                        pattern="[0-9]*" minlength="1" maxlength="2" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex_row_vcenter spc_between">
+                                                <div class="cell">Name of School:
+                                                    <input type="text" class="underline xl_width txt_center" value=""
+                                                        minlength="1" maxlength="50" autocomplete="off">
+                                                </div>full_width bold_letter
+                                                <div class="cell">School ID:
+                                                    <input type="text" class="underline l_width txt_center" value=""
+                                                        pattern="[0-9]*" minlength="6" maxlength="6" autocomplete="off">
+                                                </div>
+                                                <div class="cell">Last School Year Attended:
+                                                    <input type="text" class="underline l_width txt_center" value=""
+                                                        pattern="^\d{4}-\d{4}$" minlength="9" maxlength="9"
+                                                        autocomplete="off" placeholder="yyyy-yyyy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex spc_between m_height row_v_end">
+                                            <div class="flex column_type row_vcenter row_v_end">
+                                                <div class="cell">
+                                                    <input class="underline xl_width txt_center" type="text" readonly>
+                                                </div>
+                                                <div class="cell">
+                                                    Date
+                                                </div>
+                                            </div>
+                                            <div class="flex column_type row_vcenter row_v_end">
+                                                <div class="cell">
+                                                    <input class="underline xxl_width txt_center bold_letter"
+                                                        type="text" value="" minlength="1" maxlength="50"
+                                                        autocomplete="off">
+                                                </div>
+                                                <div class="cell">
+                                                    Signature of Principal/School Head over Printed Name
+                                                </div>
+                                            </div>
+                                            <div class="flex column_type row_vcenter row_v_end xl_width">
+                                                <div class="cell">
+                                                    (Affix School Seal Here)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/automation.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

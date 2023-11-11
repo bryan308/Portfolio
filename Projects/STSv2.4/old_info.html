@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Student's Info</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li>
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1 data-aos="fade-right" style="font-weight: 400;"><span style="font-weight: 600;">
+                            MCKERNON, GATES W.</span>
+                        Information <i class="fa-solid fa-circle-info"></i>
+                        <span class="fade-textt">306801-000083</span>
+                    </h1>
+                    <hr class="section-divider">
+                </div>
+                <div data-aos="fade-in" data-aos-duration="700" class="main-content">
+                    <div class="table-controls">
+                        <div class="buttons-left">
+                            <button class="btn">
+                                <a href="old_list.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
+                            </button>
+                            <button class="btn">
+                                <a href="old_edit.html"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                            </button>
+                        </div>
+                        <div class="buttons-right">
+                            <button class="export"><a data-aos="fade-left" data-aos-duration="600">EXPORT <i
+                                        class="fa-solid fa-file-export"></i></a></button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <tr>
+                                <th class="fs_small n_border" colspan="8">SECONDARY STUDENT'S PERMANENT RECORD</th>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="bold_letter n_border">Name:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="MCKERNON, GATES W. "
+                                        readonly>
+                                </td>
+                                <td colspan="3" class="bold_letter n_border">Citizenship:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="FILIPINO" readonly>
+                                </td>
+                                <td colspan="1" class="bold_letter n_border">Gender:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="FEMALE" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="bold_letter n_border">Date of Birth:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="MCKERNON, GATES W. "
+                                        readonly>
+                                </td>
+                                <td colspan="4" class="bold_letter n_border">Place of Birth:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr colspan="8">
+                                <td colspan="4" class="bold_letter n_border">Guardian:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                </td>
+                                <td colspan="4" class="bold_letter n_border">Occupation:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="bold_letter n_border">Address:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="bold_letter n_border">Inter. Course Completed:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                </td>
+                                <td colspan="1" class="bold_letter n_border">School year:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="2009" readonly>
+                                </td>
+                                <td colspan="1" class="bold_letter n_border">General Average:
+                                    <input type="text" class="bold_letter full_width fs_xxs" value="98" readonly>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="flex">
+                            <table class="table">
+                                <tr>
+                                    <td colspan="8" class="bold_letter">School:
+                                        <span class="value">
+                                            SOMEWHERE NATIONAL HIGH SCHOOL
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Classified as:
+                                        <span class="value">
+                                            FIRST YEAR
+                                        </span>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">School year:
+                                        <span class="value">
+                                            2009
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="record-header">
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                        Curr</br>Yr.
+                                    </td>
+                                    <td colspan="4" class="bold_letter fs_xs txt_center">
+                                        Subject
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Final Rating
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Action Taken
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Credits Earned
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="I"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days of School:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">Total Units Earned:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days Present:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">General Average:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin-left: 5px;">
+                                <tr>
+                                    <td colspan="8" class="bold_letter">School:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Classified as:
+                                    </td>
+                                    <td colspan="3" class="bold_letter">School year:
+                                    </td>
+                                </tr>
+                                <tr class="record-header">
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                        Curr</br>Yr.
+                                    </td>
+                                    <td colspan="4" class="bold_letter fs_xs txt_center">
+                                        Subject
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Final Rating
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Action Taken
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Credits Earned
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="II"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days of School:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">Total Units Earned:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days Present:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">General Average:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="flex">
+                            <table class="table" style="margin: 5px 0 0 0;">
+                                <tr>
+                                    <td colspan="8" class="bold_letter">School:
+                                        <span class="value">
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Classified as:
+                                        <span class="value">
+                                        </span>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">School year:
+                                        <span class="value">
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="record-header">
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                        Curr</br>Yr.
+                                    </td>
+                                    <td colspan="4" class="bold_letter fs_xs txt_center">
+                                        Subject
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Final Rating
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Action Taken
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Credits Earned
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="III"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days of School:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">Total Units Earned:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days Present:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">General Average:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table" style="margin: 5px 0 0 5px;">
+                                <tr>
+                                    <td colspan="8" class="bold_letter">School:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Classified as:
+                                    </td>
+                                    <td colspan="3" class="bold_letter">School year:
+                                    </td>
+                                </tr>
+                                <tr class="record-header">
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 xs_width">
+                                        Curr</br>Yr.
+                                    </td>
+                                    <td colspan="4" class="bold_letter fs_xs txt_center">
+                                        Subject
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Final Rating
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Action Taken
+                                    </td>
+                                    <td colspan="1" class="txt_center fs_xxxs fw500 s_width">
+                                        Credits Earned
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="bold_letter txt_center">
+                                        <input type="text" class="bold_letter txt_center full_width fs_xxs" value="IV"
+                                            readonly>
+                                    </td>
+                                    <td colspan="4">
+                                        <input type="text" class="bold_letter full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                    <td colspan="1" class="txt_center">
+                                        <input type="text" class="txt_center full_width fs_xxs" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days of School:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">Total Units Earned:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="bold_letter">Days Present:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                    <td colspan="3" class="bold_letter">General Average:
+                                        <input type="text" class="bold_letter fs_xxs m_width" value="" readonly>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="flex full_width s_margin_t">
+                            <div class="half_width">
+                                <div class="bold_letter txt_center fs_small">
+                                    <p>CERTIFICATION OF GRADUATION</p>
+                                </div>
+                                <div class="full_width bold_letter">
+                                    <p class="fs_xxs">Graduates as of <input type="text"
+                                            class="bold_letter underline half_width txt_center fs_xxs" value=""
+                                            readonly></p>
+                                    <p class="fs_xxs">Under Special Order (A) No. <input type="text"
+                                            class="bold_letter underline half_width txt_center fs_xxs" value=""
+                                            readonly></p>
+                                    <p class="fs_xxs">S. <input type="text"
+                                            class="bold_letter underline half_width txt_center fs_xxs" value=""
+                                            readonly></p>
+                                </div>
+                            </div>
+                            <div class="half_width">
+                                <div class="bold_letter txt_center fs_small">
+                                    <p>TRANSFER</p>
+                                </div>
+                                <p class="fs_xxs bold_letter txt_right">
+                                    This cedrtifies that this is the true record of <input type="text"
+                                        class="bold_letter underline l_width txt_center fs_xxs" value="" readonly> is
+                                    eligible for graduation to <input type="text"
+                                        class="bold_letter underline l_width txt_center fs_xxs" value="" readonly>
+                                    student as regular/irregular and has no money/property responsibility in this
+                                    school.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="js/clock.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

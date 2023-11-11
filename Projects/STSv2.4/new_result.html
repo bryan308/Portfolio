@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS Library for scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="icon" href="images/school_logo.png">
+    <title>STS | Students' List New</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-user">
+                    <div class="show-access" style="width: 90%;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <marquee behavior="scroll" loop="infinite" scrollamount="5" direction="left">
+                            Welcome Admin!
+                        </marquee>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i> Dashboard
+                    </a>
+                </li>
+                <li class="active-menu">
+                    <a href="new_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List New
+                    </a>
+                </li>
+                <li>
+                    <a href="old_list.html" target="_self">
+                        <i class="fa-solid fa-table-list"></i> Students List Old
+                    </a>
+                </li>
+            </ul>
+            <div class="signout-btn">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="top-section">
+                    <button class="menu-btn" id="menu-toggle">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="clock-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h1 data-aos="fade-right">Students List <i class="fa-regular fa-rectangle-list"></i> <span
+                            class="fade-textt">(New Curriculum)</span>
+                    </h1>
+                    <hr class="section-divider">
+                </div>
+                <div data-aos="fade-in" data-aos-duration="700" class="main-content">
+                    <div class="table-controls">
+                        <div class="search-tab">
+                            <form class="search-form" action="new_result.html" method="get">
+                                <div class="submit-button">
+                                    <button type="submit" class="btn">Search</button>
+                                </div>
+                                <div class="name-filter">
+                                    <input class="search-input" placeholder="search student..." type="search" value=""
+                                        pattern="[a-zA-Z0-9_\d.\s]*|[1-9][0-9]*" minlength="2" maxlength="15"
+                                        autocomplete="off">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="table-con-action">
+                            <button class="btn">
+                                <a class="add" href="new_add.html">Add <i class="fa-solid fa-user-plus"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-container w_5_border s_radius">
+                        <table class="table_list_sep full_width">
+                            <tr class="s_radius w_border">
+                                <th class="th txt_center">LRN</th>
+                                <th class="th txt_center">Last name</th>
+                                <th class="th txt_center">First name</th>
+                                <th class="th txt_center m_width">Middle name</th>
+                                <th class="th txt_center">Birthdate</th>
+                                <th class="th txt_center s_width">Gender</th>
+                                <th class="th txt_center s_width">Details</th>
+                            </tr>
+                            <tr class='s_radius n_border'>
+                                <td colspan='7' class='txt_center w_2_border fs_small'>
+                                    No records found. <i class='fa-solid fa-triangle-exclamation'
+                                        style='color: orange;'></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="js/clock.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
