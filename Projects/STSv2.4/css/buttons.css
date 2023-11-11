@@ -1,0 +1,412 @@
+
+:root {
+    --delete: #fa1018;
+    --update: #00bf00;
+    --export: #0011ff;
+    --cancel: #eaeaea;
+}
+
+.btn a {
+    color: var(--color-7);
+    transition: color .3s;
+    display: block;
+}
+
+.btn {
+    color: var(--color-7);
+    font-family: inherit;
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+    margin: 5px;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color-6);
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    /* transform: scale(0.9); */
+    z-index: 1;
+} 
+
+.btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color-6);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.btn:hover a {
+    color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:before {
+    color: #fff;
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.btn:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.btn:active:before {
+    background: var(--color-7);
+    transition: background 0s;
+}
+
+.archive {
+    border: none;
+}
+
+.archive {
+    font-family: inherit;
+    /* display: inline-block; */
+    color: var(--export);
+    width: 6em;
+    height: 2em;
+    margin: 5px;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--export);
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    z-index: 1;
+} 
+
+.archive:before {
+    content: "";
+    position: absolute;
+    background: var(--export);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.archive:hover {
+    color: #fff;
+    transition: color .3s;
+}
+
+.archive:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.archive:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.archive:active:before {
+    background: var(--export);
+    transition: background 0s;
+}
+
+.export a {
+    color: var(--export);
+}
+
+.export {
+    font-family: inherit;
+    /* display: inline-block; */
+    width: 6em;
+    height: 2em;
+    margin: 5px;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--export);
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    z-index: 1;
+} 
+
+.export:before {
+    content: "";
+    position: absolute;
+    background: var(--export);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.export:hover a {
+    color: #fff;
+    transition: color .3s;
+}
+
+.export:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.export:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.export:active:before {
+    background: var(--export);
+    transition: background 0s;
+}
+
+.delete {
+    color: var(--delete);
+    font-family: inherit;
+    display: inline-block;
+    width: 6em;
+    height: 2em;
+    margin: 5px 5px 0 5px;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--delete);
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    z-index: 1;
+} 
+
+.delete:before {
+    content: "";
+    position: absolute;
+    background: var(--delete);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.delete:hover{
+    color: #fff;
+}
+
+.delete:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.delete:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.delete:active:before {
+    background: var(--delete);
+    transition: background 0s;
+}
+
+.cancel {
+    color: var(--active-text);
+    font-family: inherit;
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--active-text);
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    z-index: 1;
+} 
+
+.cancel:before {
+    content: "";
+    position: absolute;
+    background: var(--text-color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.cancel:hover{
+    color: #fff;
+}
+
+.cancel:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.cancel:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.cancel:active:before {
+    background: var(--cancel);
+    transition: background 0s;
+}
+
+.update {
+    color: var(--update);
+    font-family: inherit;
+    display: inline-block;
+    width: 6em;
+    height: 2em;
+    margin: 0 5px;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--update);
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    z-index: 1;
+} 
+
+.update:before {
+    content: "";
+    position: absolute;
+    background: var(--update);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.update:hover {
+    color: #fff;
+}
+
+.update:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.update:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.update:active:before {
+    background: var(--update);
+    transition: background 0s;
+}
+
+.view a {
+    color: var(--color-7);
+    transition: color .5s;
+    display: block;
+}
+
+.view {
+    position: relative;
+    font-family: var(--font-family);
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    font-weight: 600;
+    transition: color .2s;
+    z-index: 1;
+}
+
+.view:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color-7);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.view:hover a {
+    color: #fff;
+    cursor: pointer;
+}
+
+.view:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.view:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.view:active:before {
+    background: var(--color-6);
+    transition: background 0s;
+}
+
+.search {
+    color: var(--color-6);
+    font-family: inherit;
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+    margin: 0 5px;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color-6);
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color .1s;
+    z-index: 1;
+} 
+
+.search:before {
+    content: "";
+    position: absolute;
+    background: var(--color-7);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.search:hover {
+    color: #fff;
+}
+
+.search:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.search:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.search:active:before {
+    background: var(--color-7);
+    transition: background 0s;
+}

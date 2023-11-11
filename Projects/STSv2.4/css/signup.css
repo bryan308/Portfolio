@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: rgb(255, 248, 36);
+    background: rgb(48, 239, 0);
+}
+
+:root {
+    --color: #236d00;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(-90deg, #022304 25%, #174e00 40%);
+    overflow: hidden;
+}
+
+.parent-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-image: url(images/aerialview.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
+    /* left: -100%; Initially position the container outside the screen */
+    /* animation: slideInLeft 0.8s forwards 0.5s; Animation to slide the container into position */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.logo-text {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 45px;
+}
+
+.logo-text span {
+    color: #09ff00;
+}
+
+.logo-text h2 {
+    color: #fdfdfd;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    font-weight: 600;
+}
+
+.logo-text h4 {
+    color: #ffffffe8;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.logo-text p {
+    color: #ffffffb4;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Define the animation keyframes */
+/* @keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        left: -100%;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+} */
+/* .form-logo img {
+    filter: drop-shadow(2px 2px 1px rgba( 0, 0, 0, 0.5));
+    opacity: 0.9;
+    height: 275px;
+} */
+.form-logo img {
+    height: 140px;
+    padding: 0px;
+    margin: 50px 0 0 0;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+    transition: .5s ease-in-out;
+}
+
+.left-container .logo-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.left-container .login-image img {
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+    opacity: 0.9;
+    height: 245px;
+}
+
+/* Right container for the login form */
+.right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    /* border-left: 2px solid rgba(69, 243, 63, 0.753); */
+    /* background: #f5f5f520; */
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    position: relative;
+    right: -100%;
+    /* Initially position the container outside the screen */
+    animation: slideInRight 1s forwards;
+    /* Animation to slide the container into position */
+}
+
+/* Define the animation keyframes */
+@keyframes slideInRight {
+    0% {
+        right: -100%;
+        /* Start position outside the screen */
+    }
+
+    100% {
+        right: 0;
+        /* End position at 0 (original position) */
+    }
+}
+
+.login-text {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #f5f5f5;
+    transition: .5s ease-in-out;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.label {
+    text-align: left;
+}
+
+.input-container {
+    position: relative;
+    margin: 10px 0;
+    width: 60%;
+}
+
+.input-container {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.input-container i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #404040;
+    vertical-align: middle;
+}
+
+.input-container input {
+    padding-left: 40px;
+}
+
+.input {
+    position: relative;
+    font-size: 1.3em;
+    padding: 0.5em 0.6em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    color: #333;
+}
+
+.input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.input:hover {
+    background-color: #f5f5f5;
+}
+
+.input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: input-focus 0.3s ease;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #09ff00;
+    transition: width 0.3s ease;
+}
+
+.input:focus~.highlight {
+    width: 100%;
+}
+
+/* Optional: Animation on focus */
+@keyframes input-focus {
+    from {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+    to {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+button {
+    --color: #38b000;
+    position: relative;
+    display: inline-block;
+    color: var(--color);
+    font-family: inherit;
+    width: 5em;
+    height: 2.2em;
+    line-height: 2em;
+    margin: 10px;
+    background-color: #f5f5f5;
+    border: 2px solid var(--color);
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: color .5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+button:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:active:before {
+    background: #82ff47;
+    transition: background 0s;
+}
+
+.signup {
+    margin: 0 0 30px 0;
+}
+
+.signup p {
+    font-size: 13px;
+    color: #f5f5f5;
+}
+
+.signup span a {
+    text-decoration: none;
+    color: #4dff0096;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+.signup span a:hover {
+    text-decoration: underline;
+    color: #69f869;
+}
+
+.error-container {
+    /* Error message */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 30%;
+    background-color: #ff3122;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.error-container.active {
+    display: block;
+    opacity: 1;
+}
+
+.error-close {
+    position: fixed;
+    top: 15px;
+    right: 17px;
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.footer {
+    text-align: left;
+    font-size: 13px;
+    padding: 5px;
+    color: #f5f5f5;
+    border-left: 2px solid #09ff00;
+    transition: color .2s;
+}
+
+.footer p span {
+    color: #f5f5f5;
+    font-weight: 600;
+}
+
+.footer a {
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #4dff0096;
+    font-weight: 400;
+    transition: all .2s;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #69f869;
+}
+
+.about {
+    text-align: center;
+    font-size: 16px;
+    color: #f5f5f5;
+    padding: 10px 0;
+}
+
+.about span a {
+    text-decoration: none;
+    color: #4dff00bd;
+    font-weight: 400;
+    transition: all .2s;
+}
+
+.about span a:hover {
+    text-decoration: underline;
+    color: #69f869;
+}
