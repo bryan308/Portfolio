@@ -8,26 +8,20 @@
     box-sizing: border-box;
 }
 
-/* Set the initial width of the scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
     height: 5px;
     transition: width 0.5s ease-in-out;
-    /* Add transition effect */
 }
 
-/* Style the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 10px;
 }
 
-/* Adjust the width of the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
     width: 10px;
-    /* Set the width to 10 pixels */
 }
-
 
 :root {
     --logo-image: url(images/weblogoL.webp);
@@ -37,7 +31,9 @@
 
     --text-color: #262626;
     --active-text: #252422;
-    --card-text: #fefefe;
+    --card-text-50: #fefefe;
+    --card-text-100: #f5f5f5;
+
     --card-text-hover: #252422;
     --secondary-text: #131313eb;
     --primary-color: #ff510c;
@@ -54,16 +50,13 @@
 
     --primary-bg: #f6f6f6;
     --secondary-bg: #ffffff;
-    --accordion-bg: #f1f1f1;
-    --drop-color: #f6f6f6;
-    --bg-color-bar: #252422;
 
     --JavaScript: #f1e05a;
     --CSS: #563d7c;
     --HTML: #e34c26;
     --PHP: #4f5d95;
 
-    --accordion-shadow: 3px 3px 6px #c3c3c3, -5px -5px 6px #f0f0f026;
+    --rect-shadow: 3px 3px 6px #c3c3c3, -5px -5px 6px #f0f0f026;
     --nav-shadow: 3px 3px 6px #c3c3c3, -5px -5px 6px #f0f0f026;
 
     --gen-transition: all .3s linear;
@@ -107,19 +100,29 @@
     --cardbg8: url(images/cardbg8L.png);
     --cardbg9: url(images/cardbg9L.png);
 
-    --grad-img: url(/images/gradientL.png);
-
-    /* --card1-bg: #fcfcfc;
-    --card2-bg: #fcfcfc;
-    --card3-bg: #fcfcfc;
-    --card4-bg: #fcfcfc;
-    --card5-bg: #fcfcfc;
-    --card6-bg: #fcfcfc;
-    --card7-bg: #fcfcfc;
-    --card8-bg: #fcfcfc;
-    --card9-bg: #fcfcfc; */
-
     --el-opa: 0.5;
+
+    --neutral-50: #fafafa;
+    --neutral-100: #f5f5f5;
+    --neutral-200: #e5e5e5;
+    --neutral-300: #d4d4d4;
+    --neutral-400: #a3a3a3;
+    --neutral-500: #737373;
+    --neutral-600: #525252;
+    --neutral-700: #404040;
+    --neutral-800: #262626;
+    --neutral-900: #171717;
+    --neutral-950: #0a0a0a;
+
+    --proceed-txt: #121212;
+    --proceed-txt-hover: #121212;
+    --proceed-bg: #ff6528;
+    --proceed-bg-hover: none;
+
+    --back-txt: #121212;
+    --back-txt-hover: #f5f5f5;
+    --back-bg: none;
+    --back-bg-hover: #121212;
 
 }
 
@@ -128,7 +131,9 @@
 
     --text-color: #fdfdfded;
     --active-text: #ffffff;
-    --card-text: #fefefe;
+    --card-text-50: #fefefe;
+    --card-text-100: #f5f5f5;
+    
     --secondary-text: #fffffff8;
     --primary-color: #00bfff;
     --fade-primary: #00bfff4d;
@@ -145,9 +150,6 @@
 
     --primary-bg: #101010;
     --secondary-bg: #1a1a1bfb;
-    --accordion-bg: #252423;
-    --drop-color: linear-gradient(83.21deg, #4250c8 0%, #3593c5 100%);
-    --bg-color-bar: #00bfff;
 
     --JavaScript: #fbea6b;
     --CSS: #7d5fab;
@@ -164,25 +166,36 @@
     --cardbg8: url(images/cardbg8D.png);
     --cardbg9: url(images/cardbg9D.png);
 
-    --grad-img: url(/images/gradientD.png);
-
-    /* --card1-bg: linear-gradient(83.21deg, #de471d 0%, #761d15 100%);
-    --card2-bg: linear-gradient(83.21deg, #4250c8 0%, #3593c5 100%);
-    --card3-bg: linear-gradient(83.21deg, #14213d 0%, #cf8000 100%);
-    --card4-bg: linear-gradient(83.21deg, #a9a9a9cb 5%, #0b0618 70%);
-    --card5-bg: linear-gradient(83.21deg, #4f4f4f 0%, #f1c100 100%);
-    --card6-bg: linear-gradient(90deg, #ff4e00 0%, rgb(165, 41, 0) 33%, rgb(123, 145, 0)67%, #e6b000 100%);
-    --card7-bg: linear-gradient(83.21deg, #413D3D 0%, #f0c30e 100%);
-    --card8-bg: linear-gradient(83.21deg, #b0b0b096 0%, #252422 100%);
-    --card9-bg: linear-gradient(83.21deg, #c1b09f 5%, #4b4032 100%); */
-
-    --accordion-shadow: 0;
+    --rect-shadow: 0;
     --nav-shadow: 0;
 
     --el-opa: 0.6;
+
+    --neutral-50: #0a0a0a;
+    --neutral-100: #171717;
+    --neutral-200: #262626;
+    --neutral-300: #404040;
+    --neutral-400: #525252;
+    --neutral-500: #737373;
+    --neutral-600: #a3a3a3;
+    --neutral-700: #d4d4d4;
+    --neutral-800: #e5e5e5;
+    --neutral-900: #f5f5f5;
+    --neutral-950: #fafafa;
+
+    --proceed-txt: #fdfdfd;
+    --proceed-txt-hover: #f5f5f5;
+    --proceed-bg: #007fef;
+    --proceed-bg-hover: ;
+
+    --back-txt: #f5f5f5;
+    --back-txt-hover: #121212;
+    --back-bg: ;
+    --back-bg-hover: #f5f5f5;
 }
 
 body {
+    /* position: relative; */
     font-family: var(--default-font-family);
     color: var(--text-color);
     background: var(--primary-bg);
@@ -369,7 +382,7 @@ a {
         position: absolute;
         left: 0;
         right: 0;
-        height: 3px;
+        height: 4px;
         border-radius: calc(4px / 2);
         background: var(--primary-color);
         color: inherit;
@@ -1002,7 +1015,7 @@ a {
     }
 
     .about-content p {
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-xxs);
         text-align: left;
     }
 
@@ -1020,6 +1033,10 @@ a {
     .cert-text {
         width: 90%;
     }
+
+    .cert-text p {
+        font-size: var(--font-size-xxs);
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1035,10 +1052,6 @@ a {
 @media screen and (max-width: 450px) {
     .certificate-content .cert img {
         height: 250px;
-    }
-
-    .cert-text p {
-        font-size: var(--font-size-xxs);
     }
 }
 
@@ -1132,6 +1145,10 @@ a {
     padding: 0 0 50px 0;
 }
 
+.works-content.me-2 {
+    margin-right: 7px;
+}
+
 .works-title h2 {
     font-family: var(--title-font);
     color: var(--active-text);
@@ -1160,7 +1177,7 @@ a {
     max-width: 95%;
     margin: 1em 0;
     border-radius: 3px;
-    box-shadow: var(--accordion-shadow);
+    box-shadow: var(--rect-shadow);
     overflow: hidden;
 }
 
@@ -1272,13 +1289,13 @@ a {
 .rect-content h3 {
     font-family: var();
     font-size: var(--font-size-h6);
-    color: var(--card-text);
+    color: var(--card-text-50);
     text-transform: uppercase;
 }
 
 .rect-content h5 {
     font-family: var(--default-font-family);
-    color: var(--card-text);
+    color: var(--card-text-100);
     font-size: var(--font-size-xs);
     font-weight: 500;
     margin: 20px 0;
@@ -1286,18 +1303,18 @@ a {
 
 .rect-content a {
     font-size: var(--font-size-xs);
-    color: var(--card-text);
+    color: var(--card-text-50);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
     padding: 10px 25px;
-    border: 2px solid var(--card-text);
+    border: 2px solid var(--card-text-50);
     background: none;
     transition: all .1s linear;
 }
 
 .rect-content a:hover {
-    background: var(--card-text);
+    background: var(--card-text-50);
     color: var(--card-text-hover);
 }
 
@@ -1312,10 +1329,10 @@ a {
 
 .works-image {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    /* height: 500px; */
+    width: 400px;
     overflow: hidden;
 }
 
@@ -1340,6 +1357,10 @@ a {
 .capstone-item {
     width: 50%;
     padding: 0 4rem 0 0;
+}
+
+.capstone-content {
+    height: 100%;
 }
 
 .capstone-content h1 {
@@ -1491,6 +1512,120 @@ a {
     font-size: 27px;
 }
 
+.demo-button {
+    margin: 10px 0;
+}
+
+.demo-button button {
+    font-size: var(--font-size-xs);
+    color: var(--neutral-950);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    padding: 10px 25px;
+    background: none;
+    border: none;
+    transition: all .1s linear;
+}
+
+.demo-button button:hover {
+    /* background: var(--card-text); */
+    color: var(--secondary-color);
+}
+
+.pop,
+.overlay {
+    position: relative;
+    display: none;
+}
+
+.pop.active {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 40%;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: var(--neutral-200);
+    border: 2px solid var(--proceed-txt-hover);
+    z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+    .pop.active {
+        width: 80%;
+    }
+}
+
+.pop i {
+    position: absolute;
+    /* top: 5px; */
+    left: 25px;
+    font-size: 200px;
+    color: #ffe60030;
+    z-index: -1;
+}
+
+.pop-message {
+    color: var(--active-text);
+    padding: 15px;
+}
+
+.pop-action {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.pop-action .pop-action-1,
+.pop-action .pop-action-2 {
+    
+    font-size: var(--font-size-xs);
+    background: none;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 0 5px;
+    transition: background .2s ease;
+}
+
+.pop-action .pop-action-1 {
+    color: var(--proceed-txt);
+    background: var(--proceed-bg);
+    border: 2px solid var(--proceed-txt-hover);
+}
+
+.pop-action .pop-action-1:hover {
+    color: var(--proceed-txt-hover);
+    background: var(--proceed-bg-hover);
+}
+
+.pop-action .pop-action-2 {
+    color: var(--back-txt);
+    background: var(--back-bg);
+    border: 2px solid var(--back-txt);
+}
+
+.pop-action .pop-action-2:hover {
+    color: var(--back-txt-hover);
+    background: var(--back-bg-hover);
+}
+
+.overlay.active {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background-color: #101010c6;
+    z-index: 9;
+}
+
 @media screen and (max-width: 1440px) {
     .works-image {
         width: 350px;
@@ -1530,6 +1665,19 @@ a {
         width: 90%;
     }
 
+    .capstone-content h1 {
+        font-size: var(--font-size-medium);
+    }
+
+    .capstone-content h1 span {
+        font-size: var(--font-size-large);
+    }
+
+    .capstone-content p {
+        font-size: var(--font-size-xxs);
+        padding: 20px 0;
+    }
+
     .rect {
         width: 90%;
         flex-direction: column;
@@ -1541,6 +1689,7 @@ a {
 
     .rect-content {
         width: 100%;
+        padding: 20px 50px;
     }
 
     .rect-content::before {
@@ -1581,19 +1730,6 @@ a {
 }
 
 @media screen and (max-width: 470px) {
-
-    .capstone-content h1 {
-        font-size: var(--font-size-medium);
-    }
-
-    .capstone-content h1 span {
-        font-size: var(--font-size-large);
-    }
-
-    .capstone-content p {
-        font-size: var(--font-size-xxs);
-        padding: 20px 0;
-    }
 
     .works-image {
         width: 250px;
