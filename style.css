@@ -1970,7 +1970,7 @@ a {
 .contact-text h3 {
     font-family: var(--subheader-font);
     font-size: var(--font-size-h6);
-    color: var(--card-text-50);
+    color: var(--active-text);
     text-transform: uppercase;
 }
 
@@ -2058,6 +2058,7 @@ a {
     .contact-text {
         padding: 20px;
         text-align: center;
+        width: 100%;
     }
 
     .footer .soc-med {
@@ -2067,8 +2068,8 @@ a {
     .contact-content {
         flex-direction: column-reverse;
     }
-    .contact-text {
-        width: 100%;
+    .contact-text p {
+        font-size: var(--font-size-xxs);
     }
 }
 
