@@ -2036,7 +2036,7 @@ a {
         width: 60%;
         text-align: left;
     }
-    .contact-text p {
+    .contact-content .contact-text p {
         font-size: var(--font-size-xxs);
     }
 }
