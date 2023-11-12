@@ -2068,16 +2068,10 @@ a {
     .contact-content {
         flex-direction: column-reverse;
     }
-    .contact-text p {
+    .contact-content .contact-text p {
         font-size: var(--font-size-xxs);
     }
 }
-
-@media screen and (max-width: 450px) {
-}
-
-/* .footer {
-} */
 
 .soc-med {
     display: flex;
