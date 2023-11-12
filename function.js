@@ -21,6 +21,7 @@ function closeMenu() {
   }
 }
 
+var nav = document.querySelector(".navbar");
 var container = document.querySelector(".works-content");
 const pop = document.querySelector(".pop");
 const overlay = document.querySelector(".overlay");
@@ -29,6 +30,7 @@ function popMessage() {
   pop.classList.add("active");
   overlay.classList.add("active");
   container.classList.add("me-2");
+  nav.classList.add("me-2");
   document.body.style.overflow = 'hidden';
   // document.addEventListener('scroll', preventScroll);
 }
@@ -37,6 +39,7 @@ function removePopMessage() {
   pop.classList.remove("active");
   overlay.classList.remove("active");
   container.classList.remove("me-2");
+  nav.classList.remove("me-2");
   document.body.style.overflow = '';
   // document.removeEventListener('scroll', preventScroll);
 }
@@ -74,10 +77,10 @@ function randomValues() {
       return anime.random(-20, 20) + 'vh';
     },
     scale: function () {
-      return anime.random(0.3, 1.6);
+      return anime.random(1, 3);
     },
     rotate: function () {
-      return anime.random(-360, 360);
+      return anime.random(0, 90);
     },
     duration: function () {
       return anime.random(2000, 4000);
@@ -93,13 +96,53 @@ function randomValues() {
         value: '50%', duration: 500
       }
     ],
-    easing: 'easeOutElastic(1, .9)',
+    easing: 'easeOutElastic(1, .8)',
+  });
+  
+  anime({
+    targets: '.capstone-content .bg-element',
+    translateX: function () {
+      return anime.random(-5, 5) + 'vw';
+    },
+    translateY: function () {
+      return anime.random(-5, 5) + 'vh';
+    },
+    rotate: function () {
+      return anime.random(0, 20);
+    },
+    scale: function () {
+      return anime.random(1, .8);
+    },
+    duration: function () {
+      return anime.random(4000, 4000);
+    },
+    easing: 'easeOutElastic(1, .8)',
+  });
+
+  anime({
+    targets: '.contact-content .bg-element',
+    translateX: function () {
+      return anime.random(-5, 10) + 'vw';
+    },
+    translateY: function () {
+      return anime.random(-5, 10) + 'vh';
+    },
+    rotate: function () {
+      return anime.random(0, 20);
+    },
+    scale: function () {
+      return anime.random(1, .8);
+    },
+    duration: function () {
+      return anime.random(7000, 7000);
+    },
+    easing: 'easeOutElastic(1, .8)',
   });
 }
 
 window.addEventListener('load', function () {
   randomValues();
-  setInterval(randomValues, 4000);
+  setInterval(randomValues, 5000);
 });
 
 const slides = document.querySelectorAll('.slide');
