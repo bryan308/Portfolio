@@ -678,7 +678,7 @@ a {
     left: 50%;
     height: 170%;
     width: 150%;
-    border-radius: 50%;
+    border-radius: 41% 59% 72% 28% / 76% 29% 71% 24%;
     transform: translate(-50%, -30%);
     filter: blur(90px);
     z-index: var(--layer-0);
