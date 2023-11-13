@@ -83,7 +83,7 @@ function randomValues() {
       return anime.random(0, 90);
     },
     duration: function () {
-      return anime.random(2000, 4000);
+      return anime.random(5000, 5000);
     },
     borderRadius: [
       {
